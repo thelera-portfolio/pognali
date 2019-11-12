@@ -71,7 +71,7 @@
             </label>
           </div>
 
-          <fieldset class="user-info__transport transport">
+          <fieldset class="user-info__transport transport transport-list">
             <legend class="transport__legend">Транспорт:</legend>
             <label class="transport__label transport-list__item transport-list__item--plane" aria-label="Авиаперелет">
               <input class="transport__checkbox" type="checkbox" name="transport" value="plane" checked>
@@ -125,29 +125,29 @@
 
             <p class="step__text">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
           
-            <div class="step__input">
-              <label class="step__input-label" for="travelmates-number">Ищу попутчиков:</label>
-              <button class="step__input-button step__input-button--minus" type="button" aria-label="Minus"></button>
-              <input class="step__input-field input-field" type="number" step="1" name="travelmates-number" value="2" id="travelmates-number">
-              <button class="step__input-button step__input-button--plus" type="button" aria-label="Plus"></button>
+            <div class="step__control-field control-field">
+              <label class="control-field__label" for="travelmates-number">Ищу попутчиков:</label>
+              <button class="control-field__button control-field__button--minus" type="button" aria-label="Minus"></button>
+              <input class="control-field__input input-field" type="number" step="1" name="travelmates-number" value="2" id="travelmates-number">
+              <button class="control-field__button control-field__button--plus" type="button" aria-label="Plus"></button>
             </div>
 
-            <div class="step__input">
-              <label class="step__input-label" for="days-amount">Длительность:</label>
-              <button class="step__input-button step__input-button--minus" type="button" aria-label="Minus"></button>
-              <input class="step__input-field input-field" type="number" step="1" name="days-amount" value="2" id="days-amount">
-              <button class="step__input-button step__input-button--plus" type="button" aria-label="Plus"></button>
+            <div class="step__control-field control-field">
+              <label class="control-field__label" for="days-amount">Длительность:</label>
+              <button class="control-field__button control-field__button--minus" type="button" aria-label="Minus"></button>
+              <input class="control-field__button__input input-field" type="number" step="1" name="days-amount" value="2" id="days-amount">
+              <button class="control-field__button control-field__button--plus" type="button" aria-label="Plus"></button>
             </div>
 
             <label class="step__checkbox-label">
               <input class="step__checkbox-label" type="checkbox" name="child" checked>
             Можно с детьми</label>
 
-            <div class="step__input">
-              <label class="step__input-label" for="date" aria-label="Выбрать месяц и год поездки"></label>
-              <button class="step__input-button step__input-button--back" type="button" aria-label="Minus"></button>
-              <input class="step__input-field input-field" type="text" name="date" value="Март 2019" id="date">
-              <button class="step__input-button step__input-button--forward" type="button" aria-label="Plus"></button>
+            <div class="step__control-field control-field">
+              <label class="control-field__label" for="date" aria-label="Выбрать месяц и год поездки"></label>
+              <button class="control-field__button control-field__button--back" type="button" aria-label="Minus"></button>
+              <input class="control-field__input input-field" type="text" name="date" value="Март 2019" id="date">
+              <button class="control-field__button control-field__button--forward" type="button" aria-label="Plus"></button>
             </div>
 
             <table class="step__calendar calendar">
@@ -159,7 +159,7 @@
                   <th class="calendar__item">Ч</th>
                   <th class="calendar__item">П</th>
                   <th class="calendar__item calendar__item--weekend">С</th>
-                  <th class="calendar__item alendar__item--weekend">В</th>
+                  <th class="calendar__item calendar__item--weekend">В</th>
                 </tr>
               </thead>
               <tbody>
@@ -243,42 +243,42 @@
 
             <!-- Выпадающий список стран -->
             <div class="step__country-dropdown">
-              <table class="step__country-keyboard keyboard">
+              <table class="step__country-keyboard country-keyboard">
                 <tbody>
                   <tr>
-                    <td class="keyboard__item keyboard__item--checked">А</td>
-                    <td class="keyboard__item">Б</td>
-                    <td class="keyboard__item">В</td>
-                    <td class="keyboard__item">Г</td>
-                    <td class="keyboard__item">Д</td>
+                    <td class="country-keyboard__item country-keyboard__item--checked">А</td>
+                    <td class="country-keyboard__item">Б</td>
+                    <td class="country-keyboard__item">В</td>
+                    <td class="country-keyboard__item">Г</td>
+                    <td class="country-keyboard__item">Д</td>
                   </tr>
                   <tr>
-                    <td class="keyboard__item">Е</td>
-                    <td class="keyboard__item">З</td>
-                    <td class="keyboard__item">И</td>
-                    <td class="keyboard__item">К</td>
-                    <td class="keyboard__item">Л</td>
+                    <td class="country-keyboard__item">Е</td>
+                    <td class="country-keyboard__item">З</td>
+                    <td class="country-keyboard__item">И</td>
+                    <td class="country-keyboard__item">К</td>
+                    <td class="country-keyboard__item">Л</td>
                   </tr>
                   <tr>
-                    <td class="keyboard__item">М</td>
-                    <td class="keyboard__item">Н</td>
-                    <td class="keyboard__item">О</td>
-                    <td class="keyboard__item">П</td>
-                    <td class="keyboard__item">Р</td>
+                    <td class="country-keyboard__item">М</td>
+                    <td class="country-keyboard__item">Н</td>
+                    <td class="country-keyboard__item">О</td>
+                    <td class="country-keyboard__item">П</td>
+                    <td class="country-keyboard__item">Р</td>
                   </tr>
                   <tr>
-                    <td class="keyboard__item">С</td>
-                    <td class="keyboard__item">Т</td>
-                    <td class="keyboard__item">У</td>
-                    <td class="keyboard__item">Ф</td>
-                    <td class="keyboard__item">Х</td>
+                    <td class="country-keyboard__item">С</td>
+                    <td class="country-keyboard__item">Т</td>
+                    <td class="country-keyboard__item">У</td>
+                    <td class="country-keyboard__item">Ф</td>
+                    <td class="country-keyboard__item">Х</td>
                   </tr>
                   <tr>
-                    <td class="keyboard__item">Ч</td>
-                    <td class="keyboard__item">Ш</td>
-                    <td class="keyboard__item">Э</td>
-                    <td class="keyboard__item">Ю</td>
-                    <td class="keyboard__item">Я</td>
+                    <td class="country-keyboard__item">Ч</td>
+                    <td class="country-keyboard__item">Ш</td>
+                    <td class="country-keyboard__item">Э</td>
+                    <td class="country-keyboard__item">Ю</td>
+                    <td class="country-keyboard__item">Я</td>
                   </tr>
                 </tbody>
               </table>
