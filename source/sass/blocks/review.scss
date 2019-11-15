@@ -1,11 +1,11 @@
-.review {;
+.review {
   margin: 0;
   padding: 0;
 
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
   color: #ffffff;
 
-  background-color: $color-1-1;
+  background-color: $blue-1;
 }
 
 .review__text {

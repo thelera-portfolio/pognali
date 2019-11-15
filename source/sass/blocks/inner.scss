@@ -4,4 +4,12 @@
   align-items: center;
   width: 320px;
   margin: 0 auto;
+
+  &--find-travelmate {
+    background-color: $yellow-1;
+    border-radius: $radius-2;
+  }
+
+  &--travelmates-filtered {
+  }
 }

@@ -1,12 +1,5 @@
 .user-info {
-  background-color: $grey;
-}
-
-.user-info__photo {
-  width: 100px;
-  height: 100px;
-
-  border-radius: 50%;
+  background-color: $grey-1;
 }
 
 .user-info__fieldset {
@@ -20,8 +13,8 @@
   line-height: 1.13;
   text-align: center;
   text-transform: uppercase;
-  color: $color-1-4;
+  color: $blue-4;
 
   border: 1px solid $grey-2;
-  border-radius: 10px;
+  border-radius: $radius-1;
 }

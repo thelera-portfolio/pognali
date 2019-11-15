@@ -1,0 +1,16 @@
+.travelmates-filtered {
+  background-color: $grey-1;
+}
+
+.travelmates-filtered__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.travelmates-filtered__item {
+  width: 320px;
+
+  background-color: #ffffff;
+  border-radius: 20px;
+}

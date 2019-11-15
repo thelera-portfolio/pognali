@@ -2,7 +2,7 @@
   @include font-name;
   font-weight: 500;
   line-height: 1;
-  color: $color-1-4;
+  color: $blue-4;
 }
 
 .control-field__label {
@@ -18,7 +18,9 @@
   line-height: 0.9;
   letter-spacing: 1.5px;
   text-align: center;
-  color: $color-1-4;
+  color: $blue-4;
+
+  border-radius: 4px;
 
   &--date {
     font-size: 20px;
@@ -31,5 +33,5 @@
 .step__checkbox-label {
   font-size: 15px;
   font-weight: 400;
-  color: $greyish-brown;
+  color: $grey-5;
 }

@@ -1,7 +1,7 @@
 .map {
-  background-color: $color-2-1;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  background-color: $yellow-1;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
 }
 
 .map__address {
@@ -9,5 +9,5 @@
 }
 
 .map__route {
-  border: 3px solid $color-1-2;
+  border: 3px solid $blue-2;
 }

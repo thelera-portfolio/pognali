@@ -1,12 +1,12 @@
 .about {
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
 
-  background-color: $color-1-2;
+  background-color: $blue-2;
   background-image: url("../../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
 }
 
 .about__text {

@@ -5,19 +5,19 @@
   padding-bottom: 22px;
   padding-left: 24px;
 
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
   text-transform: none;
   vertical-align: middle;
-  color: $color-1-4;
+  color: $blue-4;
 
-  background-color: $color-2-1;
-  border-radius: 10px;
+  background-color: $yellow-1;
+  border-radius: $radius-1;
 
   &:hover {
-    background-color: $color-2-2;
+    background-color: $yellow-2;
   }
 }

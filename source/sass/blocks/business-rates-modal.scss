@@ -6,7 +6,7 @@
   padding-bottom: 20px;
   padding-left: 25px;
 
-  border-radius: 20px;
+  border-radius: $radius-2;
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
   background-color: #ffffff;
   background-image: linear-gradient(to top, #f3f4f8 59px, #ffffff 59px);
@@ -20,14 +20,14 @@
   width: 220px;
   padding: 0;
 
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
-  color: $color-1-4;
+  color: $blue-4;
 
   background-color: transparent;
   border: none;

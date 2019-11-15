@@ -4,7 +4,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
   font-size: 17px;
   font-weight: 700;
   line-height: 1.76;
@@ -12,16 +12,16 @@
   text-transform: uppercase;
   text-decoration: none;
   vertical-align: middle;
-  color: $color-1-1;
+  color: $blue-1;
 
-  background-color: $color-2-1;
-  border-radius: 25px;
+  background-color: $yellow-1;
+  border-radius: $radius-2;
 
   &:hover {
-    background-color: $color-2-2;
+    background-color: $yellow-2;
   }
 
-  &--profile {
+  &--bgc {
     background-color: $grey-3;
   }
 }

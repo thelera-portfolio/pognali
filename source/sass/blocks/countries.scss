@@ -1,9 +1,9 @@
 .countries {
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
 
-  background-color: $grey;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  background-color: $grey-1;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
 }
 
 .countries__text {
@@ -11,7 +11,7 @@
   margin: 0;
   padding-right: 25px;
 
-  color: $greyish-brown;
+  color: $grey-5;
 }
 
 .countries__list {

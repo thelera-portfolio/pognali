@@ -1,11 +1,7 @@
 .rates-list {
   width: 220px;
 
-  color: $greyish-brown;
-}
-
-.rates-list__item-desc {
-  margin: 0;
+  color: $grey-5;
 }
 
 .rates-list__item-title {
@@ -14,11 +10,12 @@
 }
 
 .rates-list__item-desc {
+  margin: 0;
   padding-bottom: 15px;
 }
 
 .rates-list__item-desc:last-of-type {
   margin-bottom: 33px;
-  
+
   border-bottom: 1px solid rgba(#000000, 0.05);
 }
