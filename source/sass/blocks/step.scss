@@ -1,0 +1,50 @@
+.step {
+  @include font-name;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-1-4;
+}
+
+.step__title {
+  margin: 0;
+
+  font-size: 20;
+}
+
+.step__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.38;
+  color: $greyish-brown;
+}
+
+.step__select {
+  @include font-name;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.step__button {
+  &--back {
+    background-color: transparent;
+  }
+}
+
+.step__country {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.step__country-plan {
+  @include font-name;
+  font-size: 16px;
+  line-height: 1.38;
+  color: $greyish-brown;
+
+  &::placeholder {
+    color: rgba($greyish-brown, 0.3);
+  }
+}

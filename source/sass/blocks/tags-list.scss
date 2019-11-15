@@ -3,8 +3,9 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 177px;
+  padding: 0;
 
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.13;

@@ -1,0 +1,27 @@
+.user-info {
+  background-color: $grey;
+}
+
+.user-info__photo {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+}
+
+.user-info__fieldset {
+  width: 270px;
+  margin: 0;
+  padding: 0;
+
+  @include font-name;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.13;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-1-4;
+
+  border: 1px solid $grey-2;
+  border-radius: 10px;
+}

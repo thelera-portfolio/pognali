@@ -1,0 +1,16 @@
+.tags__text-input {
+  width: 270px;
+
+  border: none;
+  resize: none;
+
+  @include font-name;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: rgba($greyish-brown, 0.6);
+
+  &::placeholder {
+    color: $greyish-brown;
+  }
+}

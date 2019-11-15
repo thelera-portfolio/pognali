@@ -1,6 +1,7 @@
 @import "variables.scss";
+@import "mixins.scss";
 
-/* шрифты */
+// шрифты
 @font-face {
   font-family: $main-font;
   src: local("Blogger Sans Light"),
@@ -103,3 +104,11 @@ html {
 @import "./blocks/map.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/copyright.scss";
+@import "./blocks/business-rates-modal.scss";
+@import "./blocks/page-main-heading.scss";
+@import "./blocks/user-info.scss";
+@import "./blocks/tags.scss";
+@import "./blocks/user-plans.scss";
+@import "./blocks/add-plan.scss";
+@import "./blocks/step.scss";
+@import "./blocks/control-field.scss";

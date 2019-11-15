@@ -1,0 +1,47 @@
+.user-plans {
+  @include font-name;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-1-4;
+
+  background-color: $grey-3;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.user-plans__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.user-plans__title {
+  margin: 0;
+
+  font-size: 24px;
+}
+
+.user-plans__item-title {
+  margin: 0;
+  
+  font-size: 16px;
+}
+
+.user-plans__info {
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.user-plans__button {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(#000000, 0.3);
+}

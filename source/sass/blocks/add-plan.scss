@@ -1,0 +1,16 @@
+.add-plan {
+  @include font-name;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-1-4;
+
+  background-color: $grey;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.add-plan__title {
+  margin: 0;
+
+  font-size: 24px;
+}

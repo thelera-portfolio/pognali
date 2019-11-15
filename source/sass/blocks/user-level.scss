@@ -10,10 +10,17 @@
   background-color: #000000;
   border: 3px solid $color-2-3;
   border-radius: 50%;
+
+  &--profile {
+    width: 100px;
+    height: 100px;
+
+    background-color: transparent;
+  }
 }
 
 .user-level__text {
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
   color: #ffffff;
   font-size: 24px;
   font-weight: 700;
@@ -26,5 +33,17 @@
     font-weight: 400;
 
     border-top: 1px solid rgba(#ffffff, 0.3);
+  }
+
+  &--profile-thin {
+    font-size: 18px;
+    color: $greyish-brown;
+
+    border-top: 1px solid $grey-2;
+  }
+
+  &--profile {
+    font-size: 38px;
+    color: #161c35;
   }
 }
