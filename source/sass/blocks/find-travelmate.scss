@@ -1,0 +1,11 @@
+.find-travelmate {
+  background-color: $grey-1;
+}
+
+.find-travelmate__title {
+  @include font-name;
+  font-size: 22.5px;
+  font-weight: 700;
+  line-height: 1;
+  color: $blue-4;
+}

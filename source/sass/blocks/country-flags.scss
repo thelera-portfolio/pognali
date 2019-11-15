@@ -1,0 +1,35 @@
+.country-flags {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.country-flags__item {
+  width: 35px;
+  height: 24px;
+
+  @include font-name;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $blue-4;
+
+  background-repeat: no-repeat;
+
+  // &--shri-lanka {
+  // }
+
+  // &--thailand {
+  // }
+
+  // &--seychelles {
+  // }
+
+  // &--belgium {
+  // }
+
+  // &--czech {
+  // }
+}

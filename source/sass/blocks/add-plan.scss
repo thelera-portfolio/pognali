@@ -2,11 +2,11 @@
   @include font-name;
   font-weight: 700;
   line-height: 1;
-  color: $color-1-4;
+  color: $blue-4;
 
-  background-color: $grey;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  background-color: $grey-1;
+  border-top-right-radius: $radius-3;
+  border-top-left-radius: $radius-3;
 }
 
 .add-plan__title {

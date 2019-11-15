@@ -1,0 +1,19 @@
+.continent-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.continent-list__item {
+  @include font-name;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.38;
+  text-transform: uppercase;
+  color: rgba($blue-2, 0.3);
+
+  &--checked {
+    color: $blue-2;
+  }
+}

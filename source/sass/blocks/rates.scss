@@ -1,17 +1,9 @@
 .rates {
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
 
-  background-color: $grey;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
-
-.rates__text {
-
-}
-
-.rates__list {
-
+  background-color: $grey-1;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
 }
 
 .rates__more-link {
@@ -19,5 +11,5 @@
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
-  color: $color-1-2;
+  color: $blue-2;
 }

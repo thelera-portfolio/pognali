@@ -1,7 +1,7 @@
 .cta-form {
-  background-color: $color-1-2;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  background-color: $blue-2;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
 }
 
 .cta-form__text {
@@ -12,9 +12,9 @@
 }
 
 .cta-form__login-link {
-  color: $color-2-1;
+  color: $yellow-1;
 }
 
 .cta-form__contacts {
-  color: $color-2-1;
+  color: $yellow-1;
 }

@@ -1,7 +1,7 @@
 .index-text {
   margin: 0;
 
-  font-family: $main-font, "Arial", sans-serif;
+  @include font-name;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.38;
