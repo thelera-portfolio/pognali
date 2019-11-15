@@ -1,0 +1,48 @@
+.travelmates-item {
+  font-family: $main-font, "Arial", sans-serif;
+
+  background-color: #ffffff;
+}
+
+.travelmates-item__title {
+  margin: 0;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.travelmates-item__profile-link {
+  text-decoration: none;
+  color: $color-1-4;
+}
+
+.travelmates-item__image {
+
+}
+
+.travelmates-item__countries-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.travelmates-item__countries-item {
+  width: 35px;
+  height: 24px;
+
+  background-repeat: no-repeat;
+
+  &:first-child {
+    
+  }
+
+  &:nth-child(1) {
+    
+  }
+
+  &:last-child {
+    
+  }
+}

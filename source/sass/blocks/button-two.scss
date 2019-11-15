@@ -1,0 +1,23 @@
+.button-two {
+  display: inline-block;
+  width: 270px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+
+  font-family: $main-font, "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: none;
+  vertical-align: middle;
+  color: $color-1-4;
+
+  background-color: $color-2-1;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $color-2-2;
+  }
+}

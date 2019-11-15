@@ -1,0 +1,64 @@
+.intro {
+  font-family: $main-font, "Arial", sans-serif;
+  font-weight: 700;
+
+  background-color: $color-1-1;
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.intro__promo-text {
+  margin: 0;
+  width: 240px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__login-button {
+
+}
+
+.intro__promo-list {
+  width: 270px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1;
+  color: $color-1-1;
+  list-style: none;
+
+  border-radius: 100px;
+}
+
+.intro__promo-item {
+  padding-top: 23px;
+  padding-right: 105px;
+  padding-bottom: 23px;
+  padding-left: 25px;
+
+  &:first-child {
+    background-color: $color-2-3;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  &:nth-child(2) {
+    background-color: $color-2-4;
+  }
+
+  &:nth-child(3) {
+    background-color: $color-2-2;
+  }
+
+  &:last-child {
+    background-color: $color-2-1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}

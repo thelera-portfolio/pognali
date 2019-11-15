@@ -1,0 +1,23 @@
+.review {;
+  margin: 0;
+  padding: 0;
+
+  font-family: $main-font, "Arial", sans-serif;
+  color: #ffffff;
+
+  background-color: $color-1-1;
+}
+
+.review__text {
+  width: 148px;
+  margin: 0;
+  padding-right: 72px;
+}
+
+.review__author {
+  display: block;
+  width: 155px;
+  padding-right: 67px;
+
+  font-style: normal;
+}

@@ -1,0 +1,37 @@
+.countries-item {
+  width: 270px;
+
+  font-family: $main-font, "Arial", sans-serif;
+}
+
+.countries-item__title {
+  margin: 0;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: $color-1-1;
+}
+
+.countries-item__image {
+
+}
+
+.countries-item__text {
+  margin: 0;
+
+  opacity: 0.3;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.13;
+  color: rgba($greyish-brown, 0.3);
+}
+
+.countries-item__user-amount {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.88;
+  color: rgba($greyish-brown, 0.3);
+}

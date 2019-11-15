@@ -1,0 +1,16 @@
+.about {
+  font-family: $main-font, "Arial", sans-serif;
+
+  background-color: $color-1-2;
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.about__text {
+  width: 220px;
+  margin: 0;
+  padding-right: 10px;
+}

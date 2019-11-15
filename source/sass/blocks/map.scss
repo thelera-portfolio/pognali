@@ -1,0 +1,13 @@
+.map {
+  background-color: $color-2-1;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.map__address {
+  width: 143px;
+}
+
+.map__route {
+  border: 3px solid $color-1-2;
+}

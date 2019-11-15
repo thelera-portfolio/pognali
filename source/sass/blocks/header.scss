@@ -1,6 +1,10 @@
 @import "../variables.scss";
 
 .header {
-  background-color: $bg-color;
+  padding-top: 25px;
+
+  background-color: $color-1-1;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 

@@ -1,0 +1,30 @@
+.user-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+
+  background-color: #000000;
+  border: 3px solid $color-2-3;
+  border-radius: 50%;
+}
+
+.user-level__text {
+  font-family: $main-font, "Arial", sans-serif;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+
+  &--thin {
+    padding-top: 2px;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    border-top: 1px solid rgba(#ffffff, 0.3);
+  }
+}

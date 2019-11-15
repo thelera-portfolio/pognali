@@ -1,0 +1,22 @@
+.countries {
+  font-family: $main-font, "Arial", sans-serif;
+
+  background-color: $grey;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.countries__text {
+  width: 220px;
+  margin: 0;
+  padding-right: 25px;
+
+  color: $greyish-brown;
+}
+
+.countries__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

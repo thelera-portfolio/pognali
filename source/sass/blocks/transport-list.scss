@@ -1,0 +1,49 @@
+.transport-list {
+  display: flex;
+  justify-content: center;
+  height: 21px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.transport-list__item {
+  padding-right: 10px;
+
+  opacity: 0.15;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &--plane {
+    width: 19px;
+
+    background-image: url("../../img/plane.svg");
+  }
+
+  &--bus {
+    width: 17px;
+    background-image: url("../../img/bus.svg");
+  }
+
+  &--cycle {
+    width: 24px;
+
+    background-image: url("../../img/bike.svg");
+  }
+
+  &--foot {
+    width: 20px;
+
+    background-image: url("../../img/run.svg");
+  }
+
+  &--active {
+    opacity: 1;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
