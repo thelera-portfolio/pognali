@@ -56,3 +56,28 @@
     border-bottom-left-radius: $radius-1;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .intro {
+    min-height: 651px;
+  }
+
+  .intro__promo-text {
+    width: 395px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .intro__contacts {
+    display: none;
+  }
+
+  .intro__login-button {
+    display: none;
+  }
+
+  .intro__promo-list {
+    display: flex;
+  }
+}

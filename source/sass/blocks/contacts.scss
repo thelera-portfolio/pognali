@@ -11,6 +11,10 @@
 
 .contacts__button {
   position: relative;
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding-left: 60px;
 
   font: inherit;
   text-decoration: none;
@@ -20,6 +24,8 @@
     content: "";
 
     position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     width: 45px;
     height: 45px;

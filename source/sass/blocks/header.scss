@@ -6,3 +6,18 @@
   background-color: $blue-1;
 }
 
+@media (min-width: $desktop-width) {
+  .header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 47px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .header__logo {
+    margin-right: 145px;
+  }
+}
+

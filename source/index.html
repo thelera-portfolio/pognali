@@ -3,58 +3,55 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- Шапка сайта -->
-    <div class="wrapper">
-      <header class="header">
-        <!-- Логотип -->
-        <a class="header__logo logo">
-          <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
-        </a>
-        <!-- Основное меню -->
-        <nav class="header__menu menu">
-          <button class="menu__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню"></button>
-      
-          <!-- обертка для меню, которе появляется при клике на гамбургер -->
-          <div class="inner">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">О сервисе</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="form.html">Направления</a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="catalog.html">Попутчики</a>
-              </li>
-            </ul>
-      
-            <a class="menu__login-button button-one" href="#">Авторизация</a>
-      
-            <div class="menu__contacts contacts">
-              <a class="contacts__button contacts__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
-              <a class="contacts__button contacts__button--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </div>
-      
-            <ul class="menu__socials socials">
-              <li class="socials__item">
-                <a class="socials__link socials__link--facebook socials__link--facebook--header" href="#" aria-label="Сервис «Погнали» в Фейсбук"></a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--vkontakte socials__link--vkontakte--header" href="#" aria-label="Сервис «Погнали» во Вконтакте"></a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--instagram socials__link--instagram--header" href="#" aria-label="Сервис «Погнали» в Инстаграм"></a>
-              </li>
-            </ul>
-      
-            <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
-          </div>
-        </nav>
-      </header>
-    </div>
+    <header class="header">
+      <!-- Логотип -->
+      <a class="header__logo logo">
+        <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+      </a>
+      <!-- Основное меню -->
+      <nav class="header__menu menu">
+        <button class="menu__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню"></button>
+    
+        <!-- Меню, которе появляется при клике на гамбургер -->
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">О сервисе</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html">Направления</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Попутчики</a>
+          </li>
+        </ul>
+        
+        <a class="menu__login-button button-one" href="#">Авторизация</a>
+        
+        <div class="menu__contacts contacts">
+          <a class="contacts__button contacts__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
+          <a class="contacts__button contacts__button--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </div>
+  
+        <ul class="menu__socials socials">
+          <li class="socials__item">
+            <a class="socials__link socials__link--facebook socials__link--facebook--header" href="#" aria-label="Сервис «Погнали» в Фейсбук"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte socials__link--vkontakte--header" href="#" aria-label="Сервис «Погнали» во Вконтакте"></a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--instagram socials__link--instagram--header" href="#" aria-label="Сервис «Погнали» в Инстаграм"></a>
+          </li>
+        </ul>
+  
+        <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
+      </nav>
+    </header>
 
     <!-- Основное содержимое -->
     <main class="main">
