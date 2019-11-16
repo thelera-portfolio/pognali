@@ -1,0 +1,21 @@
+.rates-list {
+  width: 220px;
+
+  color: $grey-5;
+}
+
+.rates-list__item-title {
+  padding-top: 15px;
+  border-top: 1px solid rgba(#000000, 0.05);
+}
+
+.rates-list__item-desc {
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.rates-list__item-desc:last-of-type {
+  margin-bottom: 33px;
+
+  border-bottom: 1px solid rgba(#000000, 0.05);
+}

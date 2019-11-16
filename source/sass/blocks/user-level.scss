@@ -1,0 +1,56 @@
+.user-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 0;
+
+  @include font-name;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: $blue-1;
+
+  background-color: transparent;
+  border: 3px solid $yellow-3;
+  border-radius: 50%;
+
+  &--size-s {
+    width: 45px;
+    height: 45px;
+  }
+
+  &--size-m {
+    width: 60px;
+    height: 60px;
+
+    color: #ffffff;
+
+    background-color: rgba(#000000, 0.6);
+  }
+
+  &--size-l {
+    width: 100px;
+    height: 100px;
+
+    font-size: 38px;
+  }
+}
+
+.user-level__text {
+  &--thin {
+    padding-top: 2px;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    border-top: 1px solid $grey-2;
+  }
+
+  &--thin-l {
+    font-size: 18px;
+    color: $grey-5;
+  }
+}

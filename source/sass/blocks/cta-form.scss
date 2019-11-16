@@ -1,0 +1,20 @@
+.cta-form {
+  background-color: $blue-2;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
+}
+
+.cta-form__text {
+  display: inline-block;
+  width: 220px;
+
+  text-align: center;
+}
+
+.cta-form__login-link {
+  color: $yellow-1;
+}
+
+.cta-form__contacts {
+  color: $yellow-1;
+}

@@ -1,0 +1,23 @@
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 177px;
+  padding: 0;
+
+  @include font-name;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.13;
+  color: $grey-5;
+
+  list-style: none;
+}
+
+.tags-list__item {
+  padding-right: 3px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+}

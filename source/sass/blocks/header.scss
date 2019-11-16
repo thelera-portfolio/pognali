@@ -1,0 +1,26 @@
+@import "../variables.scss";
+
+.header {
+  padding-top: 25px;
+
+  background-color: $blue-1;
+<<<<<<< HEAD
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 47px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .header__logo {
+    margin-right: 145px;
+  }
+=======
+>>>>>>> a8ebedf558042914048e3f8f3de3d5b981c87d58
+}
+

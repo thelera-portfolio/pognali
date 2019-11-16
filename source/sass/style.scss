@@ -1,0 +1,122 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+// шрифты
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans Light"),
+    url("../fonts/bloggersans-light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans Light Italic"),
+    url("../fonts/bloggersans-lightitalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans"),
+    url("../fonts/bloggersans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans Italic"),
+    url("../fonts/bloggersans-italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans Medium"),
+    url("../fonts/bloggersans-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans Medium Italic"),
+    url("../fonts/bloggersans-mediumitalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans Bold"),
+    url("../fonts/bloggersans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $main-font;
+  src: local("Blogger Sans Bold Italic"),
+    url("../fonts/bloggersans-bolditalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@import "./blocks/visually-hidden.scss";
+@import "./blocks/inner.scss";
+@import "./blocks/button-one.scss";
+@import "./blocks/button-two.scss";
+@import "./blocks/input-field.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/header.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/index-title.scss";
+@import "./blocks/index-text.scss";
+@import "./blocks/main.scss";
+@import "./blocks/intro.scss";
+@import "./blocks/review.scss";
+@import "./blocks/about.scss";
+@import "./blocks/countries.scss";
+@import "./blocks/countries-item.scss";
+@import "./blocks/travelmates.scss";
+@import "./blocks/travelmates-item.scss";
+@import "./blocks/tags-list.scss";
+@import "./blocks/transport-list.scss";
+@import "./blocks/user-level.scss";
+@import "./blocks/rates.scss";
+@import "./blocks/rates-list.scss";
+@import "./blocks/cta-form.scss";
+@import "./blocks/map.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/copyright.scss";
+@import "./blocks/business-rates-modal.scss";
+@import "./blocks/page-main-heading.scss";
+@import "./blocks/user-info.scss";
+@import "./blocks/user-photo.scss";
+@import "./blocks/tags.scss";
+@import "./blocks/user-plans.scss";
+@import "./blocks/add-plan.scss";
+@import "./blocks/step.scss";
+@import "./blocks/control-field.scss";
+@import "./blocks/filter-country.scss";
+@import "./blocks/continent-list.scss";
+@import "./blocks/countries-list.scss";
+@import "./blocks/find-travelmate.scss";
+@import "./blocks/travelmate-form.scss";
+@import "./blocks/country-flags.scss";
+@import "./blocks/travelmates-filtered.scss";

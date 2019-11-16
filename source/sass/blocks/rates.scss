@@ -1,0 +1,15 @@
+.rates {
+  @include font-name;
+
+  background-color: $grey-1;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
+}
+
+.rates__more-link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  color: $blue-2;
+}

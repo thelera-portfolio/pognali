@@ -1,0 +1,29 @@
+.button-one {
+  display: inline-block;
+  width: 270px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include font-name;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.76;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  vertical-align: middle;
+  color: $blue-1;
+
+  background-color: $yellow-1;
+  border-radius: $radius-2;
+
+  &:hover {
+    background-color: $yellow-2;
+  }
+
+  &--bgc {
+    background-color: $grey-3;
+  }
+}
+

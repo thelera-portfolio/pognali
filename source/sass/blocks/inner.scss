@@ -1,0 +1,23 @@
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $mobile-width;
+  margin: 0 auto;
+
+  &--find-travelmate {
+    background-color: $yellow-1;
+    border-radius: $radius-2;
+  }
+
+  &--travelmates-filtered {
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: $desktop-width;
+  }
+}

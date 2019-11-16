@@ -1,0 +1,37 @@
+.control-field {
+  @include font-name;
+  font-weight: 500;
+  line-height: 1;
+  color: $blue-4;
+}
+
+.control-field__label {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.control-field__input {
+  @include font-name;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: $blue-4;
+
+  border-radius: 4px;
+
+  &--date {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: normal;
+    text-align: center;
+  }
+}
+
+.step__checkbox-label {
+  font-size: 15px;
+  font-weight: 400;
+  color: $grey-5;
+}

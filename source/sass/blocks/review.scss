@@ -1,0 +1,23 @@
+.review {
+  margin: 0;
+  padding: 0;
+
+  @include font-name;
+  color: #ffffff;
+
+  background-color: $blue-1;
+}
+
+.review__text {
+  width: 220px;
+  margin: 0;
+  padding-right: 72px;
+}
+
+.review__author {
+  display: block;
+  width: 220px;
+  padding-right: 60px;
+
+  font-style: normal;
+}

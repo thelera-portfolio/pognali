@@ -1,0 +1,16 @@
+.about {
+  @include font-name;
+
+  background-color: $blue-2;
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-right-radius: $radius-3;
+  border-bottom-left-radius: $radius-3;
+}
+
+.about__text {
+  width: 220px;
+  margin: 0;
+  padding-right: 10px;
+}

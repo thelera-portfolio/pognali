@@ -1,0 +1,16 @@
+.filter-country {
+  background-color: $grey-4;
+  border-bottom-right-radius: $radius-2;
+  border-bottom-left-radius: $radius-2;
+}
+
+.filter-country__title {
+  margin: 0;
+
+  @include font-name;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.38;
+  text-transform: uppercase;
+  color: $blue-2;
+}

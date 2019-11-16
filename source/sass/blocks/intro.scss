@@ -1,0 +1,83 @@
+.intro {
+  @include font-name;
+  font-weight: 700;
+
+  background-color: $blue-1;
+  background-image: url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.intro__promo-text {
+  margin: 0;
+  width: 295px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  color: #ffffff;
+}
+
+.intro__promo-list {
+  width: 270px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1;
+  color: $blue-1;
+  list-style: none;
+}
+
+.intro__promo-item {
+  padding-top: 23px;
+  padding-right: 105px;
+  padding-bottom: 23px;
+  padding-left: 25px;
+
+  &:first-child {
+    background-color: $yellow-3;
+    border-top-right-radius: $radius-1;
+    border-top-left-radius: $radius-1;
+  }
+
+  &:nth-child(2) {
+    background-color: $yellow-4;
+  }
+
+  &:nth-child(3) {
+    background-color: $yellow-2;
+  }
+
+  &:last-child {
+    background-color: $yellow-1;
+    border-bottom-right-radius: $radius-1;
+    border-bottom-left-radius: $radius-1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    min-height: 651px;
+  }
+
+  .intro__promo-text {
+    width: 395px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .intro__contacts {
+    display: none;
+  }
+
+  .intro__login-button {
+    display: none;
+  }
+
+  .intro__promo-list {
+    display: flex;
+  }
+}

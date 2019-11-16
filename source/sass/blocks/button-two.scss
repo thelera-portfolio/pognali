@@ -1,0 +1,23 @@
+.button-two {
+  display: inline-block;
+  width: 270px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+
+  @include font-name;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: none;
+  vertical-align: middle;
+  color: $blue-4;
+
+  background-color: $yellow-1;
+  border-radius: $radius-1;
+
+  &:hover {
+    background-color: $yellow-2;
+  }
+}
