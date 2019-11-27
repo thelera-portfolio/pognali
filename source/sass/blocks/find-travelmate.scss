@@ -1,11 +1,64 @@
 .find-travelmate {
-  background-color: $grey-1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: $yellow-1;
+  border-radius: $radius-2;
 }
 
 .find-travelmate__title {
   @include font-name;
-  font-size: 22.5px;
   font-weight: 700;
   line-height: 1;
   color: $blue-4;
+}
+
+@media (max-width: $mobile-width-only) {
+  .find-travelmate {
+    width: 270px;
+    margin: 0 auto;
+    margin-bottom: 28px;
+    padding-top: 26px;
+    padding-right: 20px;
+    padding-bottom: 26px;
+    padding-left: 20px;
+  }
+
+  .find-travelmate__title {
+    margin-bottom: 21px;
+
+    font-size: 22.5px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .find-travelmate {
+    width: 688px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding-top: 37px;
+    padding-right: 35px;
+    padding-bottom: 38px;
+    padding-left: 35px;
+  }
+
+  .find-travelmate__title {
+    font-size: 30px;
+    margin-bottom: 37px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .find-travelmate {
+    width: 283px;
+    padding-top: 45px;
+    padding-right: 45px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+  }
+
+  .find-travelmate__title {
+    font-size: 30px;
+  }
 }

@@ -5,7 +5,6 @@
   padding: 0;
 
   @include font-name;
-  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   vertical-align: middle;
@@ -13,7 +12,6 @@
 
   background-color: #ffffff;
   border: 0;
-  border-radius: $radius-1;
 
   &::placeholder {
     padding-left: 24px;
@@ -40,5 +38,33 @@
     &::placeholder {
       color: transparent;
     }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .input-field {
+    font-size: 18px;
+
+    border-radius: $radius-1;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .input-field {
+    height: 81px;
+
+    font-size: 24px;
+
+    border-radius: $radius-2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .input-field {
+    height: 81px;
+
+    font-size: 24px;
+
+    border-radius: $radius-2;
   }
 }

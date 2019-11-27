@@ -1,13 +1,79 @@
 .page-main-heading {
+  position: relative;
+
   margin: 0;
 
   @include font-name;
-  font-size: 36px;
   font-weight: 700;
-  line-height: 1.11;
   color: #ffffff;
 
-  background-color: $blue-1;
-  border-bottom-right-radius: $radius-3;
-  border-bottom-left-radius: $radius-3;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+
+    background-color: $yellow-3;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-main-heading {
+    min-height: 70px;
+    padding-top: 27px;
+    padding-right: 27px;
+    padding-bottom: 12px;
+    padding-left: 27px;
+
+    font-size: 36px;
+    line-height: 1.11;
+
+    &::before {
+      width: 214px;
+      height: 5px;
+
+      border-radius: 2.4px;
+    }
+  } 
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .page-main-heading {
+    width: $tablet-width;
+    padding-top: 94px;
+    padding-right: 77px;
+    padding-bottom: 70px;
+    padding-left: 77px;
+
+    min-height: 70px;
+    font-size: 60px;
+    line-height: 1.17;
+
+    &::before {
+      width: 355px;
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main-heading {
+    width: $desktop-width;
+    padding-top: 118px;
+    padding-right: 69px;
+    padding-bottom: 69px;
+    padding-left: 129px;
+    min-height: 243px;
+
+    font-size: 60px;
+    line-height: 1.17;
+
+    &::before {
+      width: 357px;
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
 }

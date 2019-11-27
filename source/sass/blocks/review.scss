@@ -4,20 +4,47 @@
 
   @include font-name;
   color: #ffffff;
-
-  background-color: $blue-1;
 }
 
 .review__text {
-  width: 220px;
   margin: 0;
-  padding-right: 72px;
 }
 
 .review__author {
   display: block;
-  width: 220px;
-  padding-right: 60px;
 
   font-style: normal;
 }
+
+@media (max-width: $mobile-width-only) {
+  .review {
+    width: 190px;
+    padding-left: 25px;
+  }
+
+  .review__text {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .review {
+    width: 298px;
+    padding-left: 33px;
+  }
+
+  .review__text {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review {
+    width: $desktop-width - 2 * $desktop-padding;
+  }
+
+  .review__text {
+    margin-bottom: 50px;
+  }
+}
+

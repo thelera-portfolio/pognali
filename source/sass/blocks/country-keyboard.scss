@@ -1,0 +1,95 @@
+.country-keyboard {
+  @include font-name;
+  font-weight: 500;
+  line-height: 1;
+  color: $blue-4;
+
+  border-collapse: collapse;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.country-keyboard__item {
+  padding: 0;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #ffffff;
+  border: 1px solid $grey-2;
+
+  &--checked {
+    color: #ffffff;
+
+    background-color: $blue-4;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .country-keyboard {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+  }
+
+  .country-keyboard__item {
+    width: 44px;
+    height: 42px;
+
+    &:last-child {
+      width: 43px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .country-keyboard {
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &--catalog {
+      .country-keyboard__item {
+        width: 71px;
+        margin-right: 46px;
+        font-size: 60px;
+        line-height: 0.4;
+        color: rgba($blue-2, 0.2);
+
+        background-color: transparent;
+        border: 0;
+
+        &--checked {
+          color: $blue-2;
+        }
+      }
+    }
+  }
+
+  .country-keyboard__item {
+    width: 52px;
+    height: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-keyboard {
+    margin-top: 37px;
+    margin-bottom: 34px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    border-collapse: separate;
+    border-spacing: 15px;
+
+    &--catalog {
+      display: none;
+    }
+  }
+
+  .country-keyboard__item {
+    width: 60px;
+    height: 70px;
+  }
+}

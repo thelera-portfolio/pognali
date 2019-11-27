@@ -1,11 +1,27 @@
 .index-title {
-  width: 220px;
   margin: 0;
 
   @include font-name;
-  font-size: 24px;
   font-weight: 700;
   line-height: 1;
 
   color: $yellow-3;
+}
+
+@media (max-width: $mobile-width-only) {
+  .index-title {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .index-title {
+    font-size: 45px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .index-title {
+    font-size: 45px;
+  }
 }

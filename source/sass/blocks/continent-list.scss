@@ -1,19 +1,61 @@
 .continent-list {
+  display: flex;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  &--hide {
+    display: none;
+  }
 }
 
 .continent-list__item {
   @include font-name;
-  font-size: 16px;
   font-weight: 700;
-  line-height: 1.38;
   text-transform: uppercase;
   color: rgba($blue-2, 0.3);
 
   &--checked {
     color: $blue-2;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .continent-list {
+    flex-direction: column;
+  }
+
+  .continent-list__item {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .continent-list__item {
+    margin-right: 25px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .filter-country__title {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .continent-list__item {
+    margin-right: 25px;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

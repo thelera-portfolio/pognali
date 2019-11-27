@@ -1,9 +1,48 @@
+$padding-top-mobile: 105px;
+$padding-bottom-mobile: 35px;
+$padding-top-tablet: 135px;
+$padding-bottom-tablet: 86px;
+$padding-top-desktop: 165px;
+$padding-bottom-desktop: 165px;
+
 .rates {
   @include font-name;
 
   background-color: $grey-1;
-  border-bottom-right-radius: $radius-3;
-  border-bottom-left-radius: $radius-3;
+  border-bottom-right-radius: $radius-4;
+  border-bottom-left-radius: $radius-4;
+}
+
+.rates__inner {
+  position: relative;
+
+  padding-top: $padding-top-mobile;
+  padding-bottom: $padding-bottom-mobile;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 97px;
+    right: $mobile-padding;
+
+    width: 99px;
+    height: 99px;
+
+    background-image: url("../../img/rates@1x.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.rates__text {
+  width: 200px;
+  margin-bottom: 55px;
+  padding-right: 110px;
+}
+
+.rates__list {
+  margin-bottom: 30px;
 }
 
 .rates__more-link {
@@ -12,4 +51,124 @@
   line-height: 1;
   text-decoration: none;
   color: $blue-2;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .rates {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+
+  .rates__inner {
+    padding-top: $padding-top-tablet;
+    padding-bottom: $padding-bottom-tablet;
+
+    &::before {
+      top: auto;
+      right: 90px;
+      bottom: 48px;
+
+      width: 99px;
+      height: 99px;
+    }
+  }
+
+  .rates__text {
+    align-self: center;
+    width: auto;
+    margin-bottom: 70px;
+    padding: 0;
+  }
+
+  .rates__list {
+    align-self: flex-start;
+    margin-bottom: 59px;
+  }
+
+  .rates__more-link {
+    position: relative;
+
+    align-self: flex-start;
+    padding-left: 90px;
+
+    font-size: 20px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -25px;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+
+      background-color: $grey-4;
+      background-image: url("../../img/business.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 17px 21px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rates {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+
+  .rates__inner {
+    padding-top: $padding-top-desktop;
+    padding-bottom: $padding-bottom-desktop;
+
+    &::before {
+      top: auto;
+      right: 133px;
+      bottom: 244px;
+
+      width: 198px;
+      height: 198px;
+    }
+  }
+
+  .rates__text {
+    align-self: center;
+    width: auto;
+    margin-bottom: 130px;
+    padding: 0;
+  }
+
+  .rates__list {
+    margin-bottom: 58px;
+    margin-left: 70px;
+  }
+
+  .rates__more-link {
+    position: relative;
+
+    margin-left: 70px;
+    padding-left: 90px;
+
+    font-size: 20px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -25px;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+
+      background-color: $grey-4;
+      background-image: url("../../img/business.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 17px 21px;
+      border-radius: 50%;
+    }
+  }
 }

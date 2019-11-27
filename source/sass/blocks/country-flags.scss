@@ -6,11 +6,11 @@
 }
 
 .country-flags__item {
-  width: 35px;
-  height: 24px;
+  position: relative;
+
+  padding-left: 55px;
 
   @include font-name;
-  font-size: 15px;
   font-weight: 500;
   line-height: 1.2;
   text-transform: uppercase;
@@ -18,6 +18,17 @@
 
   background-repeat: no-repeat;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    width: 35px;
+    height: 24px;
+
+    border: 1px solid grey;;
+  }
   // &--shri-lanka {
   // }
 
@@ -32,4 +43,24 @@
 
   // &--czech {
   // }
+}
+
+@media (max-width: $mobile-width-only) {
+  .country-flags__item {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .country-flags__item {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .country-flags__item {
+    margin-bottom: 18px;
+
+    font-size: 20px;
+  }
 }

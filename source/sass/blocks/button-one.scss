@@ -1,29 +1,52 @@
 .button-one {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
-  height: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   @include font-name;
-  font-size: 17px;
   font-weight: 700;
-  line-height: 1.76;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  vertical-align: middle;
   color: $blue-1;
 
   background-color: $yellow-1;
-  border-radius: $radius-2;
+  border: none;
 
   &:hover {
     background-color: $yellow-2;
   }
 
   &--bgc {
-    background-color: $grey-3;
+    background-color: $grey-7;
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .button-one {
+    font-size: 17px;
+    line-height: 1.76;
+
+    border-radius: $radius-2;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .button-one {
+    font-size: 20px;
+    line-height: 1.5;
+
+    border-radius: $radius-3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button-one {
+    font-size: 20px;
+    line-height: 1.5;
+
+    border-radius: $radius-3;
+  }
+}

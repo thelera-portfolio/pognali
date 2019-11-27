@@ -1,15 +1,20 @@
 .business-rates-modal {
-  width: 270px;
-  margin: 0 auto;
-  padding-top: 30px;
-  padding-right: 25px;
-  padding-bottom: 20px;
-  padding-left: 25px;
+  position: absolute;
+  z-index: 10;
+  top: 20px;
 
-  border-radius: $radius-2;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
   background-color: #ffffff;
-  background-image: linear-gradient(to top, #f3f4f8 59px, #ffffff 59px);
+
+  &--show {
+    display: flex;
+  }
 }
 
 .business-rates-modal__title {
@@ -21,9 +26,7 @@
   padding: 0;
 
   @include font-name;
-  font-size: 16px;
   font-weight: 700;
-  line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
   vertical-align: middle;
@@ -31,4 +34,114 @@
 
   background-color: transparent;
   border: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .business-rates-modal {
+    left: calc(50% - 135px);
+
+    width: 270px;
+    padding-top: 30px;
+    padding-right: 25px;
+    padding-left: 25px;
+
+    border-radius: $radius-2;
+  }
+
+  .business-rates-modal__list {
+    margin-bottom: 33px;
+  }
+
+  .business-rates-modal__close-button {
+    width: 270px;
+    padding-top: 18px;
+    padding-bottom: 17px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    background-color: #f3f4f8;
+    border-bottom-right-radius: $radius-2;
+    border-bottom-left-radius: $radius-2;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .business-rates-modal {
+    top: $radius-5;
+    left: calc(50% - 384px);
+
+    width: 768px;
+    padding-top: 52px;
+    padding-right: 92px;
+    padding-left: 92px;
+
+    border-radius: $radius-4;
+  }
+
+  .business-rates-modal__title {
+    margin-bottom: 47px;
+  }
+
+  .business-rates-modal__list {
+    margin-bottom: 51px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .business-rates-modal__close-button {
+    width: 768px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    font-size: 24px;
+    line-height: 1;
+    text-transform: none;
+
+    background-color: #f3f4f8;
+    border-bottom-right-radius: $radius-4;
+    border-bottom-left-radius: $radius-4;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .business-rates-modal {
+    top: 150px;
+    left: calc(50% - 384px);
+
+    width: 768px;
+    padding-top: 52px;
+    padding-right: 92px;
+    padding-left: 92px;
+
+    border-radius: $radius-4;
+  }
+
+  .business-rates-modal__title {
+    margin-bottom: 47px;
+  }
+
+  .business-rates-modal__list {
+    margin-bottom: 51px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .business-rates-modal__close-button {
+    width: 768px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    font-size: 24px;
+    line-height: 1;
+    text-transform: none;
+
+    background-color: #f3f4f8;
+    border-bottom-right-radius: $radius-4;
+    border-bottom-left-radius: $radius-4;
+  }
 }

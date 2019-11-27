@@ -1,8 +1,354 @@
-.travelmate-form__legend {
+.travelmate-form__fieldset {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   @include font-name;
-  font-size: 16px;
   font-weight: 700;
+
+  border: none;
+}
+
+.travelmate-form__legend {
   line-height: 1.13;
   text-transform: uppercase;
   color: $blue-4;
+}
+
+.travelmate-form__label {
+  position: relative;
+
+  font-weight: 400;
+  line-height: 1;
+  color: $grey-5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+  }
+}
+
+.travelmate-form__checkbox:checked + .travelmate-form__label {
+  &::before {
+    background-image: url("../../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.travelmate-form__label--range {
+  position: static;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  color: $blue-4;
+
+  background-color: #ffffff;
+  border: solid 1px $grey-2;
+}
+
+.travelmate-form__range--custom-range {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $blue-4;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $blue-4;
+    border-radius: 50%;
+  }
+}
+
+.travelmate-form__button {
+  background-color: #ffffff;
+}
+
+@media (max-width: $mobile-width-only) {
+  .travelmate-form__fieldset {
+  }
+
+  .travelmate-form__legend {
+    width: 100%;
+    padding-top: 13px;
+    margin-bottom: 21px;
+
+    font-size: 16px;
+
+    border-top: 1px solid #f3c72b;
+  }
+
+  .travelmate-form__label {
+    margin-bottom: 14px;
+    padding-left: 25px;
+
+    font-size: 15px;
+
+    &::before {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .travelmate-form__checkbox {
+
+  }
+
+  .travelmate-form__checkbox:checked + .travelmate-form__label {
+    &::before {
+      background-size: 9px 9px;
+    }
+  }
+
+  .travelmate-form__transport {
+    margin-bottom: 19px;
+  }
+
+  .travelmate-form__label--range {
+    width: 220px;
+    height: 35px;
+    margin-bottom: 24px;
+    padding: 0;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 1.5px;
+
+    &::before {
+      width: 0;
+    }
+  }
+
+  .travelmate-form__range--custom-range {
+    width: 220px;
+    height: 2px;
+    margin-bottom: 26px;
+
+    background-image: linear-gradient(to right, rgba($blue-4, 0.2) 76px, $blue-4 76px);
+
+    &::before {
+      left: 71px;
+      top: -4px;
+      width: 10px;
+      height: 10px;
+    }
+
+    &::after {
+      left: 210px;
+      top: -4px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .travelmate-form__button {
+    width: 230px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .travelmate-form {
+    border-top: 1px solid #f3c72b;
+    padding-top: 38px;
+  }
+
+  .travelmate-form__fieldset {
+    position: relative;
+    // баг fieldset в chrome: не работает flex
+    display: block;
+    padding-bottom: 34px;
+
+    &:last-of-type {
+      margin-bottom: 36px;
+
+      border-bottom: 1px solid #f3c72b;
+    }
+  }
+
+  .travelmate-form__legend {
+    position: absolute;
+    font-size: 20px;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  .travelmate-form__label {
+    display: inline-block;
+    width: 160px;
+    padding-left: 35px;
+
+    font-size: 20px;
+    vertical-align: middle;
+
+    &::before {
+      top: -3px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &:first-of-type {
+      margin-left: 125px;
+    }
+  }
+
+  .travelmate-form__checkbox {
+
+  }
+
+  .travelmate-form__checkbox:checked + .travelmate-form__label {
+    &::before {
+      background-size: 12px 12px;
+    }
+  }
+
+  .travelmate-form__transport {
+    margin-top: -10px;
+    margin-bottom: 14px;
+    margin-left: 125px;
+  }
+
+  .travelmate-form__label--range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 46px;
+    margin-top: -10px;
+    padding: 0;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+
+    &:first-of-type {
+      margin-left: 467px;
+    }
+
+    &::before {
+      width: 0;
+    }
+  }
+
+  .travelmate-form__range--custom-range {
+    position: absolute;
+    top: 10px;
+    width: 277px;
+    height: 3px;
+    margin-left: 125px;
+
+    background-image: linear-gradient(to right, rgba($blue-4, 0.2) 76px, $blue-4 76px);
+
+    &::before {
+      left: 70px;
+      top: -4px;
+      width: 13px;
+      height: 13px;
+    }
+
+    &::after {
+      left: 264px;
+      top: -4px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  .travelmate-form__button {
+    width: 618px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmate-form__fieldset {
+    flex-direction: column;
+  }
+
+  .travelmate-form__legend {
+    margin-bottom: 28px;
+
+    font-size: 20px;
+  }
+
+  .travelmate-form__label {
+    margin-bottom: 20px;
+    padding-left: 35px;
+
+    font-size: 20px;
+
+    &::before {
+      top: -4px;
+
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .travelmate-form__checkbox {
+
+  }
+
+  .travelmate-form__checkbox:checked + .travelmate-form__label {
+    &::before {
+      background-size: 12px 12px;
+    }
+  }
+
+  .travelmate-form__transport {
+    margin-bottom: 36px;
+  }
+
+  .travelmate-form__label--range {
+    width: 191px;
+    height: 46px;
+    margin-bottom: 36px;
+    padding: 0;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .travelmate-form__range--custom-range {
+    width: 191px;
+    height: 3px;
+    margin-bottom: 43px;
+
+    background-image: linear-gradient(to right, rgba($blue-4, 0.2) 66px, $blue-4 66px);
+
+    &::before {
+      left: 60px;
+      top: -4px;
+      width: 13px;
+      height: 13px;
+    }
+
+    &::after {
+      left: 178px;
+      top: -4px;
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  .travelmate-form__button {
+    width: 196px;
+  }
 }

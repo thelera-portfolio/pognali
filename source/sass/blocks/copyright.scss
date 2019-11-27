@@ -1,17 +1,17 @@
 .copyright {
   display: flex;
-  width: 270px;
+  justify-content: space-between;
+  align-items: center;
 
   @include font-name;
+  line-height: 1;
 }
 
 .copyright__text {
   margin: 0;
   margin-right: auto;
 
-  font-size: 16px;
   font-weight: 400;
-  line-height: 1.38;
   color: $grey-5;
 }
 
@@ -19,9 +19,41 @@
   display: block;
   width: 27px;
   height: 34px;
-  margin-left: auto;
 
   background-image: url("../../img/htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .copyright {
+    width: 270px;
+  }
+
+  .copyright__text {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .copyright {
+    width: 154px;
+  }
+
+  .copyright__text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    width: 154px;
+  }
+
+  .copyright__text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }

@@ -34,5 +34,21 @@
     background-image: url("../../img/instagram.svg");
     background-size: 24px 24px;
   }
+
+  &--color-white {
+    background-color: #ffffff;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+
+}
+
+@media (min-width: $desktop-width) {
+
 }
 

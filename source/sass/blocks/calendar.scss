@@ -1,0 +1,96 @@
+.calendar {
+  @include font-name;
+  font-weight: 400;
+  color: $grey-5;
+
+  border-collapse: collapse;
+}
+
+.calendar__item {
+  padding: 0;
+
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: $grey-1;
+  border: 1px solid $grey-6;
+
+  &--disabled {
+    color: rgba($grey-5, 0.3);
+
+    background-color: #ffffff;
+  }
+
+  &--checked {
+    color: #ffffff;
+
+    background-color: $blue-4;
+  }
+}
+
+.calendar__days-of-week .calendar__item {
+  background-color: transparent;
+  border: none;
+}
+
+.calendar__item--weekend {
+  color: $yellow-5;
+}
+
+@media (max-width: $mobile-width-only) {
+  .calendar {
+    margin-bottom: 22px;
+
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .calendar__item {
+    width: 30px;
+    height: 30px;
+
+    &--text {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .calendar {
+    margin-bottom: 46px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 2px;
+  }
+
+  .calendar__item {
+    width: 75px;
+    height: 70px;
+
+    &--text {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .calendar {
+    margin-bottom: 56px;
+
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.8px;
+  }
+
+  .calendar__item {
+    width: 141px;
+    height: 72px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+
+    text-align: left;
+    vertical-align: top;
+  }
+}

@@ -1,10 +1,69 @@
-@import "../variables.scss";
+.header__toggle {
+  padding: 0;
 
-.header {
-  padding-top: 25px;
+  background-color: transparent;
+  border: none;
+}
 
-  background-color: $blue-1;
-<<<<<<< HEAD
+@media (max-width: $mobile-width-only) {
+  .header {
+    background-color: $blue-1;
+  }
+
+  .header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 73px;
+  }
+
+  .header__toggle-icon {
+    path {
+      fill: #ffffff;
+    }
+  }
+
+  .header__login-button {
+    display: none;
+  }
+
+  .header__menu {
+    top: -73px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .header {
+    background-color: $blue-1;
+  }
+
+  .header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 132px;
+  }
+
+  .header__logo {
+    width: 166px;
+    height: 42px;
+
+    background-image: url("../../img/logo-tablet-white@1x.png");
+  }
+
+  .header__toggle-icon {
+    path {
+      fill: #ffffff;
+    }
+  }
+
+  .header__login-button {
+    width: 188px;
+  }
+
+  .header__menu {
+    top: -132px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -15,12 +74,24 @@
     padding-top: 47px;
     padding-right: 60px;
     padding-left: 60px;
+
+    background-color: $blue-1;
+  }
+
+  .header__inner {
+    display: none;
   }
 
   .header__logo {
-    margin-right: 145px;
+    display: none;
   }
-=======
->>>>>>> a8ebedf558042914048e3f8f3de3d5b981c87d58
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__login-button {
+    display: none;
+  }
 }
 

@@ -1,0 +1,119 @@
+.transport {
+  display: flex;
+  flex-direction: row;
+}
+
+.transport__icon {
+  position: relative;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &--plane::before {
+    width: 19px;
+    height: 21px;
+    margin-left: calc(50% - 10px);
+    margin-top: calc(50% - 10px);
+    background-image: url("../../img/plane.svg");
+    opacity: 0.15;
+  }
+
+  &--plane--active::before {
+    background-image: url("../../img/plane-on.svg");
+    opacity: 1;
+  }
+
+  &--bus::before {
+    width: 17px;
+    height: 21px;
+    margin-left: calc(50% - 8px);
+    margin-top: calc(50% - 10px);
+    background-image: url("../../img/bus.svg");
+    opacity: 0.15;
+  }
+
+  &--bus--active::before {
+    background-image: url("../../img/bus-on.svg");
+    opacity: 1;
+  }
+
+  &--cycle::before {
+    width: 24px;
+    height: 21px;
+    margin-left: calc(50% - 12px);
+    margin-top: calc(50% - 10px);
+    background-image: url("../../img/bike.svg");
+    opacity: 0.15;
+  }
+
+  &--cycle--active::before {
+    background-image: url("../../img/cycle-on.svg");
+    opacity: 1;
+  }
+
+  &--foot::before {
+    width: 20px;
+    height: 21px;
+    margin-left: calc(50% - 10px);
+    margin-top: calc(50% - 10px);
+    background-image: url("../../img/run.svg");
+    opacity: 0.15;
+  }
+
+  &--foot--active::before {
+    background-image: url("../../img/run-on.svg");
+    opacity: 1;
+  }
+}
+
+.transport__checkbox:checked + .transport__icon--plane::before {
+  background-image: url("../../img/plane-on.svg");
+  opacity: 1;
+}
+
+.transport__checkbox:checked + .transport__icon--bus::before {
+  background-image: url("../../img/bus-on.svg");
+  opacity: 1;
+}
+
+.transport__checkbox:checked + .transport__icon--cycle::before {
+  background-image: url("../../img/bike-on.svg");
+  opacity: 1;
+}
+
+.transport__checkbox:checked + .transport__icon--foot::before {
+  background-image: url("../../img/run-on.svg");
+  opacity: 1;
+}
+
+@media (max-width: $mobile-width-only) {
+  .transport__icon {
+    width: 33px;
+    height: 33px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .transport__icon {
+    width: 43px;
+    height: 43px;
+    //margin-right: 13px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transport__icon {
+    width: 43px;
+    height: 43px;
+  }
+}

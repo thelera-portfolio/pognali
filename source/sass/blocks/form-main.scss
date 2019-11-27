@@ -1,0 +1,31 @@
+.form-main__title-inner {
+  position: relative;
+  z-index: 1;
+
+  background-color: $blue-1;
+}
+
+.form-main__title {
+    margin: 0 auto;
+}
+
+@media (max-width: $mobile-width-only) {
+  .form-main__title-inner {
+    border-bottom-right-radius: $radius-2;
+    border-bottom-left-radius: $radius-2;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .form-main__title-inner {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-main__title-inner {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+}

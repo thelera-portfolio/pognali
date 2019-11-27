@@ -1,19 +1,291 @@
+$padding-top-mobile: 133px;
+$padding-bottom-mobile: 30px;
+$padding-top-tablet: 200px;
+$padding-bottom-tablet: 85px;
+$padding-top-desktop: 190px;
+$padding-bottom-desktop: 133px;
+
 .travelmates {
   @include font-name;
 
   background-color: $blue-2;
-  border-bottom-right-radius: $radius-3;
-  border-bottom-left-radius: $radius-3;
+  border-bottom-right-radius: $radius-4;
+  border-bottom-left-radius: $radius-4;
+}
+
+.travelmates__inner {
+  position: relative;
+
+  align-items: flex-start;
+  padding-top: $padding-top-mobile;
+  padding-bottom: $padding-bottom-mobile;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 380px;
+    left: 0;
+
+    width: 71px;
+    height: 71px;
+
+    background-image: url("../../img/rogovaya-back-mobile@1x.png");
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    right: $mobile-padding;
+
+    width: 143px;
+    height: 143px;
+
+    background-image: url("../../img/smolov-back-desktop@1x.png");
+  }
+}
+
+.travelmates__title {
+  position: relative;
+
+  margin-bottom: 20px;
+  margin-left: 25px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: -35px;
+    left: -65px;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: $blue-5;
+    border-radius: $radius-2;
+  }
 }
 
 .travelmates__text {
   width: 220px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+
+  &:last-of-type {
+    margin-bottom: 60px;
+  }
+
+  br {
+    display: none;
+  }
 }
 
 .travelmates__list {
-  width: 270px;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 
   list-style: none;
+}
+
+.travelmates__item {
+  margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .travelmates {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+
+  .travelmates__inner {
+    position: relative;
+
+    align-items: flex-start;
+    padding-top: $padding-top-tablet;
+    padding-bottom: $padding-bottom-tablet;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 143px;
+      right: 0;
+      left: auto;
+
+      width: 285px;
+      height: 285px;
+
+      background-image: url("../../img/rogovaya-back-desktop@1x.png");
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: 480px;
+      left: 0;
+
+      width: 143px;
+      height: 143px;
+
+      background-image: url("../../img/smolov-back-desktop@1x.png");
+    }
+  }
+
+  .travelmates__title {
+    position: relative;
+
+    margin-bottom: 60px;
+    margin-left: 36px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: -63px;
+      left: -35px;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: $blue-5;
+      border-radius: $radius-2;
+    }
+  }
+
+  .travelmates__text {
+    width: 430px;
+    margin-bottom: 35px;
+    margin-left: 36px;
+
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+
+  .travelmates__list {
+    display: flex;
+    align-self: center;
+    margin-bottom: 80px;
+  }
+
+  .travelmates__item {
+    margin-right: 48px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .travelmates__button {
+    width: 618px;
+    margin-left: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+
+  .travelmates__inner {
+    position: relative;
+
+    padding-top: $padding-top-desktop;
+    padding-bottom: $padding-bottom-desktop;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      bottom: 80px;
+      left: 191px;
+
+      width: 285px;
+      height: 285px;
+
+      background-image: url("../../img/rogovaya-back-desktop@1x.png");
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: auto;
+      left: 547px;
+
+      width: 143px;
+      height: 143px;
+
+      background-image: url("../../img/smolov-back-desktop@1x.png");
+    }
+  }
+
+  .travelmates__title {
+    position: relative;
+
+    margin-bottom: 60px;
+    margin-left: 72px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: -1;
+      top: -63px;
+      left: -71px;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: $blue-5;
+      border-radius: $radius-2;
+    }
+  }
+
+  .travelmates__text {
+    width: 430px;
+    margin-bottom: 45px;
+    margin-left: 72px;
+
+    &:last-of-type {
+      margin-bottom: 85px;
+    }
+  }
+
+  .travelmates__list {
+    position: absolute;
+    left: 750px;
+
+    display: flex;
+  }
+
+  .travelmates__item {
+    margin-right: 60px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  .travelmates__button {
+    width: 280px;
+    margin-left: 72px;
+  }
 }

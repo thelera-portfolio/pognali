@@ -1,12 +1,14 @@
 .button-two {
-  display: inline-block;
-  width: 270px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 24px;
 
   @include font-name;
-  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
@@ -14,10 +16,107 @@
   vertical-align: middle;
   color: $blue-4;
 
+  border: 0;
   background-color: $yellow-1;
-  border-radius: $radius-1;
 
   &:hover {
     background-color: $yellow-2;
+  }
+
+  &--bgc {
+    background-color: $grey-3;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 14px;
+
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--back::after {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 14px;
+
+    background-image: url("../../img/triangle-arrow-left.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .button-two {
+    width: 270px;
+
+    font-size: 18px;
+
+    border-radius: $radius-1;
+
+    &::after {
+      top: calc(50% - 7px);
+      right: 23px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .button-two {
+    width: 285px;
+    height: 81px;
+
+    font-size: 24px;
+
+    border-radius: $radius-2;
+
+    &::after {
+      top: calc(50% - 7px);
+      right: 36px;
+    }
+
+    &--back {
+      padding-left: 70px;
+    }
+
+    &--back::after {
+      top: calc(50% - 7px);
+      left: 36px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button-two {
+    width: 285px;
+    height: 81px;
+
+    font-size: 24px;
+
+    border-radius: $radius-2;
+
+    &::after {
+      top: calc(50% - 7px);
+      right: 36px;
+    }
+
+    &--back {
+      padding-left: 70px;
+    }
+
+    &--back::after {
+      top: calc(50% - 7px);
+      left: 36px;
+    }
   }
 }

@@ -1,23 +1,34 @@
 .inner {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: $mobile-width;
+  flex-wrap: wrap;
   margin: 0 auto;
+}
 
-  &--find-travelmate {
-    background-color: $yellow-1;
-    border-radius: $radius-2;
+@media (max-width: $mobile-width-only) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+    width: $mobile-width;
+    padding-right: $mobile-padding;
+    padding-left: $mobile-padding;
   }
+}
 
-  &--travelmates-filtered {
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+    width: $tablet-width;
+    padding-right: $tablet-padding;
+    padding-left: $tablet-padding;
   }
 }
 
 @media (min-width: $desktop-width) {
   .inner {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: $desktop-width;
+    padding-right: $desktop-padding;
+    padding-left: $desktop-padding;
   }
 }
