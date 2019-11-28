@@ -1,3 +1,10 @@
+$padding-top-mobile: 30px;
+$padding-bottom-mobile: 74px;
+$padding-top-tablet: 57px;
+$padding-bottom-tablet: 93px;
+$padding-top-desktop: 57px;
+$padding-bottom-desktop: 132px;
+
 .add-plan {
   @include font-name;
   font-weight: 700;
@@ -5,55 +12,42 @@
   color: $blue-4;
 
   background-color: $grey-6;
+  border-top-right-radius: $radius-4;
+  border-top-left-radius: $radius-4;
 }
 
 .add-plan__inner {
   position: relative;
+
+  padding-top: $padding-top-mobile;
+  padding-bottom: $padding-bottom-mobile;
 }
 
 .add-plan__title {
+  align-self: flex-start;
   margin: 0;
+  margin-bottom: 31px;
+
+  font-size: 24px;
 }
 
 .add-plan__controls-list {
   position: absolute;
-}
 
-@media (max-width: $mobile-width-only) {
-  .add-plan {
-    margin-top: -$radius-4;
-    padding-top: 30px;
-    padding-bottom: 44px + $radius-4;
-
-    border-top-right-radius: $radius-4;
-    border-top-left-radius: $radius-4;
-  }
-
-  .add-plan__title {
-    align-self: flex-start;
-    margin-bottom: 31px;
-
-    font-size: 24px;
-  }
-
-  .add-plan__controls-list {
-    top: 10px;
-    right: 42px;
-  }
+  top: 39px;
+  right: 42px;
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .add-plan {
-    margin-top: -$radius-4;
-    padding-top: 57px;
-    padding-bottom: 63px + $radius-4;
-
     border-top-right-radius: $radius-4;
     border-top-left-radius: $radius-4;
   }
 
   .add-plan__inner {
+    padding-top: $padding-top-tablet;
     padding-right: 75px;
+    padding-bottom: $padding-bottom-tablet;
     padding-left: 75px;
   }
 
@@ -66,24 +60,26 @@
   }
 
   .add-plan__controls-list {
-    top: 10px;
+    top: 70px;
     right: 75px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .add-plan {
-    margin-top: -$radius-5;
-    padding-top: 57px;
-    padding-bottom: 72px + $radius-5;
-
     border-top-right-radius: $radius-5;
     border-top-left-radius: $radius-5;
+  }
+
+  .add-plan__inner {
+    padding-top: $padding-top-desktop;
+    padding-bottom: $padding-bottom-desktop;
   }
 
   .add-plan__title {
     align-self: flex-start;
     margin-bottom: 60px;
+    margin-left: 64px;
 
     font-size: 36px;
     line-height: 1.39;

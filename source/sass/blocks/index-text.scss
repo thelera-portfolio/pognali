@@ -2,18 +2,13 @@
   margin: 0;
 
   @include font-name;
+  font-size: 16px;
   font-weight: 300;
+  line-height: 1.38;
   color: #ffffff;
 
   &--bold {
     font-weight: 700;
-  }
-}
-
-@media (max-width: $mobile-width-only) {
-  .index-text {
-    font-size: 16px;
-    line-height: 1.38;
   }
 }
 

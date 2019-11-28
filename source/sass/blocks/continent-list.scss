@@ -1,5 +1,6 @@
 .continent-list {
   display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 
@@ -12,7 +13,9 @@
 
 .continent-list__item {
   @include font-name;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 1.38;
   text-transform: uppercase;
   color: rgba($blue-2, 0.3);
 
@@ -21,18 +24,11 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .continent-list {
-    flex-direction: column;
-  }
-
-  .continent-list__item {
-    font-size: 16px;
-    line-height: 1.38;
-  }
-}
-
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .continent-list {
+    flex-direction: row;
+  }
+
   .continent-list__item {
     margin-right: 25px;
     font-size: 20px;
@@ -49,6 +45,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .continent-list {
+    flex-direction: row;
+  }
+
   .continent-list__item {
     margin-right: 25px;
     font-size: 20px;

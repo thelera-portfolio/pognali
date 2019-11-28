@@ -1,6 +1,8 @@
 .review {
+  width: 190px;
   margin: 0;
   padding: 0;
+  padding-left: 25px;
 
   @include font-name;
   color: #ffffff;
@@ -8,23 +10,13 @@
 
 .review__text {
   margin: 0;
+  margin-bottom: 25px;
 }
 
 .review__author {
   display: block;
 
   font-style: normal;
-}
-
-@media (max-width: $mobile-width-only) {
-  .review {
-    width: 190px;
-    padding-left: 25px;
-  }
-
-  .review__text {
-    margin-bottom: 25px;
-  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
@@ -41,6 +33,7 @@
 @media (min-width: $desktop-width) {
   .review {
     width: $desktop-width - 2 * $desktop-padding;
+    padding: 0;
   }
 
   .review__text {

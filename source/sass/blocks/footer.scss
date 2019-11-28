@@ -1,34 +1,36 @@
+$padding-top-mobile: 35px;
+$padding-bottom-mobile: 14px;
+$padding-top-tablet: 50px;
+$padding-bottom-tablet: 50px;
+$padding-top-desktop: 50px;
+$padding-bottom-desktop: 50px;
+
 .footer {
   position: relative;
   z-index: 1;
 
+  margin-top: -$radius-4;
+
   background-color: #ffffff;
+  border-top-right-radius: $radius-4;
+  border-top-left-radius: $radius-4;
 }
 
-@media (max-width: $mobile-width-only) {
-  .footer {
-    margin-top: -$radius-4;
+.footer__inner {
+  padding-top: $padding-top-mobile;
+  padding-bottom: $padding-bottom-mobile;
+}
 
-    border-top-right-radius: $radius-4;
-    border-top-left-radius: $radius-4;
-  }
+.footer__logo {
+  margin-bottom: 41px;
+}
 
-  .footer__inner {
-    padding-top: 35px;
-    padding-bottom: 14px;
-  }
-
-  .footer__logo {
-    margin-bottom: 41px;
-  }
-
-  .footer__socials {
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 14px;
-    padding-bottom: 37px;
-    border-bottom: 1px solid rgba(#000000, 0.05);
-  }
+.footer__socials {
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 14px;
+  padding-bottom: 37px;
+  border-bottom: 1px solid rgba(#000000, 0.05);
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
@@ -42,12 +44,19 @@
   .footer__inner {
     flex-direction: row;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: $padding-top-tablet;
+    padding-bottom: $padding-bottom-tablet;
   }
 
   .footer__logo {
+    margin: 0;
     margin-right: auto;
+  }
+
+  .footer__socials {
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .footer__copyright {
@@ -66,12 +75,19 @@
   .footer__inner {
     flex-direction: row;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: $padding-top-desktop;
+    padding-bottom: $padding-bottom-desktop;
   }
 
   .footer__logo {
+    margin: 0;
     margin-right: auto;
+  }
+
+  .footer__socials {
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
 
   .footer__copyright {

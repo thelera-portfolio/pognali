@@ -38,7 +38,6 @@ $padding-bottom-desktop: 57px;
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .map__contacts {
-    background-color: $yellow-1;
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;
   }
@@ -65,7 +64,6 @@ $padding-bottom-desktop: 57px;
 
 @media (min-width: $desktop-width) {
   .map__contacts {
-    background-color: $yellow-1;
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;
   }

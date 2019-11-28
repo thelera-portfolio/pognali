@@ -7,13 +7,16 @@
   padding-bottom: 5px;
 
   @include font-name;
+  font-size: 17px;
   font-weight: 700;
+  line-height: 1.76;
   text-transform: uppercase;
   text-decoration: none;
   color: $blue-1;
 
   background-color: $yellow-1;
   border: none;
+  border-radius: $radius-2;
 
   &:hover {
     background-color: $yellow-2;
@@ -24,17 +27,11 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .button-one {
-    font-size: 17px;
-    line-height: 1.76;
-
-    border-radius: $radius-2;
-  }
-}
-
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
   .button-one {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     font-size: 20px;
     line-height: 1.5;
 
@@ -44,6 +41,9 @@
 
 @media (min-width: $desktop-width) {
   .button-one {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
     font-size: 20px;
     line-height: 1.5;
 

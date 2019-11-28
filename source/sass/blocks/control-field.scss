@@ -13,15 +13,30 @@
 }
 
 .control-field__label {
+  position: relative;
+
   display: block;
+  width: 100%;
   margin-bottom: 9px;
 
   font-size: 16px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
+
+  &--travelmates::after {
+    content: "чел.";
+
+    position: absolute;
+    right: 0;
+
+    opacity: 0.3;
+  }
 }
 
 .control-field__input {
+  width: 220px;
+  height: 43px;
+  margin-bottom: 21px;
   padding: 0;
 
   @include font-name;
@@ -35,6 +50,7 @@
   border-radius: 4px;
 
   &--date {
+    font-size: 20px;
     font-weight: 700;
     text-align: center;
 
@@ -52,102 +68,53 @@
   border: none;
 
   opacity: 0.3;
-}
 
-@media (max-width: $mobile-width-only) {
-  .control-field {
+  &--minus {
+    top: 21px;
+    left: 14px;
+
+    width: 14px;
+    height: 2px;
+
+    background-image: url("../../img/qty-minus-mobile.svg");
+    background-size: 14px 2px;
   }
 
-  .control-field__label {
-    position: relative;
+  &--plus {
+    top: 15px;
+    right: 14px;
 
-    width: 100%;
+    width: 14px;
+    height: 14px;
 
-    font-size: 16px;
-    letter-spacing: 1.6px;
-
-    &--travelmates::after {
-      content: "чел.";
-
-      position: absolute;
-      right: 0;
-
-      opacity: 0.3;
-    }
-
-    &--days::after {
-      content: "дн.";
-
-      position: absolute;
-      right: 0;
-
-      opacity: 0.3;
-    }
+    background-image: url("../../img/qty-plus-mobile.svg");
+    background-size: 14px 14px;
   }
 
-  .control-field__input {
-    width: 220px;
-    height: 43px;
-    margin-bottom: 21px;
+  &--back {
+    top: 12px;
+    left: 0;
 
-    font-size: 15px;
+    width: 9px;
+    height: 17px;
 
-    &--date {
-      font-size: 20px;
-    }
+    background-image: url("../../img/month-arrow-left.svg");
+    background-size: 9px 17px;
   }
 
-  .control-field__button {
-    &--minus {
-      top: 21px;
-      left: 14px;
+  &--forward {
+    top: 12px;
+    right: 0;
 
-      width: 14px;
-      height: 2px;
+    width: 9px;
+    height: 17px;
 
-      background-image: url("../../img/qty-minus-mobile.svg");
-      background-size: 14px 2px;
-    }
-
-    &--plus {
-      top: 15px;
-      right: 14px;
-
-      width: 14px;
-      height: 14px;
-
-      background-image: url("../../img/qty-plus-mobile.svg");
-      background-size: 14px 14px;
-    }
-
-    &--back {
-      top: 12px;
-      left: 0;
-
-      width: 9px;
-      height: 17px;
-
-      background-image: url("../../img/month-arrow-left.svg");
-      background-size: 9px 17px;
-    }
-
-    &--forward {
-      top: 12px;
-      right: 0;
-
-      width: 9px;
-      height: 17px;
-
-      background-image: url("../../img/month-arrow-right.svg");
-      background-size: 9px 17px;
-    }
+    background-image: url("../../img/month-arrow-right.svg");
+    background-size: 9px 17px;
   }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-  .control-field {
-  }
-
   .control-field__label {
     position: relative;
 
@@ -244,8 +211,8 @@
   }
 
   .control-field__label {
-    margin-right: 32px;
     width: 200px;
+    margin-right: 32px;
 
     font-size: 20px;
     letter-spacing: 2px;
@@ -254,14 +221,20 @@
       content: "чел.";
 
       position: absolute;
+      right: auto;
       left: 436px;
+
+      opacity: 1;
     }
 
     &--days::after {
       content: "дн.";
 
       position: absolute;
+      right: auto;
       left: 436px;
+
+      opacity: 1;
     }
   }
 

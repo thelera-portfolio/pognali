@@ -10,7 +10,7 @@
   <body>
     <!-- Шапка сайта -->
     <header class="header">
-      <div class="header__inner inner">
+      <div class="header__inner header__inner--hide inner">
         <!-- Логотип -->
         <a class="header__logo logo" href="index.html">
           <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
@@ -74,13 +74,13 @@
 
     <!-- Основное содержимое -->
     <main class="form-main"> 
-      <div class="form-main__title-inner">
+      <div class="form-main__title-wrapper">
         <h1 class="form-main__title page-main-heading">Направления</h1>
       </div>
 
       <!-- Информация о пользователе -->
       <form class="form-main__form" action="https://echo.htmlacademy.ru" method="POST">
-        <section class="user-info">
+        <section class="form-main__user-info user-info">
           <div class="user-info__inner inner">
             <h2 class="visually-hidden">Информация о пользователе</h2>
             
@@ -119,7 +119,7 @@
         </section>
 
         <!-- Планы пользователя -->
-        <section class="user-plans">
+        <section class="form-main__user-plans user-plans">
           <div class="user-plans__inner inner">
             <h2 class="user-plans__title">Мои планы:</h2>
             
@@ -142,7 +142,7 @@
         </section>
 
         <!-- Добавить план пользователя  -->
-        <section class="add-plan">
+        <section class="form-main__add-plan add-plan">
           <div class="add-plan__inner inner">
             <h2 class="add-plan__title">Добавить план:</h2>
             
@@ -690,6 +690,7 @@
       var mainMenu = document.querySelector(".menu");
       var headerToggle = document.querySelector(".header__toggle");
       var mainMenuCloseButton = document.querySelector(".menu__close-button");
+      var headerTopMenu = document.querySelector(".header__inner");
 
       var countryDropdown = document.querySelector(".step__country-dropdown");
       var chooseCountrySelect = document.querySelector(".step__select--choose-country");
@@ -701,11 +702,13 @@
       mainMenuCloseButton.addEventListener("click", function () {
         mainMenu.classList.remove("menu--opened");
         mainMenu.classList.add("menu--closed");
+        headerTopMenu.classList.remove("header__inner--hide");
       });
 
       headerToggle.addEventListener("click", function () {
         mainMenu.classList.remove("menu--closed");
         mainMenu.classList.add("menu--opened");
+        headerTopMenu.classList.add("header__inner--hide");
       });
 
       chooseCountrySelect.addEventListener("click", function (evt) {

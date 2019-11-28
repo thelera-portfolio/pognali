@@ -3,12 +3,14 @@
 
   display: flex;
   align-items: center;
+  width: 270px;
 
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 24px;
 
   @include font-name;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
@@ -17,6 +19,7 @@
   color: $blue-4;
 
   border: 0;
+  border-radius: $radius-1;
   background-color: $yellow-1;
 
   &:hover {
@@ -35,6 +38,8 @@
     content: "";
 
     position: absolute;
+    top: calc(50% - 7px);
+    right: 23px;
 
     width: 10px;
     height: 14px;
@@ -53,21 +58,6 @@
 
     background-image: url("../../img/triangle-arrow-left.svg");
     background-repeat: no-repeat;
-  }
-}
-
-@media (max-width: $mobile-width-only) {
-  .button-two {
-    width: 270px;
-
-    font-size: 18px;
-
-    border-radius: $radius-1;
-
-    &::after {
-      top: calc(50% - 7px);
-      right: 23px;
-    }
   }
 }
 

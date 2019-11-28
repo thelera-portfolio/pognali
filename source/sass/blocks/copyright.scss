@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 270px;
 
   @include font-name;
   line-height: 1;
@@ -11,7 +12,9 @@
   margin: 0;
   margin-right: auto;
 
+  font-size: 16px;
   font-weight: 400;
+  line-height: 1.38;
   color: $grey-5;
 }
 
@@ -23,17 +26,6 @@
   background-image: url("../../img/htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-}
-
-@media (max-width: $mobile-width-only) {
-  .copyright {
-    width: 270px;
-  }
-
-  .copyright__text {
-    font-size: 16px;
-    line-height: 1.38;
-  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {

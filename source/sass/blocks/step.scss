@@ -4,6 +4,11 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 10px;
+  padding-top: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  padding-left: 24px;
 
   @include font-name;
   font-weight: 700;
@@ -11,29 +16,57 @@
   color: $blue-4;
 
   background-color: #ffffff;
+  border-radius: $radius-1;
 }
 
 .step__title {
   margin: 0;
+  margin-bottom: 18px;
+
+  font-size: 20px;
+
+  &--new-line {
+    display: block;
+  }
+}
+
+.step__controls-list {
+  display: none;
 }
 
 .step__text {
+  margin-bottom: 25px;
   padding: 0;
 
+  font-size: 16px;
   font-weight: 400;
+  line-height: 1.38;
   color: $grey-5;
+
+  &--break {
+    display: none;
+  }
 }
 
 .step__checkbox-label {
   position: relative;
 
+  margin-bottom: 26px;
+  padding-left: 39px;
+
+  font-size: 15px;
   font-weight: 500;
-  color: $blue-4;
+  color: $grey-5;
 
   &::before {
     content: "";
 
     position: absolute;
+    top: -6px;
+    left: 0;
+
+    width: 26px;
+    height: 26px;
 
     border: 1px solid $grey-2;
     border-radius: 4px;
@@ -45,6 +78,7 @@
     background-image: url("../../img/tick.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 9px 9px;
   }
 }
 
@@ -54,22 +88,12 @@
   }
 }
 
-.step__country-dropdown {
-  position: absolute;
-  z-index: 1;
-
-  display: none;
-
-  background-color: #ffffff;
-  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
-
-  &--show {
-    display: flex;
-  }
-}
-
 .step__country-dropdown-title {
   margin: 0;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
 
   text-transform: uppercase;
   color: #ffffff;
@@ -83,22 +107,55 @@
   position: relative;
 
   display: flex;
+  padding-bottom: 22px;
 
+  // градиент
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 4px;
+    left: 118px;
+
+    width: 49px;
+    height: 36px;
+
+    background-image: linear-gradient(to right, transparent 5%, #ffffff 40%);
+  }
+
+  // кнопка выпадающего списка
   &::after {
     content: "";
 
     position: absolute;
+    left: 118px;
+
+    width: 49px;
+    height: 40px;
 
     background-image: url("../../img/dropdown-form.svg");
+    background-position: 24px 16px;
     background-repeat: no-repeat;
+    background-size: 12px 7px;
 
     opacity: 0.3;
+  }
+
+  &:nth-of-type(4) {
+    margin-bottom: 25px;
   }
 }
 
 .step__select {
+  width: 168px;
+  height: 42px;
+  padding-left: 12px;
+
   @include font-name;
+  font-size: 14px;
   font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 
   background-color: transparent;
@@ -114,36 +171,112 @@
   position: relative;
 
   display: block;
+  width: 53px;
+  height: 42px;
+  margin-left: -1px;
 
-  &--hide {
-      display: none;
-    }
+  border-radius: 4px;
+  border: solid 1px $grey-2;
 
+  //черный круг
   &::before {
     content: "";
 
     position: absolute;
 
+    left: -4px;
+    top: 15px;
+
+    width: 8px;
+    height: 8px;
+
     background-color: #000000;
     border-radius: 50%;
   }
 
+  // кнопка-крестик
   &::after {
     content: "";
 
     position: absolute;
+    top: -11px;
+    left: 41px;
 
+    width: 21px;
+    height: 21px;
+
+    background-color: $grey-1;
     background-image: url("../../img/filter-close.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 9px 9px;
+    border-radius: 50%;
+  }
+
+  &--hide {
+    display: none;
+  }
+}
+
+.step__country-dropdown {
+  position: absolute;
+  z-index: 1;
+  top: 317px;
+  left: auto;
+
+  flex-direction: column;
+  display: none;
+  width: 220px;
+
+  background-color: #ffffff;
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+  border-bottom-left-radius: $radius-2;
+  border-bottom-right-radius: $radius-2;
+
+  &--show {
+    display: flex;
   }
 }
 
 .step__country {
+  position: relative;
+
+  margin-bottom: 16px;
+  padding-left: 12px;
+
+  font-size: 18px;
   font-weight: 500;
+  line-height: 1;
+
+  &--empty::before {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: -14px;
+
+    width: 17px;
+    height: 287px;
+
+    background-image: url("../../img/line.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 17px 287px;
+  }
 }
 
 .step__country-plan {
+  width: 220px;
+  height: 220px;
+  margin-bottom: 28px;
+  padding-top: 13px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 13px;
+
   @include font-name;
+  font-size: 16px;
+  line-height: 1.38;
   color: $grey-5;
 
   border-radius: 4px;
@@ -158,74 +291,21 @@
 
 .step__dropdown-close-button {
   position: absolute;
+  top: 12px;
+  right: 17px;
 
   background-color: transparent;
   border: 0;
 }
 
 .step__dropdown-button-image {
+  width: 9px;
+  height: 9px;
+
   fill: #ffffff;
 }
 
 @media (max-width: $mobile-width-only) {
-  .step {
-    margin-bottom: 10px;
-    padding-top: 24px;
-    padding-right: 24px;
-    padding-bottom: 24px;
-    padding-left: 24px;
-
-    border-radius: $radius-1;
-  }
-
-  .step__title {
-    margin-bottom: 18px;
-
-    font-size: 20px;
-
-    &--new-line {
-      display: block;
-    }
-  }
-
-  .step__controls-list {
-    display: none;
-  }
-
-  .step__text {
-    margin-bottom: 25px;
-
-    font-size: 16px;
-    line-height: 1.38;
-
-    &--break {
-      display: none;
-    }
-  }
-
-  .step__checkbox-label {
-    margin-bottom: 26px;
-    padding-left: 39px;
-
-    font-size: 15px;
-    font-weight: 400;
-    color: $grey-5;
-
-    &::before {
-      top: -6px;
-      left: 0;
-
-      width: 26px;
-      height: 26px;
-    }
-  }
-
-  .step__checkbox:checked + .step__checkbox-label {
-    &::before {
-      background-size: 9px 9px;
-    }
-  }
-
   .step__button {
     justify-content: center;
     align-items: center;
@@ -243,148 +323,6 @@
     &::after {
       display: none;
     }
-  }
-
-  .step__select-wrapper {
-    margin-bottom: 22px;
-
-    // кнопка выпадающего списка
-    &::after {
-      left: 118px;
-
-      width: 49px;
-      height: 40px;
-
-      background-position: 24px 16px;
-      background-size: 12px 7px;
-    }
-
-    // градиент
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 4px;
-      left: 118px;
-
-      width: 49px;
-      height: 36px;
-
-      background-image: linear-gradient(to right, transparent 5%, #ffffff 40%);
-    }
-
-    &:last-of-type {
-      margin-bottom: 25px;
-    }
-  }
-
-  .step__select {
-    width: 168px;
-    height: 42px;
-    padding-left: 12px;
-
-    font-size: 14px;
-    line-height: 1.29;
-    letter-spacing: 1.4px;
-  }
-
-  .step__select-button {
-    width: 53px;
-    height: 42px;
-    margin-left: -1px;
-
-    border-radius: 4px;
-    border: solid 1px $grey-2;
-
-    //черный круг
-    &::before {
-      left: -4px;
-      top: 15px;
-
-      width: 8px;
-      height: 8px;
-    }
-
-    // кнопка-крестик
-    &::after {
-      left: 41px;
-      top: -11px;
-
-      width: 21px;
-      height: 21px;
-
-      background-color: $grey-1;
-      background-position: center;
-      background-size: 9px 9px;
-      border-radius: 50%;
-    }
-  }
-
-  .step__country-dropdown {
-    top: 317px;
-    left: auto;
-
-    flex-direction: column;
-    width: 220px;
-
-    border-bottom-left-radius: $radius-2;
-    border-bottom-right-radius: $radius-2;
-  }
-
-  .step__country-dropdown-title {
-    padding-top: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-  }
-
-  .step__dropdown-close-button {
-    top: 12px;
-    right: 17px;
-  }
-
-  .step__dropdown-button-image {
-    width: 9px;
-    height: 9px;
-  }
-
-  .step__country {
-    position: relative;
-
-    margin-bottom: 16px;
-    padding-left: 12px;
-
-    font-size: 18px;
-    line-height: 1;
-
-    &--empty::before {
-      content: "";
-
-      position: absolute;
-      top: 5px;
-      left: -14px;
-
-      width: 17px;
-      height: 287px;
-
-      background-image: url("../../img/line.png");
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: 17px 287px;
-    }
-  }
-
-  .step__country-plan {
-    width: 220px;
-    height: 220px;
-    margin-bottom: 28px;
-    padding-top: 13px;
-    padding-right: 15px;
-    padding-left: 15px;
-    padding-bottom: 13px;
-
-    font-size: 16px;
-    line-height: 1.38;
   }
 }
 
@@ -421,6 +359,10 @@
 
     font-size: 20px;
     line-height: 1.2;
+
+    &--break {
+      display: block;
+    }
   }
 
   .step__control-field:first-of-type {
@@ -469,6 +411,7 @@
       height: 100%;
 
       background-color: $grey-6;
+      background-image: none;
     }
 
     // кнопка выпадающего списка
@@ -513,6 +456,9 @@
     height: 70px;
     margin-left: 26px;
 
+    border-radius: 0;
+    border: none;
+
     // черный круг
     &::before {
       left: -4px;
@@ -530,6 +476,7 @@
       width: 17px;
       height: 17px;
 
+      background-color: transparent;
       background-position: center;
       background-size: 17px 17px;
 
@@ -541,6 +488,7 @@
     top: 550px;
     left: auto;
 
+    flex-direction: row;
     width: 575px;
     padding-left: 27px;
 
@@ -571,6 +519,7 @@
 
   .step__dropdown-close-button {
     top: -45px;
+    right: auto;
     left: 322px;
   }
 
@@ -586,9 +535,14 @@
 
   .step__country {
     margin-bottom: 37px;
+    padding: 0;
 
     font-size: 30px;
     line-height: 0.6;
+
+    &--empty::before {
+      display: none;
+    }
   }
 
   .step__country-plan {
@@ -625,12 +579,18 @@
 
     font-size: 36px;
     line-height: 1.39;
+
+    &--new-line {
+      display: inline;
+    }
   }
 
   .step__controls-list {
     position: absolute;
     top: 115px;
     right: 203px;
+
+    display: block;
   }
 
   .step__text {
@@ -640,6 +600,10 @@
 
     font-size: 20px;
     line-height: 1.2;
+
+    &--break {
+      display: block;
+    }
   }
 
   .step__control-field:first-of-type {
@@ -666,6 +630,7 @@
     right: 162px;
 
     order: -1;
+    margin: 0;
     margin-left: auto;
     padding-left: 59px;
 
@@ -706,6 +671,7 @@
       height: 100%;
 
       background-color: $grey-6;
+      background-image: none;
     }
 
     // кнопка выпадающего списка
@@ -750,6 +716,9 @@
     height: 70px;
     margin-left: 26px;
 
+    border-radius: 0;
+    border: none;
+
     // черный круг
     &::before {
       left: 10px;
@@ -767,6 +736,7 @@
       width: 17px;
       height: 17px;
 
+      background-color: transparent;
       background-position: center;
       background-size: 17px 17px;
 
@@ -776,7 +746,9 @@
 
   .step__country-dropdown {
     top: 592px;
+    left: auto;
 
+    flex-direction: row;
     width: 730px;
     padding-left: 27px;
 
@@ -818,9 +790,14 @@
 
   .step__country {
     margin-bottom: 37px;
+    padding: 0;
 
     font-size: 30px;
     line-height: 0.6;
+
+    &--empty::before {
+      display: none;
+    }
   }
 
   .step__country-plan {

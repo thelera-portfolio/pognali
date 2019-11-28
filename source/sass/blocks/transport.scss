@@ -4,6 +4,8 @@
 }
 
 .transport__icon {
+  width: 33px;
+  height: 33px;
   position: relative;
 
   background-color: #ffffff;
@@ -94,13 +96,6 @@
 .transport__checkbox:checked + .transport__icon--foot::before {
   background-image: url("../../img/run-on.svg");
   opacity: 1;
-}
-
-@media (max-width: $mobile-width-only) {
-  .transport__icon {
-    width: 33px;
-    height: 33px;
-  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {

@@ -1,12 +1,18 @@
 .calendar {
+  margin-bottom: 22px;
+
   @include font-name;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 1.29;
   color: $grey-5;
 
   border-collapse: collapse;
 }
 
 .calendar__item {
+  width: 30px;
+  height: 30px;
   padding: 0;
 
   text-align: center;
@@ -26,6 +32,10 @@
 
     background-color: $blue-4;
   }
+
+  &--text {
+    display: none;
+  }
 }
 
 .calendar__days-of-week .calendar__item {
@@ -35,24 +45,6 @@
 
 .calendar__item--weekend {
   color: $yellow-5;
-}
-
-@media (max-width: $mobile-width-only) {
-  .calendar {
-    margin-bottom: 22px;
-
-    font-size: 14px;
-    line-height: 1.29;
-  }
-
-  .calendar__item {
-    width: 30px;
-    height: 30px;
-
-    &--text {
-      display: none;
-    }
-  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width) {
@@ -92,5 +84,9 @@
 
     text-align: left;
     vertical-align: top;
+
+    &--text {
+      display: inline;
+    }
   }
 }

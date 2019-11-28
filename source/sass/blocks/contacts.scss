@@ -1,6 +1,8 @@
 .contacts {
   @include font-name;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 1.38;
   text-transform: uppercase;
   color: $blue-2;
 
@@ -11,6 +13,9 @@
   position: relative;
   display: flex;
   align-items: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 60px;
 
   font: inherit;
   text-decoration: none;
@@ -24,6 +29,9 @@
     left: 0;
     display: block;
 
+    width: 40px;
+    height: 40px;
+
     background-position: 50%;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -33,6 +41,7 @@
     background-color: $blue-3;
     background-image: url("../../img/contacts-phone-yellow.svg");
     background-repeat: no-repeat;
+    background-size: 18px 18px;
 
     &:hover {
       background-color: $yellow-3;
@@ -43,6 +52,7 @@
     background-color: $blue-3;
     background-image: url("../../img/contacts-mail-yellow.svg");
     background-repeat: no-repeat;
+    background-size: 18px 13px;
 
     &:hover {
       background-color: $yellow-3;
@@ -53,6 +63,7 @@
     background-color: $blue-3;
     background-image: url("../../img/contacts-location-yellow.svg");
     background-repeat: no-repeat;
+    background-size: 14px 22px;
 
     &:hover {
       background-color: $yellow-3;
@@ -65,33 +76,7 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .contacts {
-    font-size: 16px;
-    line-height: 1.38;
-  }
-
   .contacts__button {
-    padding-top: 9px;
-    padding-bottom: 9px;
-    padding-left: 60px;
-
-    &::before {
-      width: 40px;
-      height: 40px;
-    }
-
-    &--tel::before {
-      background-size: 18px 18px;
-    }
-
-    &--email::before {
-      background-size: 18px 13px;
-    }
-
-    &--address::before {
-      background-size: 14px 22px;
-    }
-
     &--tel-intro {
       padding-left: 40px;
 

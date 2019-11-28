@@ -2,6 +2,8 @@
   position: relative;
   top: 0;
 
+  padding-top: 27px;
+  padding-bottom: 40px;
   background-color: #ffffff;
 
   &--no-js {
@@ -23,8 +25,17 @@
   position: relative;
 }
 
+.menu__logo {
+  align-self: flex-start;
+  margin-bottom: 79px;
+}
+
 .menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
+  margin-bottom: 58px;
   padding: 0;
 
   @include font-name;
@@ -36,12 +47,33 @@
 }
 
 .menu__link {
+  font-size: 30px;
+  line-height: 1.2;
   text-decoration: none;
   color: inherit;
 }
 
+.menu__login-button {
+  width: 100%;
+  margin-bottom: 51px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menu__contacts {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-bottom: 42px;
+}
+
 .menu__close-button {
   position: absolute;
+  top: 0;
+  right: 25px;
+
+  width: 19px;
+  height: 19px;
 
   background-color: transparent;
   background-image: url("../../img/menu-close.svg");
@@ -51,46 +83,9 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .menu {
-    padding-top: 27px;
-    padding-bottom: 40px;
-  }
-
-  .menu__logo {
-    align-self: flex-start;
-    margin-bottom: 79px;
-  }
-
-  .menu__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 58px;
-  }
-
-  .menu__link {
-    font-size: 30px;
-    line-height: 1.2;
-  }
-
   .menu__login-button {
-    width: 100%;
-    margin-bottom: 51px;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
-
-  .menu__contacts {
-    align-self: flex-start;
-    margin-bottom: 42px;
-  }
-
-  .menu__close-button {
-    top: 0;
-    right: 25px;
-
-    width: 19px;
-    height: 19px;
   }
 }
 
@@ -113,8 +108,6 @@
   }
 
   .menu__list {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
     margin-bottom: 150px;
     margin-left: 59px;
@@ -131,10 +124,10 @@
     right: 40px;
 
     width: 188px;
+    margin: 0;
   }
 
   .menu__contacts {
-    align-self: flex-start;
     margin-bottom: 123px;
     margin-left: 59px;
   }
@@ -144,8 +137,9 @@
   }
 
   .menu__close-button {
-    top: 21px;
-    left: 385px;
+    top: 15px;
+    right: auto;
+    left: 365px;
 
     width: 19px;
     height: 19px;
@@ -157,11 +151,13 @@
     display: flex;
     flex-grow: 1;
     align-items: center;
+    padding: 0;
 
     background-color: $blue-1;
   }
 
   .menu__inner {
+    flex-direction: row;
     align-items: center;
   }
 
@@ -170,6 +166,7 @@
 
     width: 200px;
     height: 52px;
+    margin: 0;
     margin-right: 145px;
 
     background-image: url("../../img/logo-tablet-white@1x.png");
@@ -190,11 +187,18 @@
   }
 
   .menu__list {
-    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
 
     font-size: 20px;
     line-height: 1.5;
     color: #ffffff;
+  }
+
+  .menu__link {
+    font-size: 20px;
+    line-height: 1.5;
   }
 
   .menu__item {
@@ -205,19 +209,21 @@
     display: none;
   }
 
-  .menu__close-button {
-    display: none;
-  }
-
   .menu__login-button {
     order: 1;
     width: 188px;
+    margin: 0;
   }
 
   .menu__contacts {
-    display: flex;
+    flex-direction: row;
+    margin: 0;
     margin-left: auto;
 
     font-size: 0;
+  }
+
+  .menu__close-button {
+    display: none;
   }
 }

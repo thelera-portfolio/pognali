@@ -10,7 +10,7 @@
 <body>
   <!-- Шапка сайта -->
   <header class="header">
-    <div class="header__inner inner">
+    <div class="header__inner header__inner--hide inner">
       <!-- Логотип -->
       <a class="header__logo logo" href="index.html">
         <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
@@ -73,7 +73,7 @@
   </header>
 
   <main class="catalog-main">
-    <div class="catalog-main__title-inner">
+    <div class="catalog-main__title-wrapper">
       <h1 class="catalog-main__title page-main-heading">Попутчики</h1>
     </div>
 
@@ -81,7 +81,7 @@
       <div class="filter-country__inner inner">
         <h2 class="filter-country__title">Фильтрация по странам</h2>
 
-        <button class="filter-country__button" aria-label="Кнопка открытия/закрытия блока с фильтром по странам"></button>
+        <button class="filter-country__button filter-country__button--expanded" aria-label="Кнопка открытия/закрытия блока с фильтром по странам"></button>
 
         <ul class="filter-country__continent continent-list">
           <li class="continent-list__item continent-list__item--checked">Европа</li>
@@ -669,6 +669,7 @@
     var mainMenu = document.querySelector(".menu");
     var headerToggle = document.querySelector(".header__toggle");
     var mainMenuCloseButton = document.querySelector(".menu__close-button");
+    var headerTopMenu = document.querySelector(".header__inner");
 
     var filterCountryButton = document.querySelector(".filter-country__button");
     var filterCountryButtonClose = document.querySelector(".filter-country__button-close");
@@ -681,11 +682,13 @@
     mainMenuCloseButton.addEventListener("click", function () {
       mainMenu.classList.remove("menu--opened");
       mainMenu.classList.add("menu--closed");
+      headerTopMenu.classList.remove("header__inner--hide");
     });
 
     headerToggle.addEventListener("click", function () {
       mainMenu.classList.remove("menu--closed");
       mainMenu.classList.add("menu--opened");
+      headerTopMenu.classList.add("header__inner--hide");
     });
 
     filterCountryButton.addEventListener("click", function () {

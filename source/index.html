@@ -10,7 +10,7 @@
   <body>
     <!-- Шапка сайта -->
     <header class="header">
-      <div class="header__inner inner">
+      <div class="header__inner header__inner--hide header--color inner">
         <!-- Логотип -->
         <a class="header__logo logo">
           <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
@@ -128,21 +128,27 @@
           
           <ul class="countries__list">
             <li class="countries__item countries-item">
-              <h3 class="countries-item__title">Тайланд</h3>
+              <div class="countries-item__title-wrapper">
+                <h3 class="countries-item__title">Таиланд</h3>
+              </div>
               <img class="countries-item__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Тропические острова в Тайланде">
               <p class="countries-item__text">Джунгли зовут!</p>
               <p class="countries-item__user-amount">18321</p>
             </li>
           
             <li class="countries__item countries-item">
-              <h3 class="countries-item__title">Франция</h3>
+              <div class="countries-item__title-wrapper">
+                <h3 class="countries-item__title">Франция</h3>
+              </div>
               <img class="countries-item__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Улица с типичной парижской архитектурой">
               <p class="countries-item__text">Трэ бьен, манифик!</p>
               <p class="countries-item__user-amount">12518</p>
             </li>
           
             <li class="countries__item countries-item">
-              <h3 class="countries-item__title">Чехия</h3>
+              <div class="countries-item__title-wrapper">
+                <h3 class="countries-item__title">Чехия</h3>
+              </div>
               <img class="countries-item__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Городской пейзаж с речным корабликом в Чехии">
               <p class="countries-item__text">Закоулки старой Европы</p>
               <p class="countries-item__user-amount">5326</p>
@@ -356,6 +362,7 @@
       var mainMenu = document.querySelector(".menu");
       var headerToggle = document.querySelector(".header__toggle");
       var mainMenuCloseButton = document.querySelector(".menu__close-button");
+      var headerTopMenu = document.querySelector(".header__inner");
 
       var businessRatesModal = document.querySelector(".business-rates-modal");
       var showBusinessRatesModalButton = document.querySelector(".rates__more-link");
@@ -366,11 +373,13 @@
       mainMenuCloseButton.addEventListener("click", function() {
         mainMenu.classList.remove("menu--opened");
         mainMenu.classList.add("menu--closed");
+        headerTopMenu.classList.remove("header__inner--hide");
       });
 
       headerToggle.addEventListener("click", function () {
         mainMenu.classList.remove("menu--closed");
         mainMenu.classList.add("menu--opened");
+        headerTopMenu.classList.add("header__inner--hide");
       });
 
       showBusinessRatesModalButton.addEventListener("click", function(evt) {
