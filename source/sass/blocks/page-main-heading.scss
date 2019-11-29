@@ -28,7 +28,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .page-main-heading {
     width: $tablet-width;
     min-height: 70px;

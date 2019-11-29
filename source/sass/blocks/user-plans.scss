@@ -83,7 +83,7 @@ $padding-bottom-desktop: 123px;
 }
 
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .user-plans {
     border-top-right-radius: $radius-4;
     border-top-left-radius: $radius-4;

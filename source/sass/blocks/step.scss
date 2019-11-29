@@ -326,7 +326,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .step {
     width: 618px;
     margin-bottom: 40px;

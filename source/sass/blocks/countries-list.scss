@@ -56,7 +56,7 @@
   line-height: 1.38;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .countries-list {
     width: 206px;
     margin-left: 79px;

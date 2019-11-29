@@ -79,7 +79,7 @@ $padding-bottom-desktop: 123px;
   justify-content: center;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .user-info__inner {
     flex-direction: row;
     justify-content: space-between;

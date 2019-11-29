@@ -21,7 +21,7 @@
   margin-top: -$radius-4;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .form-main__title-wrapper {
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;

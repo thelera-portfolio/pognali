@@ -49,7 +49,7 @@
   margin-top: -$radius-4;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .main__countries {
     margin-top: -$radius-5;
   }

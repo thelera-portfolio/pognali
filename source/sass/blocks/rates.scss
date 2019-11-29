@@ -53,7 +53,7 @@ $padding-bottom-desktop: 165px;
   color: $blue-2;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .rates {
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;

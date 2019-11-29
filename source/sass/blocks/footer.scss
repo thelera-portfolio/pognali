@@ -33,7 +33,7 @@ $padding-bottom-desktop: 50px;
   border-bottom: 1px solid rgba(#000000, 0.05);
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .footer {
     margin-top: -$radius-5;
 

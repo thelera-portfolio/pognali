@@ -38,7 +38,7 @@ $padding-bottom-desktop: 132px;
   right: 42px;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .add-plan {
     border-top-right-radius: $radius-4;
     border-top-left-radius: $radius-4;

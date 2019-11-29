@@ -47,7 +47,7 @@
   color: $yellow-5;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .calendar {
     margin-bottom: 46px;
 

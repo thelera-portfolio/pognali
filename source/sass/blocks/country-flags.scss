@@ -46,7 +46,7 @@
   // }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .country-flags__item {
     font-size: 20px;
   }

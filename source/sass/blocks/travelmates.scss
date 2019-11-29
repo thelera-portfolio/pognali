@@ -101,7 +101,7 @@ $padding-bottom-desktop: 133px;
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .travelmates {
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;

@@ -137,7 +137,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .filter-country {
     margin-top: -$radius-5;
     padding-top: 120px;

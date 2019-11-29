@@ -61,7 +61,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .button-two {
     width: 285px;
     height: 81px;

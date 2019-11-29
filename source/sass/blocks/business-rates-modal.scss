@@ -51,7 +51,7 @@
   border-bottom-left-radius: $radius-2;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .business-rates-modal {
     top: $radius-5;
     left: calc(50% - 384px);

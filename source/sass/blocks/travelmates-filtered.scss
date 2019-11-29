@@ -18,7 +18,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .travelmates-filtered__pagination {
     margin-bottom: 62px;
   }

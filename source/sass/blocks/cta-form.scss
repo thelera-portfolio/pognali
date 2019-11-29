@@ -56,7 +56,7 @@ $padding-bottom-desktop: 104px;
   color: $yellow-1;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .cta-form {
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;

@@ -27,7 +27,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .button-one {
     padding-top: 10px;
     padding-bottom: 10px;

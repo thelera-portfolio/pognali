@@ -19,7 +19,7 @@
   font-style: normal;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .review {
     width: 298px;
     padding-left: 33px;

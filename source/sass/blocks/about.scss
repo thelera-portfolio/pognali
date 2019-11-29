@@ -40,7 +40,7 @@ $padding-bottom-desktop: 165px;
   display: none;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .about {
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;

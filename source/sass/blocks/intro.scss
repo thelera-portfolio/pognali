@@ -126,7 +126,7 @@ $padding-bottom-desktop: 130px;
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .intro {
     background-color: $blue-2;
     background-image: url("../../img/globe-back-tablet@1x.jpg");

@@ -12,7 +12,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .index-text {
     font-size: 28px;
     line-height: 1.18;

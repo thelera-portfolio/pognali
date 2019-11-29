@@ -125,7 +125,7 @@
   background-color: #ffffff;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .travelmate-form {
     border-top: 1px solid #f3c72b;
     padding-top: 38px;

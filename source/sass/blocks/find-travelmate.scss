@@ -24,7 +24,7 @@
   color: $blue-4;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .find-travelmate {
     width: 688px;
     margin: 0 auto;

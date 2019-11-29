@@ -40,7 +40,7 @@ $padding-bottom-desktop: 140px;
   list-style: none;
 }
 
-@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .countries {
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;
