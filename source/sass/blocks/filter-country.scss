@@ -63,17 +63,6 @@
   background-color: transparent;
   border: 0;
 
-  // блок открыт
-  &--expanded::before {
-    content: "свернуть";
-  }
-
-  &--expanded::after {
-    background-image: url("../../img/small-cross.svg");
-    background-position: right center;
-    background-size: 12px 12px;
-  }
-
   //блок скрыт
   &::before {
     content: "показать все";
@@ -97,6 +86,17 @@
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 17px 3px;
+  }
+
+  // блок открыт
+  &--expanded::before {
+    content: "свернуть";
+  }
+
+  &--expanded::after {
+    background-image: url("../../img/small-cross.svg");
+    background-position: right center;
+    background-size: 12px 12px;
   }
 }
 
