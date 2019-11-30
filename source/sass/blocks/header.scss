@@ -1,26 +1,80 @@
-@import "../variables.scss";
-
 .header {
-  padding-top: 25px;
-
   background-color: $blue-1;
-<<<<<<< HEAD
+}
+
+.header__inner {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 73px;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.header__toggle {
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+.header__toggle-icon {
+  fill: #ffffff;
+}
+
+.header__login-button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .header {
+    &--color {
+      background-color: $blue-2;
+    }
+  }
+
+  .header__inner {
+    min-height: 132px;
+  }
+
+  .header__logo {
+    width: 166px;
+    height: 42px;
+
+    background-image: url("../../img/logo-tablet-white@1x.png");
+  }
+
+  .header__toggle-icon {
+    fill: #ffffff;
+  }
+
+  .header__login-button {
+    display: flex;
+    width: 188px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     padding-top: 47px;
-    padding-right: 60px;
-    padding-left: 60px;
+  }
+
+  .header__inner {
+    display: none;
   }
 
   .header__logo {
-    margin-right: 145px;
+    display: none;
   }
-=======
->>>>>>> a8ebedf558042914048e3f8f3de3d5b981c87d58
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__login-button {
+    display: none;
+  }
 }
 

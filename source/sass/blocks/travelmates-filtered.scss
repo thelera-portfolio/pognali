@@ -8,9 +8,46 @@
 
   list-style: none;
 }
-.travelmates-filtered__item {
-  width: 320px;
 
-  background-color: #ffffff;
-  border-radius: 20px;
+.travelmates-filtered__button {
+  margin: 0 auto;
+  background-color: transparent;
+
+  &::before {
+
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .travelmates-filtered__pagination {
+    margin-bottom: 62px;
+  }
+
+  .travelmates-filtered__button {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates-filtered {
+    width: 950px;
+  }
+
+  .travelmates-filtered__inner {
+    display: block;
+    padding: 0;
+    width: 950px;
+  }
+
+  .travelmates-filtered__list {
+    margin-bottom: 70px;
+  }
+
+  .travelmates-filtered__button {
+    margin-bottom: 70px;
+  }
+
+  .travelmates-filtered__pagination {
+    margin-bottom: 77px;
+  }
 }

@@ -1,10 +1,43 @@
+$padding-top-mobile: 73px;
+$padding-bottom-mobile: 73px;
+$padding-top-tablet: 124px;
+$padding-bottom-tablet: 85px;
+$padding-top-desktop: 0;
+$padding-bottom-desktop: 123px;
+
 .user-info {
   background-color: $grey-1;
+}
+
+.user-info__inner {
+  position: relative;
+  padding-top: $padding-top-mobile;
+  padding-bottom: $padding-bottom-mobile;
+}
+
+.user-info__user-level {
+  margin-right: auto;
+  margin-bottom: 19px;
+  margin-left: 20px;
+}
+
+.user-info__photo {
+  position: absolute;
+  right: 42px;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user-info__change-photo-button {
+  margin-bottom: 27px;
 }
 
 .user-info__fieldset {
   width: 270px;
   margin: 0;
+  margin-bottom: 19px;
   padding: 0;
 
   @include font-name;
@@ -17,4 +50,203 @@
 
   border: 1px solid $grey-2;
   border-radius: $radius-1;
+
+  &--tags {
+    padding-top: 26px;
+    padding-right: 26px;
+    padding-bottom: 26px;
+    padding-left: 26px;
+  }
+
+  &--transport {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.user-info__legend {
+  padding-right: 17px;
+  padding-left: 17px;
+}
+
+.user-info__transport {
+  justify-content: center;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .user-info__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: $padding-top-tablet;
+    padding-right: 75px;
+    padding-bottom: $padding-bottom-tablet;
+    padding-left: 75px;
+  }
+
+  .user-info__user-level {
+    order: -2;
+    margin: 0;
+  }
+
+  .user-info__photo {
+    position: static;
+
+    width: 94px;
+    height: 94px;
+
+    border-radius: 8px;
+  }
+
+  .user-info__change-photo-button {
+    width: 100%;
+    margin-top: 52px;
+    margin-bottom: 51px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 24px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border-radius: $radius-1;
+  }
+
+  .user-info__fieldset {
+    font-size: 20px;
+    line-height: 0.9;
+
+    margin-bottom: 19px;
+
+    &--tags {
+      width: 618px;
+      padding-top: 36px;
+      padding-right: 26px;
+      padding-bottom: 16px;
+      padding-left: 26px;
+    }
+
+    &--transport {
+      order: -1;
+      width: 308px;
+      padding-top: 20px;
+      padding-right: 24px;
+      padding-bottom: 20px;
+      padding-left: 24px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .user-info__legend {
+    align: bottom;
+  }
+
+  .user-info__transport {
+    justify-content: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-info {
+    margin-top: -190px;
+    //padding-bottom: 65px + $radius-5;
+  }
+
+  .user-info__inner {
+    flex-direction: row;
+    align-items: center;
+    padding-top: $padding-top-desktop;
+    padding-bottom: $padding-bottom-desktop;
+    padding-left: 124px;
+  }
+
+  .user-info__user-level {
+    z-index: 1;
+
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 837px;
+
+    color: #ffffff;
+  }
+
+  .user-info__photo {
+    position: static;
+    z-index: 1;
+
+    width: 190px;
+    height: 190px;
+    margin-left: 33px;
+
+    border-radius: 0;
+    border-top-left-radius: $radius-1;
+    border-top-right-radius: $radius-1;
+  }
+
+  .user-info__change-photo-button {
+    width: 190px;
+    margin-bottom: 26px;
+    margin-left: 970px;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    border-radius: 0;
+    border-bottom-left-radius: $radius-1;
+    border-bottom-right-radius: $radius-1;
+  }
+
+  .user-info__button-text {
+    display: none;
+  }
+
+  .user-info__fieldset {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 0.9;
+
+    &--tags {
+      width: 730px;
+      padding-top: 32px;
+      padding-right: 26px;
+      padding-bottom: 12px;
+      padding-left: 26px;
+    }
+
+    &--transport {
+      width: 384px;
+      margin-left: auto;
+      padding-top: 25px;
+      padding-right: 25px;
+      padding-bottom: 25px;
+      padding-left: 25px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .user-info__transport {
+    justify-content: center;
+  }
 }

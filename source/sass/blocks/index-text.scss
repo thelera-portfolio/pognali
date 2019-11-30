@@ -11,3 +11,39 @@
     font-weight: 700;
   }
 }
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .index-text {
+    font-size: 28px;
+    line-height: 1.18;
+
+    &--bold {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.19;
+    }
+
+    &--modal {
+      font-size: 22px;
+      line-height: 1.27;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .index-text {
+    font-size: 28px;
+    line-height: 1.18;
+
+    &--bold {
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.19;
+    }
+
+    &--modal {
+      font-size: 22px;
+      line-height: 1.27;
+    }
+  }
+}

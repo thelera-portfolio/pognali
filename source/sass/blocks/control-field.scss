@@ -1,37 +1,301 @@
 .control-field {
+  display: flex;
+  flex-wrap: wrap;
+
   @include font-name;
   font-weight: 500;
   line-height: 1;
   color: $blue-4;
 }
 
+.control-field__inner {
+  position: relative;
+}
+
 .control-field__label {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  margin-bottom: 9px;
+
   font-size: 16px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
+
+  &--travelmates::after {
+    content: "чел.";
+
+    position: absolute;
+    right: 0;
+
+    opacity: 0.3;
+  }
 }
 
 .control-field__input {
+  width: 220px;
+  height: 43px;
+  margin-bottom: 21px;
+  padding: 0;
+
   @include font-name;
   font-size: 15px;
   font-weight: 500;
   line-height: 0.9;
-  letter-spacing: 1.5px;
   text-align: center;
   color: $blue-4;
 
+  border: 1px solid $grey-6;
   border-radius: 4px;
 
   &--date {
     font-size: 20px;
     font-weight: 700;
-    letter-spacing: normal;
     text-align: center;
+
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 }
 
-.step__checkbox-label {
-  font-size: 15px;
-  font-weight: 400;
-  color: $grey-5;
+.control-field__button {
+  position: absolute;
+
+  background-repeat: no-repeat;
+
+  border: none;
+
+  opacity: 0.3;
+
+  &--minus {
+    top: 21px;
+    left: 14px;
+
+    width: 14px;
+    height: 2px;
+
+    background-image: url("../../img/qty-minus-mobile.svg");
+    background-size: 14px 2px;
+  }
+
+  &--plus {
+    top: 15px;
+    right: 14px;
+
+    width: 14px;
+    height: 14px;
+
+    background-image: url("../../img/qty-plus-mobile.svg");
+    background-size: 14px 14px;
+  }
+
+  &--back {
+    top: 12px;
+    left: 0;
+
+    width: 9px;
+    height: 17px;
+
+    background-image: url("../../img/month-arrow-left.svg");
+    background-size: 9px 17px;
+  }
+
+  &--forward {
+    top: 12px;
+    right: 0;
+
+    width: 9px;
+    height: 17px;
+
+    background-image: url("../../img/month-arrow-right.svg");
+    background-size: 9px 17px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .control-field__label {
+    position: relative;
+
+    width: 100%;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &--travelmates::after {
+      content: "чел.";
+
+      position: absolute;
+      right: 0;
+
+      opacity: 0.3;
+    }
+
+    &--days::after {
+      content: "дн.";
+
+      position: absolute;
+      right: 0;
+
+      opacity: 0.3;
+    }
+  }
+
+  .control-field__input {
+    width: 531px;
+    height: 70px;
+    margin-bottom: 34px;
+
+    font-size: 20px;
+
+    &--date {
+      height: 85px;
+
+      font-size: 36px;
+    }
+  }
+
+  .control-field__button {
+    &--minus {
+      top: 34px;
+      left: 23px;
+
+      width: 20px;
+      height: 2px;
+
+      background-image: url("../../img/qty-minus.svg");
+      background-size: 20px 2px;
+    }
+
+    &--plus {
+      top: 25px;
+      right: 23px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../../img/qty-plus.svg");
+      background-size: 20px 20px;
+    }
+
+    &--back {
+      top: 29px;
+      left: 0;
+
+      width: 15px;
+      height: 28px;
+
+      background-image: url("../../img/month-arrow-left.svg");
+      background-size: 15px 28px;
+    }
+
+    &--forward {
+      top: 29px;
+      right: 0;
+
+      width: 15px;
+      height: 28px;
+
+      background-image: url("../../img/month-arrow-right.svg");
+      background-size: 15px 28px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .control-field {
+    position: relative;
+
+    align-items: center;
+  }
+
+  .control-field__label {
+    width: 200px;
+    margin-right: 32px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &--travelmates::after {
+      content: "чел.";
+
+      position: absolute;
+      right: auto;
+      left: 436px;
+
+      opacity: 1;
+    }
+
+    &--days::after {
+      content: "дн.";
+
+      position: absolute;
+      right: auto;
+      left: 436px;
+
+      opacity: 1;
+    }
+  }
+
+  .control-field__input {
+    width: 181px;
+    height: 70px;
+    margin-bottom: 14px;
+
+    font-size: 20px;
+
+    &--date {
+      width: 1000px;
+      height: 85px;
+
+      font-size: 36px;
+    }
+  }
+
+  .control-field__button {
+    &--minus {
+      top: 34px;
+      left: 20px;
+
+      width: 20px;
+      height: 2px;
+
+      background-image: url("../../img/qty-minus.svg");
+      background-size: 20px 2px;
+    }
+
+    &--plus {
+      top: 25px;
+      right: 20px;
+
+      width: 20px;
+      height: 20px;
+
+      background-image: url("../../img/qty-plus.svg");
+      background-size: 20px 20px;
+    }
+
+    &--back {
+      top: 27px;
+      left: 0;
+
+      width: 18px;
+      height: 34px;
+
+      background-image: url("../../img/month-arrow-left.svg");
+      background-size: 18px 34px;
+    }
+
+    &--forward {
+      top: 27px;
+      right: 0;
+
+      width: 18px;
+      height: 34px;
+
+      background-image: url("../../img/month-arrow-right.svg");
+      background-size: 18px 34px;
+    }
+  }
 }

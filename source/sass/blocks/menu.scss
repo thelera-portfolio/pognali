@@ -1,15 +1,45 @@
 .menu {
+  position: relative;
+  top: 0;
+
+  padding-top: 27px;
+  padding-bottom: 40px;
   background-color: #ffffff;
+
+  &--no-js {
+    .menu__close-button {
+      display: none;
+    }
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.menu__inner {
+  position: relative;
+}
+
+.menu__logo {
+  align-self: flex-start;
+  margin-bottom: 79px;
 }
 
 .menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
+  margin-bottom: 58px;
   padding: 0;
 
   @include font-name;
-  font-size: 30px;
   font-weight: 500;
-  line-height: 1.2;
   text-transform: uppercase;
   color: $blue-2;
 
@@ -17,15 +47,103 @@
 }
 
 .menu__link {
+  font-size: 30px;
+  line-height: 1.2;
   text-decoration: none;
   color: inherit;
 }
 
-.menu__toggle {
+.menu__login-button {
+  width: 100%;
+  margin-bottom: 51px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-@media (min-width: $tablet-width) {
+.menu__contacts {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-bottom: 42px;
+}
 
+.menu__close-button {
+  position: absolute;
+  top: 0;
+  right: 25px;
+
+  width: 19px;
+  height: 19px;
+
+  background-color: transparent;
+  background-image: url("../../img/menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .menu__login-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .menu {
+    padding-top: 40px;
+    padding-bottom: 84px;
+  }
+
+  .menu__inner {
+    align-items: flex-start;
+  }
+
+  .menu__logo {
+    width: 166px;
+    height: 42px;
+    margin-bottom: 105px;
+
+    background-image: url("../../img/logo-tablet-white@1x.png");
+  }
+
+  .menu__list {
+    align-items: flex-start;
+    margin-bottom: 150px;
+    margin-left: 59px;
+  }
+
+  .menu__link {
+    font-size: 60px;
+    line-height: 1.18;
+  }
+
+  .menu__login-button {
+    position: absolute;
+    top: 0;
+    right: 40px;
+
+    width: 188px;
+    margin: 0;
+  }
+
+  .menu__contacts {
+    margin-bottom: 123px;
+    margin-left: 59px;
+  }
+
+  .menu__socials {
+    margin-left: 59px;
+  }
+
+  .menu__close-button {
+    top: 15px;
+    right: auto;
+    left: 365px;
+
+    width: 19px;
+    height: 19px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -33,45 +151,79 @@
     display: flex;
     flex-grow: 1;
     align-items: center;
+    padding: 0;
 
-    background-color: transparent;
+    background-color: $blue-1;
   }
 
-  .menu__toggle {
-    display: none;
+  .menu__inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu__logo {
+    position: relative;
+
+    width: 200px;
+    height: 52px;
+    margin: 0;
+    margin-right: 145px;
+
+    background-image: url("../../img/logo-tablet-white@1x.png");
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 21px;
+      right: -75px;
+
+      width: 60px;
+      height: 2px;
+
+      background-color: #ffffff;
+    }
   }
 
   .menu__list {
-    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0;
 
     font-size: 20px;
     line-height: 1.5;
     color: #ffffff;
   }
 
-  .menu__socials {
-    display: none;
+  .menu__link {
+    font-size: 20px;
+    line-height: 1.5;
   }
 
-  .menu__close-button {
+  .menu__item {
+    margin-right: 36px;
+  }
+
+  .menu__socials {
     display: none;
   }
 
   .menu__login-button {
     order: 1;
-    width: 189px;
+    width: 188px;
+    margin: 0;
   }
 
   .menu__contacts {
-    display: flex;
-    width: 50px;
-    height: 50px;
+    flex-direction: row;
+    margin: 0;
     margin-left: auto;
 
     font-size: 0;
   }
 
-  .menu__item {
-    margin-right: 36px;
+  .menu__close-button {
+    display: none;
   }
 }

@@ -1,8 +1,11 @@
 .copyright {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 270px;
 
   @include font-name;
+  line-height: 1;
 }
 
 .copyright__text {
@@ -19,9 +22,30 @@
   display: block;
   width: 27px;
   height: 34px;
-  margin-left: auto;
 
   background-image: url("../../img/htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .copyright {
+    width: 154px;
+  }
+
+  .copyright__text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    width: 154px;
+  }
+
+  .copyright__text {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }

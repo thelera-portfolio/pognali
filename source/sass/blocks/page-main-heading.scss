@@ -1,5 +1,12 @@
 .page-main-heading {
+  position: relative;
+
   margin: 0;
+  min-height: 70px;
+  padding-top: 27px;
+  padding-right: 27px;
+  padding-bottom: 12px;
+  padding-left: 27px;
 
   @include font-name;
   font-size: 36px;
@@ -7,7 +14,58 @@
   line-height: 1.11;
   color: #ffffff;
 
-  background-color: $blue-1;
-  border-bottom-right-radius: $radius-3;
-  border-bottom-left-radius: $radius-3;
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+
+    width: 214px;
+    height: 5px;
+
+    background-color: $yellow-3;
+    border-radius: 2.4px;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .page-main-heading {
+    width: $tablet-width;
+    min-height: 70px;
+    padding-top: 94px;
+    padding-right: 77px;
+    padding-bottom: 70px;
+    padding-left: 77px;
+
+    font-size: 60px;
+    line-height: 1.17;
+
+    &::before {
+      width: 355px;
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main-heading {
+    width: $desktop-width;
+    min-height: 243px;
+    padding-top: 118px;
+    padding-right: 69px;
+    padding-bottom: 69px;
+    padding-left: 129px;
+
+    font-size: 60px;
+    line-height: 1.17;
+
+    &::before {
+      width: 357px;
+      height: 8px;
+
+      border-radius: 4px;
+    }
+  }
 }

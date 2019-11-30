@@ -3,53 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header class="header">
-      <!-- Логотип -->
-      <a class="header__logo logo">
-        <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
-      </a>
+    <header class="header header--color">
+      <div class="header__inner header__inner--hide inner">
+        <!-- Логотип -->
+        <a class="header__logo logo">
+          <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+        </a>
+
+        <button class="header__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">
+          <svg class="header__toggle-icon" width="25" height="11" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 25 11" style="enable-background: new 0 0 25 11;" xml:space="preserve">
+            <g>
+              <path d="M1.5,3h22C24.3,3,25,2.3,25,1.5S24.3,0,23.5,0h-22C0.7,0,0,0.7,0,1.5S0.7,3,1.5,3z" />
+              <path d="M23.5,8h-22C0.7,8,0,8.7,0,9.5S0.7,11,1.5,11h22c0.8,0,1.5-0.7,1.5-1.5S24.3,8,23.5,8z" />
+            </g>
+          </svg>
+        </button>
+
+        <a class="header__login-button button-one" href="#">Авторизация</a>
+      </div>
+      
       <!-- Основное меню -->
-      <nav class="header__menu menu">
-        <button class="menu__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню"></button>
+      <nav class="header__menu menu menu--opened menu--no-js">
+        <div class="menu__inner inner">
+          <a class="menu__logo logo">
+            <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </a>
+
+          <!-- Меню, которе появляется при клике на гамбургер -->
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">О сервисе</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="form.html">Направления</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="catalog.html">Попутчики</a>
+            </li>
+          </ul>
+          
+          <a class="menu__login-button button-one" href="#">Авторизация</a>
+          
+          <div class="menu__contacts contacts">
+            <a class="contacts__button contacts__button--tel contacts__button--tel-topmenu" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contacts__button contacts__button--email contacts__button--email-topmenu" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </div>
     
-        <!-- Меню, которе появляется при клике на гамбургер -->
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="#">О сервисе</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="form.html">Направления</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="catalog.html">Попутчики</a>
-          </li>
-        </ul>
-        
-        <a class="menu__login-button button-one" href="#">Авторизация</a>
-        
-        <div class="menu__contacts contacts">
-          <a class="contacts__button contacts__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
-          <a class="contacts__button contacts__button--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <ul class="menu__socials socials">
+            <li class="socials__item">
+              <a class="socials__link socials__link--facebook socials__link--facebook--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» в Фейсбук"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--vkontakte socials__link--vkontakte--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» во Вконтакте"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram socials__link--instagram--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» в Инстаграм"></a>
+            </li>
+          </ul>
+    
+          <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
         </div>
-  
-        <ul class="menu__socials socials">
-          <li class="socials__item">
-            <a class="socials__link socials__link--facebook socials__link--facebook--header" href="#" aria-label="Сервис «Погнали» в Фейсбук"></a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--vkontakte socials__link--vkontakte--header" href="#" aria-label="Сервис «Погнали» во Вконтакте"></a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link socials__link--instagram socials__link--instagram--header" href="#" aria-label="Сервис «Погнали» в Инстаграм"></a>
-          </li>
-        </ul>
-  
-        <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
       </nav>
     </header>
 
@@ -58,22 +77,24 @@
       <h1 class="visually-hidden">Основная информация о сервисе поиска попутчиков «Погнали»</h1>
 
       <!-- Intro -->
-      <section class="intro main__intro">
-        <div class="inner">
+      <section class="main__intro intro">
+        <div class="intro__inner inner">
           <h2 class="visually-hidden">Вводная информация</h2>
           
           <p class="intro__promo-text">В путешествие с крутыми попутчиками!</p>
           
-          <div class="intro__contacts contacts">
-            <a class="contacts__button contacts__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
-            <a class="contacts__button contacts__button--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <div class="intro__contacts-inner">
+            <div class="intro__contacts contacts">
+              <a class="contacts__button contacts__button--tel contacts__button--tel-intro" href="tel:+78005558628">8 800 555-86-28</a>
+              <a class="contacts__button contacts__button--email contacts__button--email-intro" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </div>
+            
+            <a class="intro__login-button button-one" href="#">Авторизация</a>
           </div>
-          
-          <a class="intro__login-button button-one" href="#">Авторизация</a>
           
           <blockquote class="intro__review review">
             <p class="review__text index-text">«Лучшее приложение, что я видел в жизни!»</p>
-            <cite class="review__author index-text index-text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+            <cite class="review__author index-text index-text--bold">Мурат Эльтазин<br>главный редактор газеты «гаджетлайф»</cite>
           </blockquote>
           
           <ul class="intro__promo-list">
@@ -86,40 +107,48 @@
       </section>
 
       <!-- О сервисе -->
-      <section class="about">
-        <div class="inner">
+      <section class="main__about about">
+        <div class="about__inner inner">
           <h2 class="about__title index-title">О сервисе</h2>
           
-          <p class="about__text index-text">Любое путешествие веселее<br>с попутчиками, которые на одной волне в тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="about__text index-text">Любое путешествие веселее с&nbspпопутчиками, которые на одной волне с&nbspтобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbspчужих.</p>
           
           <p class="about__text index-text index-text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        
+          <a class="about__more-button button-two" href="#">Подробнее</a>
         </div>
       </section>
 
       <!-- Направления -->
-      <section class="countries">
-        <div class="inner">
+      <section class="main__countries countries">
+        <div class="countries__inner inner">
           <h2 class="countries__title index-title">Направления</h2>
           
-          <p class="countries__text index-text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться, и чем можно там заняться.</p>
+          <p class="countries__text index-text">Мы не продаем туры и&nbspничего&nbspне&nbspрекламируем. Люди сами пишут о странах, куда хотели бы отправиться, и чем можно там заняться.</p>
           
           <ul class="countries__list">
             <li class="countries__item countries-item">
-              <h3 class="countries-item__title">Тайланд</h3>
+              <div class="countries-item__title-wrapper">
+                <h3 class="countries-item__title">Таиланд</h3>
+              </div>
               <img class="countries-item__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Тропические острова в Тайланде">
               <p class="countries-item__text">Джунгли зовут!</p>
               <p class="countries-item__user-amount">18321</p>
             </li>
           
             <li class="countries__item countries-item">
-              <h3 class="countries-item__title">Франция</h3>
+              <div class="countries-item__title-wrapper">
+                <h3 class="countries-item__title">Франция</h3>
+              </div>
               <img class="countries-item__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Улица с типичной парижской архитектурой">
               <p class="countries-item__text">Трэ бьен, манифик!</p>
               <p class="countries-item__user-amount">12518</p>
             </li>
           
             <li class="countries__item countries-item">
-              <h3 class="countries-item__title">Чехия</h3>
+              <div class="countries-item__title-wrapper">
+                <h3 class="countries-item__title">Чехия</h3>
+              </div>
               <img class="countries-item__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Городской пейзаж с речным корабликом в Чехии">
               <p class="countries-item__text">Закоулки старой Европы</p>
               <p class="countries-item__user-amount">5326</p>
@@ -131,16 +160,16 @@
       </section>
 
       <!-- Попутчики -->
-      <section class="travelmates">
-        <div class="inner">
+      <section class="main__travelmates travelmates">
+        <div class="travelmates__inner inner">
           <h2 class="travelmates__title index-title">Попутчики</h2>
           
-          <p class="travelmates__text index-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="travelmates__text index-text index-text--bold">Теперь можно легко найти единомышленников!</p>
+          <p class="travelmates__text index-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.</p>
+          <p class="travelmates__text index-text index-text--bold">Теперь можно легко<br> найти единомышленников!</p>
           
           <ul class="travelmates__list">
             <li class="travelmates__item travelmates-item">
-              <h3 class="travelmates-item__title"><a class="travelmates-item__profile-link" href="#">Таня Фирсова</a></h3>
+              <h3 class="travelmates-item__title travelmates-item__title--busy"><a class="travelmates-item__profile-link" href="#">Таня Фирсова</a></h3>
           
               <img class="travelmates-item__image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Фото девушки в бассейне">
           
@@ -159,11 +188,11 @@
                 <li class="tags-list__item">#смузи</li>
               </ul>
           
-              <ul class="travelmates-item__transport-list transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active" aria-label="Авиаперелет"></li>
-                <li class="transport-list__item transport-list__item--bus" aria-label="Автотранспорт"></li>
-                <li class="transport-list__item transport-list__item--cycle" aria-label="Велосипед"></li>
-                <li class="transport-list__item transport-list__item--foot" aria-label="Пешком"></li>
+              <ul class="travelmates-item__transport-list transport">
+                <li class="transport__icon transport__icon--plane transport__icon--plane--active" aria-label="Авиаперелет"></li>
+                <li class="transport__icon transport__icon--bus" aria-label="Автотранспорт"></li>
+                <li class="transport__icon transport__icon--cycle" aria-label="Велосипед"></li>
+                <li class="transport__icon transport__icon--foot" aria-label="Пешком"></li>
               </ul>
           
               <p class="travelmates-item__user-level user-level user-level--size-m">
@@ -173,7 +202,7 @@
             </li>
           
             <li class="travelmates__item travelmates-item">
-              <h3 class="travelmates-item__title"><a class="travelmates-item__profile-link profile-link" href="#">Петя Демин</a></h3>
+              <h3 class="travelmates-item__title travelmates-item__title--ready"><a class="travelmates-item__profile-link profile-link" href="#">Петя Демин</a></h3>
           
               <img class="travelmates-item__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Фото мужчины с бородой в шапке и темных очках">
           
@@ -190,11 +219,11 @@
                 <li class="tags-list__item">#крафт</li>
               </ul>
           
-              <ul class="travelmates-item__transport-list transport-list">
-                <li class="transport-list__item transport-list__item--plane transport-list__item--active" aria-label="Авиаперелет"></li>
-                <li class="transport-list__item transport-list__item--bus transport-list__item--active" aria-label="Автотранспорт"></li>
-                <li class="transport-list__item transport-list__item--cycle" aria-label="Велосипед"></li>
-                <li class="transport-list__item transport-list__item--foot transport-list__item--active" aria-label="Пешком"></li>
+              <ul class="travelmates-item__transport-list transport">
+                <li class="transport__icon transport__icon--plane transport__icon--plane--active" aria-label="Авиаперелет"></li>
+                <li class="transport__icon transport__icon--bus transport__icon--bus--active" aria-label="Автотранспорт"></li>
+                <li class="transport__icon transport__icon--cycle" aria-label="Велосипед"></li>
+                <li class="transport__icon transport__icon--foot transport__icon--foot--active" aria-label="Пешком"></li>
               </ul>
           
               <p class="travelmates-item__user-level user-level user-level--size-m">
@@ -208,66 +237,104 @@
       </section>
 
       <!-- Тарифы -->
-      <section class="rates">
-        <div class="inner">
-          <h2 class="visually-hidden">Тарифы на использование сервиса</h2>
-          
-          <p class="rates__text index-title">Добавьте свой профиль</p>
-          
-          <dl class="rates__list rates-list index-text">
-            <dt class="rates-list__item-title">Базовое размещение</dt>
-            <dd class="rates-list__item-desc">Бесплатно</dd>
-            <dt class="rates-list__item-title">Вывод на первых позициях</dt>
-            <dd class="rates-list__item-desc">99 руб./месяц</dd>
-            <dt class="rates-list__item-title">Кастомный цвет карточки</dt>
-            <dd class="rates-list__item-desc">59 руб./месяц</dd>
+      <div class="main__rates-wrapper">
+        <section class="main__rates rates">
+          <div class="rates__inner inner">
+            <h2 class="visually-hidden">Тарифы на использование сервиса</h2>
+        
+            <p class="rates__text index-title">Добавьте свой профиль</p>
+        
+            <dl class="rates__list rates-list index-text">
+              <div class="rates-list__inner">
+                <dt class="rates-list__item-title">Базовое размещение</dt>
+                <dd class="rates-list__item-desc">Бесплатно</dd>
+              </div>
+              <div class="rates-list__inner">
+                <dt class="rates-list__item-title">Вывод на первых позициях</dt>
+                <dd class="rates-list__item-desc">99 руб./мес</dd>
+              </div>
+              <div class="rates-list__inner">
+                <dt class="rates-list__item-title">Кастомный цвет карточки</dt>
+                <dd class="rates-list__item-desc">59 руб./мес</dd>
+              </div>
+            </dl>
+        
+            <a class="rates__more-link" href="#">Показать тарифы для бизнеса</a>
+          </div>
+        </section>
+        
+        <!-- Модальное окно с бизнес-тарифами -->
+        <section class="business-rates-modal business-rates-modal--show">
+          <h2 class="business-rates-modal__title index-title">Бизнес-тарифы</h2>
+        
+          <dl class="business-rates-modal__list rates-list index-text index-text--modal">
+            <div class="rates-list__inner rates-list__inner--business">
+              <dt class="rates-list__item-title">Реклама у блоггера</dt>
+              <dd class="rates-list__item-desc">300 000 руб./пост</dd>
+            </div>
+        
+            <div class="rates-list__inner rates-list__inner--business">
+              <dt class="rates-list__item-title">Накрутка подписчиков</dt>
+              <dd class="rates-list__item-desc">от 1 руб./шт.</dd>
+            </div>
+        
+            <div class="rates-list__inner rates-list__inner--business">
+              <dt class="rates-list__item-title">Лайки от ботов</dt>
+              <dd class="rates-list__item-desc">20 коп./лайк</dd>
+            </div>
+            <div class="rates-list__inner rates-list__inner--business">
+              <dt class="rates-list__item-title">Ваш продакт-плейсмент</dt>
+              <dd class="rates-list__item-desc">Индивидуально</dd>
+            </div>
           </dl>
-          
-          <a class="rates__more-link" href="business-rates.html">Показать тарифы для бизнеса</a>
-        </div>
-      </section>
+        
+          <button class="business-rates-modal__close-button" type="button">Закрыть окно</button>
+        </section>
+      </div>
 
       <!-- Авторизация -->
-      <section class="cta-form">
-        <div class="inner">
+      <section class="main__cta-form cta-form">
+        <div class="cta-form__inner inner">
           <h2 class="visually-hidden">Регистрация пользователя</h2>
           
           <p class="cta-form__title index-title">Заинтересовались?</p>
           
-          <p class="cta-form__text index-text">Зарегистрируйтесь,<br>это быстро и бесплатно!<br>Уже зарегистрированы? Тогда скорее <a class="cta-form__login-link" href="user-login.html">авторизуйтесь</a>.</p>
+          <p class="cta-form__text index-text">Зарегистрируйтесь, это&nbspбыстро&nbspи бесплатно!<br>Уже&nbspзарегистрированы?&nbspТогда скорее <a class="cta-form__login-link" href="user-login.html">авторизуйтесь</a>.</p>
           
           <form class="cta-form__login-form" action="https://echo.htmlacademy.ru" method="POST">
             <label aria-label="Поле ввода электронной почты">
               <input class="cta-form__input input-field" type="text" placeholder="E-mail">
             </label>
           
-            <button class="cta-form__button" aria-label="Отправить форму"></button>
+            <button class="cta-form__button button-two" aria-label="Отправить форму">Регистрация</button>
           </form>
           
-          <p class="cta-form__text index-text">Остались вопросы?<br>Мы с радостью на них ответим!</p>
+          <p class="cta-form__text index-text">Остались вопросы? Мы&nbspс&nbspрадостью&nbspна&nbspних&nbspответим!</p>
           
           <div class="cta-form__contacts contacts">
-            <a class="contacts__button contacts__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
-            <a class="contacts__button contacts__button--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__button contacts__button--tel contacts__button--margin" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contacts__button contacts__button--email contacts__button--margin" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
         </div>
       </section>
 
       <!-- Карта -->
-      <section class="map contacts">
-        <div class="inner">
-          <h2 class="visually-hidden">Карта офиса</h2>
-          <p class="map__address contacts__button contacts__button--address">ул. Большая Конюшенная, 19/8</p>
-          <a class="map__route button-two" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=routes&rtext=59.938631%2C30.323055&rtt=comparison&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=16">Проложить маршрут</a>
+      <section class="main__map map contacts">
+        <div class="map__contacts">
+          <div class="map__inner inner">
+            <h2 class="visually-hidden">Карта офиса</h2>
+            <p class="map__address contacts__button contacts__button--address contacts__button--address--mobile">ул. Большая Конюшенная, 19/8</p>
+            <a class="map__route button-two" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=routes&rtext=59.938631%2C30.323055&rtt=comparison&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=16">Проложить маршрут</a>
+          </div>
         </div>
 
-        <img src="img/map.png" width="320" height="332" alt="Офис компании по адресу: ул. Большая Конюшенная, 19/8">
+        <img class="map__image" src="img/map-tablet.png" width="767" height="700" alt="Офис компании по адресу: ул. Большая Конюшенная, 19/8">
       </section>
     </main>
 
     <!-- Подвал сайта -->
     <footer class="footer">
-      <div class="inner">
+      <div class="footer__inner inner">
         <a class="footer__logo logo">
           <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
         </a>
@@ -290,23 +357,39 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      var mainMenu = document.querySelector(".menu");
+      var headerToggle = document.querySelector(".header__toggle");
+      var mainMenuCloseButton = document.querySelector(".menu__close-button");
+      var headerTopMenu = document.querySelector(".header__inner");
+
+      var businessRatesModal = document.querySelector(".business-rates-modal");
+      var showBusinessRatesModalButton = document.querySelector(".rates__more-link");
+      var businessRatesModalCloseButton = document.querySelector(".business-rates-modal__close-button");
+
+      mainMenu.classList.remove("menu--no-js");
+
+      mainMenuCloseButton.addEventListener("click", function() {
+        mainMenu.classList.remove("menu--opened");
+        mainMenu.classList.add("menu--closed");
+        headerTopMenu.classList.remove("header__inner--hide");
+      });
+
+      headerToggle.addEventListener("click", function () {
+        mainMenu.classList.remove("menu--closed");
+        mainMenu.classList.add("menu--opened");
+        headerTopMenu.classList.add("header__inner--hide");
+      });
+
+      showBusinessRatesModalButton.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        businessRatesModal.classList.add("business-rates-modal--show");
+      });
+
+      businessRatesModalCloseButton.addEventListener("click", function () {
+          businessRatesModal.classList.remove("business-rates-modal--show");
+        });
+    </script>
   </body>
-
-  <!-- Модальное окно с бизнес-тарифами -->
-  <section class="business-rates-modal">
-    <h2 class="business-rates-modal__title index-title">Бизнес-тарифы</h2>
-
-    <dl class="business-rates-modal__list rates-list index-text">
-      <dt class="rates-list__item-title">Реклама у блоггера</dt>
-      <dd class="rates-list__item-desc">300 000 руб./пост</dd>
-      <dt class="rates-list__item-title">Накрутка подписчиков</dt>
-      <dd class="rates-list__item-desc">от 1 руб./шт.</dd>
-      <dt class="rates-list__item-title">Лайки от ботов</dt>
-      <dd class="rates-list__item-desc">20 коп./лайк</dd>
-      <dt class="rates-list__item-title">Ваш продакт-плейсмент</dt>
-      <dd class="rates-list__item-desc">Индивидуально</dd>
-    </dl>
-
-    <button class="business-rates-modal__close-button" type="button">Закрыть окно</button>
-  </section>
 </html>

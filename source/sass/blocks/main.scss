@@ -1,8 +1,98 @@
 .main {
-  margin: 0 auto;
+  //margin: 0 auto;
 }
 
 .main__intro {
-  margin: 0 auto;
-  padding-top: 23px;
+  //margin: 0 auto;
+  position: relative;
+  z-index: 6;
+}
+
+.main__about {
+  position: relative;
+  z-index: 5;
+}
+
+.main__countries {
+  position: relative;
+  z-index: 4;
+
+  margin-top: -$radius-4;
+}
+
+.main__travelmates {
+  position: relative;
+  z-index: 3;
+
+  margin-top: -$radius-4;
+}
+
+.main__rates-wrapper {
+  position: relative;
+}
+
+.main__rates {
+  position: relative;
+  z-index: 2;
+
+  margin-top: -$radius-4;
+}
+
+.main__cta-form {
+  position: relative;
+  z-index: 1;
+
+  margin-top: -$radius-4;
+}
+
+.main__map {
+  margin-top: -$radius-4;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .main__countries {
+    margin-top: -$radius-5;
+  }
+
+  .main__travelmates {
+    margin-top: -$radius-5;
+  }
+
+  .main__rates {
+    margin-top: -$radius-5;
+  }
+
+  .main__cta-form {
+    margin-top: -$radius-5;
+  }
+
+  .main__map {
+    margin-top: -$radius-5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main__about {
+    margin-top: -$radius-5;
+  }
+
+  .main__countries {
+    margin-top: -$radius-5;
+  }
+
+  .main__travelmates {
+    margin-top: -$radius-5;
+  }
+
+  .main__rates {
+    margin-top: -$radius-5;
+  }
+
+  .main__cta-form {
+    margin-top: -$radius-5;
+  }
+
+  .main__map {
+    margin-top: -$radius-5;
+  }
 }

@@ -1,0 +1,86 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  @include font-name;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  list-style: none;
+
+  background-color: #ffffff;
+  border-radius: $radius-2;
+}
+
+.pagination__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pagination__link {
+  text-decoration: none;
+  color: $blue-1;
+}
+
+.pagination__button {
+  width: 30px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px 20px;
+
+  &--back {
+    background-image: url("../../img/triangle-arrow-left.svg");
+  }
+
+  &--forward {
+    background-image: url("../../img/triangle-arrow-right.svg");
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .pagination__item {
+    display: none;
+  }
+
+  .pagination__button {
+    width: 135px;
+
+    &--back {
+      border-right: 1px solid $grey-1;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .pagination {
+    padding-top: 20px;
+    padding-right: 28px;
+    padding-bottom: 20px;
+    padding-left: 28px;
+  }
+
+  .pagination__button--back {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    padding-top: 25px;
+    padding-right: 28px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+  }
+
+  .pagination__button--back {
+    margin-left: auto;
+  }
+}

@@ -1,15 +1,144 @@
 .countries-list {
+
+  display: flex;
+  width: 220px;
   margin: 0;
   padding: 0;
+  padding-top: 59px;
+  padding-right: 20px;
+  padding-bottom: 19px;
+  padding-left: 20px;
 
   @include font-name;
-  font-size: 16px;
   font-weight: 400;
-  line-height: 1.38;
   list-style: none;
+  color: $grey-5;
+
+  background-color: #ffffff;
+  border-bottom-left-radius: $radius-2;
+  border-bottom-right-radius: $radius-2;
+  border-right: 1px solid $grey-2;
+  border-bottom: 1px solid $grey-2;
+  border-left: 1px solid $grey-2;
+
+  ul {
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  &--catalog {
+    background-color: transparent;
+    border: 0;
+  }
 }
 
 .countries-list__link {
   text-decoration: none;
   color: $grey-5;
+}
+
+.countries-list__letter {
+  font-size: 0;
+  display: none;
+
+  &:first-child {
+    display: block;
+  }
+}
+
+.countries-list__item {
+  font-size: 16px;
+  line-height: 1.38;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .countries-list {
+    width: 206px;
+    margin-left: 79px;
+    padding-top: 37px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+
+    border: 0;
+    border-bottom-right-radius: $radius-4;
+    border-left: 1px solid $grey-2;
+
+    &--catalog {
+      padding-top: 0;
+
+      background-color: transparent;
+      border: 0;
+    }
+  }
+
+  .countries-list__item {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries-list {
+    width: 240px;
+    margin-left: 102px;
+    padding-top: 37px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+
+    font-size: 20px;
+    line-height: 1.5;
+
+    border: 0;
+    border-bottom-right-radius: $radius-4;
+    border-left: 1px solid $grey-2;
+
+    &--catalog {
+      flex-wrap: wrap;
+      width: 100%;
+      margin-left: 0;
+      padding-top: 49px;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+
+      background-color: transparent;
+      border: 0;
+
+      .countries-list__letter {
+        display: block;
+        padding-right: 10px;
+
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1;
+        color: $blue-2;
+      }
+
+      .countries-list__item {
+        width: 240px;
+
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $grey-5;
+      }
+
+      .countries-list__letter-list {
+        margin-top: 48px;
+        margin-bottom: 59px;
+      }
+    }
+  }
+
+  .countries-list__item {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }

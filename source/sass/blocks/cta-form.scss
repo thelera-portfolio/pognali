@@ -1,20 +1,147 @@
+$padding-top-mobile: 100px;
+$padding-bottom-mobile: 29px;
+$padding-top-tablet: 137px;
+$padding-bottom-tablet: 62px;
+$padding-top-desktop: 135px;
+$padding-bottom-desktop: 104px;
+
 .cta-form {
   background-color: $blue-2;
-  border-bottom-right-radius: $radius-3;
-  border-bottom-left-radius: $radius-3;
+
+  border-bottom-right-radius: $radius-4;
+  border-bottom-left-radius: $radius-4;
+}
+
+.cta-form__inner {
+  padding-top: $padding-top-mobile;
+  padding-bottom: $padding-bottom-mobile;
+}
+
+.cta-form__title {
+  margin-bottom: 20px;
 }
 
 .cta-form__text {
-  display: inline-block;
-  width: 220px;
+  width: 210px;
+  margin-bottom: 30px;
 
   text-align: center;
+}
+
+.cta-form__input {
+  margin-bottom: 32px;
+}
+
+.cta-form__login-form {
+  position: relative;
 }
 
 .cta-form__login-link {
   color: $yellow-1;
 }
 
+.cta-form__button {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 60px;
+  height: 62px;
+
+  font-size: 0;
+}
+
 .cta-form__contacts {
   color: $yellow-1;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .cta-form {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+
+  .cta-form__inner {
+    padding-top: $padding-top-tablet;
+    padding-bottom: $padding-bottom-tablet;
+  }
+
+  .cta-form__title {
+    margin-bottom: 60px;
+  }
+
+  .cta-form__text {
+    width: auto;
+    margin-bottom: 65px;
+  }
+
+  .cta-form__login-form {
+    margin-bottom: 60px;
+  }
+
+  .cta-form__input {
+    width: 617px;
+  }
+
+  .cta-form__contacts {
+    align-self: flex-start;
+  }
+
+  .cta-form__button {
+    top: 0;
+    right: 0;
+
+    width: 82px;
+    height: 81px;
+
+    font-size: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cta-form {
+    border-bottom-right-radius: $radius-5;
+    border-bottom-left-radius: $radius-5;
+  }
+
+  .cta-form__inner {
+    align-items: center;
+
+    padding-top: $padding-top-desktop;
+    padding-bottom: $padding-bottom-desktop;
+  }
+
+  .cta-form__title {
+    margin-bottom: 60px;
+  }
+
+  .cta-form__text {
+    width: auto;
+    margin-bottom: 60px;
+  }
+
+  .cta-form__login-form {
+    margin-bottom: 70px;
+  }
+
+  .cta-form__input {
+    width: 1175px;
+  }
+
+  .cta-form__contacts {
+    display: flex;
+  }
+
+  .cta-form__button {
+    top: 0;
+    right: 0;
+
+    width: 325px;
+    height: 81px;
+
+    background-position: 278px center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }

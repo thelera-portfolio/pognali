@@ -1,23 +1,43 @@
 .review {
+  width: 190px;
   margin: 0;
   padding: 0;
+  padding-left: 25px;
 
   @include font-name;
   color: #ffffff;
-
-  background-color: $blue-1;
 }
 
 .review__text {
-  width: 220px;
   margin: 0;
-  padding-right: 72px;
+  margin-bottom: 25px;
 }
 
 .review__author {
   display: block;
-  width: 220px;
-  padding-right: 60px;
 
   font-style: normal;
 }
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
+  .review {
+    width: 298px;
+    padding-left: 33px;
+  }
+
+  .review__text {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review {
+    width: $desktop-width - 2 * $desktop-padding;
+    padding: 0;
+  }
+
+  .review__text {
+    margin-bottom: 50px;
+  }
+}
+
