@@ -1,0 +1,22 @@
+.logo {
+  width: 100px;
+  height: 19px;
+}
+
+.logo__image {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .logo {
+    width: 166px;
+    height: 42px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    width: 198px;
+    height: 52px;
+  }
+}

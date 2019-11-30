@@ -100,11 +100,7 @@
   }
 
   .menu__logo {
-    width: 166px;
-    height: 42px;
     margin-bottom: 105px;
-
-    background-image: url("../../img/logo-tablet-white@1x.png");
   }
 
   .menu__list {
@@ -164,13 +160,8 @@
   .menu__logo {
     position: relative;
 
-    width: 200px;
-    height: 52px;
     margin: 0;
     margin-right: 145px;
-
-    background-image: url("../../img/logo-tablet-white@1x.png");
-    background-repeat: no-repeat;
 
     &::before {
       content: "";

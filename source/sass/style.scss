@@ -76,6 +76,11 @@ html {
   box-sizing: inherit;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/inner.scss";
 @import "./blocks/index-text.scss";
@@ -125,3 +130,4 @@ html {
 @import "./blocks/calendar.scss";
 @import "./blocks/business-rates-modal.scss";
 @import "./blocks/form-main.scss";
+@import "./blocks/logo.scss";
