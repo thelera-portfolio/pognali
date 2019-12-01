@@ -20,7 +20,7 @@
 .countries-item__title-wrapper {
   z-index: 1;
 
-  margin-top: -$radius-1;
+  margin-top: 100px;
   padding-top: 25px;
 
   background-color: #ffffff;
@@ -29,18 +29,54 @@
 }
 
 .countries-item__title {
+  position: relative;
+
   margin: 0;
+  margin-top: -20px;
+  padding-top: 25px;
+  padding-right: 85px;
+  padding-left: 25px;
 
   font-size: 21px;
   font-weight: 700;
   line-height: 1;
   color: $blue-1;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -17px;
+    left: 25px;
+
+    width: 35px;
+    height: 24px;
+
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--thailand::before {
+    background-image: url("../../img/flag-thailand.svg");
+  }
+
+  &--france::before {
+    background-image: url("../../img/flag-france.svg");
+  }
+
+  &--czech::before {
+    background-image: url("../../img/flag-czech.svg");
+  }
 }
 
 .countries-item__image {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-  order: -1;
+  width: 270px;
+  height: 110px;
 
   border-top-right-radius: $radius-1;
   border-top-left-radius: $radius-1;
@@ -89,21 +125,6 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
-  .countries-item__title {
-    position: relative;
-    z-index: 1;
-
-    margin-top: -20px;
-    padding-top: 25px;
-    padding-right: 85px;
-    padding-left: 25px;
-
-    //background-image: linear-gradient(#ffffff 50%, transparent 50%);
-    border-radius: $radius-1;
-  }
-}
-
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .countries-item {
     position: relative;
@@ -135,21 +156,37 @@
   }
 
   .countries-item__title {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+
     font-size: 24px;
+
+    &::before {
+      top: -15px;
+      left: 368px;
+
+      width: 70px;
+      height: 47px;
+    }
   }
 
   .countries-item__image {
-    position: absolute;
     top: 0;
     right: 0;
+    left: auto;
 
-    order: 0;
-    width: 174px;
+    width: 186px;
     height: 140px;
 
     border-radius: 0;
     border-top-right-radius: $radius-2;
     border-bottom-right-radius: $radius-2;
+  }
+
+  .countries-item__image-picture {
+    width: 186px;
+    height: 140px;
   }
 
   .countries-item__text {
@@ -217,15 +254,26 @@
   }
 
   .countries-item__title {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+
     font-size: 24px;
+
+    &::before {
+      top: 0;
+      left: 308px;
+
+      width: 70px;
+      height: 47px;
+    }
   }
 
   .countries-item__image {
-    position: absolute;
     top: 0;
     right: 0;
+    left: auto;
 
-    order: 0;
     width: 186px;
     height: 140px;
 
