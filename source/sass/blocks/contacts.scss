@@ -11,6 +11,7 @@
 
 .contacts__button {
   position: relative;
+
   display: flex;
   align-items: center;
   padding-top: 9px;
@@ -21,58 +22,61 @@
   text-decoration: none;
   color: inherit;
 
+  //круглый фон
   &::before {
     content: "";
 
     position: absolute;
     top: 0;
     left: 0;
+
     display: block;
+    width: 40px;
+    height: 40px;
+
+    background-color: $blue-3;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $yellow-3;
+    }
+  }
+
+  //картинки в круглом фоне
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
 
     width: 40px;
     height: 40px;
 
-    background-position: 50%;
     background-repeat: no-repeat;
-    border-radius: 50%;
+    background-position: center;
   }
 
-  &--tel::before {
-    background-color: $blue-3;
+  &--tel::after {
     background-image: url("../../img/contacts-phone-yellow.svg");
-    background-repeat: no-repeat;
     background-size: 18px 18px;
-
-    &:hover {
-      background-color: $yellow-3;
-    }
   }
 
-  &--email::before {
-    background-color: $blue-3;
+  &--email::after {
     background-image: url("../../img/contacts-mail-yellow.svg");
-    background-repeat: no-repeat;
     background-size: 18px 13px;
-
-    &:hover {
-      background-color: $yellow-3;
-    }
   }
 
-  &--address::before {
-    background-color: $blue-3;
+  &--address::after {
     background-image: url("../../img/contacts-location-yellow.svg");
-    background-repeat: no-repeat;
     background-size: 14px 22px;
-
-    &:hover {
-      background-color: $yellow-3;
-    }
   }
 
-  &--address--mobile::before {
-    top: 10px;
-  }
+  // &--address--mobile::before {
+  //   top: 10px;
+  // }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -81,12 +85,26 @@
       padding-left: 40px;
 
       &::before {
-        width: 40px;
-        height: 40px;
-
         background-color: $yellow-3;
-        background-image: url("../../img/topmenu-phone.svg");
+      }
+
+      &::after {
+        //width: 40px;
+        //height: 40px;
+
+        background-image: url("../../img/topmenu-phone-blue.svg");
         background-size: 18px 18px;
+      }
+
+      &:hover::before,
+      &:focus::before,
+      &:active::before {
+        background-color: $yellow-6;
+      }
+
+      &:focus::after,
+      &:active::after {
+        opacity: 0.3;
       }
     }
 
@@ -98,7 +116,7 @@
         height: 40px;
 
         background-color: $yellow-2;
-        background-image: url("../../img/topmenu-mail.svg");
+        background-image: url("../../img/topmenu-mail-blue.svg");
         background-size: 18px 14px;
       }
     }
