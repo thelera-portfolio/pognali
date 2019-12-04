@@ -13,7 +13,11 @@
     <div class="header__inner header__inner--hide inner">
       <!-- Логотип -->
       <a class="header__logo logo" href="index.html">
-        <img class="logo__image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source media="(min-width: 768px)" width="166" height="42" srcset="img/logo-tablet-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+        </picture>
       </a>
 
       <button class="header__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">
@@ -32,7 +36,11 @@
     <nav class="header__menu menu menu--opened menu--no-js">
       <div class="menu__inner inner">
         <a class="menu__logo logo" href="index.html">
-          <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+          </picture>
         </a>
 
         <!-- Меню, которе появляется при клике на гамбургер -->
@@ -476,8 +484,11 @@
             <h3 class="travelmates-item__title">
               <a class="travelmates-item__profile-link" href="#">Таня Фирсова</a>
             </h3>
-
-            <img class="travelmates-item__image" src="img/firsova-desktop@1x.jpg" width="285" height="285" alt="Фото девушки в бассейне">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+              <img class="travelmates-item__image" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Фото девушки в бассейне">
+            </picture>
 
             <p class="travelmates-item__likes">1,5 М</p>
 
@@ -492,9 +503,9 @@
 
             <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
             <ul class="travelmates-item__countries-flags country-flags">
-              <li class="country-flags__item country-flags__item--shri-lanka">Шри-Ланка</li>
-              <li class="country-flags__item country-flags__item--thailand">Тайланд</li>
-              <li class="country-flags__item country-flags__item--seychelles">Сейшеллы</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--shri-lanka">Шри-Ланка</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--thailand">Тайланд</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--seychelles">Сейшеллы</li>
             </ul>
 
             <p class="travelmates-item__text travelmates-item__text--transport">Транспорт:</p>
@@ -516,14 +527,18 @@
               <a class="travelmates-item__profile-link" href="#">Петя Демин</a>
             </h3>
 
-            <img class="travelmates-item__image" src="img/demin-desktop@1x.jpg" width="285" height="285" alt="Фото мужчины с бородой в шапке и темных очках">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+              <img class="travelmates-item__image" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Фото мужчины с бородой в шапке и темных очках">
+            </picture>
 
             <p class="travelmates-item__likes">150</p>
 
             <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
             <ul class="travelmates-item__countries-flags country-flags">
-              <li class="country-flags__item country-flags__item--belgium">Бельгия</li>
-              <li class="country-flags__item country-flags__item--czech">Чехия</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--belgium">Бельгия</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--czech">Чехия</li>
             </ul>
 
             <ul class="travelmates-item__tags-list tags-list">
@@ -553,15 +568,19 @@
               <a class="travelmates-item__profile-link" href="#">Марк Смолов</a>
             </h3>
 
-            <img class="travelmates-item__image" src="img/smolov-desktop@1x.jpg" width="285" height="285" alt="Фото без головы мужчины в белой майке и шортах">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+              <img class="travelmates-item__image" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Фото мужчины в белой майке и шортах">
+            </picture>
 
             <p class="travelmates-item__likes">1700</p>
 
             <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
             <ul class="travelmates-item__countries-flags country-flags">
-              <li class="country-flags__item country-flags__item--usa">США</li>
-              <li class="country-flags__item country-flags__item--australia">Австралия</li>
-              <li class="country-flags__item country-flags__item--dominican">Доминикана</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--usa">США</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--australia">Австралия</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--dominican">Доминикана</li>
             </ul>
 
             <ul class="travelmates-item__tags-list tags-list">
@@ -590,14 +609,18 @@
             <h3 class="travelmates-item__title">
               <a class="travelmates-item__profile-link" href="#">Лариса Роговая</a></h3>
 
-            <img class="travelmates-item__image" src="img/rogovaya-desktop@1x.jpg" width="285" height="285" alt="Фото девушки в синем костюме">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+              <img class="travelmates-item__image" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Фото девушки в синем деловом костюме">
+            </picture>
 
             <p class="travelmates-item__likes">23</p>
 
             <p class="travelmates-item__text travelmates-item__text--countries">Хочет посетить:</p>
             <ul class="travelmates-item__countries-flags country-flags">
-              <li class="country-flags__item country-flags__item--uk">Великобритания</li>
-              <li class="country-flags__item country-flags__item--germany">Германия</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--uk">Великобритания</li>
+              <li class="travelmates-item__countries-flags-item country-flags__item country-flags__item--germany">Германия</li>
             </ul>
 
             <ul class="travelmates-item__tags-list tags-list">
@@ -643,7 +666,11 @@
   <footer class="footer">
     <div class="footer__inner inner">
       <a class="footer__logo logo" href="index.html">
-        <img class="logo__image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" width="166" height="42" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+        </picture>
       </a>
 
       <ul class="footer__socials socials">

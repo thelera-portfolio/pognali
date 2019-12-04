@@ -300,6 +300,11 @@
     font-weight: 500;
     line-height: 0.9;
     letter-spacing: 2px;
+
+    &::before {
+      width: 0;
+      height: 0;
+    }
   }
 
   .travelmate-form__range--custom-range {

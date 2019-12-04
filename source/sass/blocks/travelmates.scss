@@ -32,6 +32,12 @@ $padding-bottom-desktop: 133px;
     height: 71px;
 
     background-image: url("../../img/rogovaya-back-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 71px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/rogovaya-back-mobile@2x.png");
+    }
   }
 
   &::after {
@@ -46,6 +52,11 @@ $padding-bottom-desktop: 133px;
     height: 143px;
 
     background-image: url("../../img/smolov-back-desktop@1x.png");
+    background-size: 143px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/smolov-back-desktop@2x.png");
+    }
   }
 }
 
@@ -127,6 +138,11 @@ $padding-bottom-desktop: 133px;
       height: 285px;
 
       background-image: url("../../img/rogovaya-back-desktop@1x.png");
+      background-size: 285px auto;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/rogovaya-back-desktop@2x.png");
+      }
     }
 
     &::after {
@@ -141,6 +157,11 @@ $padding-bottom-desktop: 133px;
       height: 143px;
 
       background-image: url("../../img/smolov-back-desktop@1x.png");
+      background-size: 143px auto;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/smolov-back-desktop@2x.png");
+      }
     }
   }
 
@@ -220,6 +241,11 @@ $padding-bottom-desktop: 133px;
       height: 285px;
 
       background-image: url("../../img/rogovaya-back-desktop@1x.png");
+      background-size: 285px auto;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/rogovaya-back-desktop@2x.png");
+      }
     }
 
     &::after {
@@ -234,6 +260,10 @@ $padding-bottom-desktop: 133px;
       height: 143px;
 
       background-image: url("../../img/smolov-back-desktop@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/smolov-back-desktop@2x.png");
+      }
     }
   }
 

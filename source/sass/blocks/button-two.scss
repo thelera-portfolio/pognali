@@ -26,6 +26,18 @@
     background-color: $yellow-2;
   }
 
+  &:focus {
+    color: rgba($blue-1, 0.3);
+
+    background-color: $yellow-2;
+  }
+
+  &:active {
+    color: rgba($blue-1, 0.3);
+
+    background-color: $yellow-2;
+  }
+
   &--bgc {
     background-color: $grey-3;
   }

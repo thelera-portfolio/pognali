@@ -22,39 +22,37 @@
   font-weight: 700;
   line-height: 1;
 
-  .travelmates-item__title {
-    &--busy::before {
-      content: "";
+  &--busy::before {
+    content: "";
 
-      position: absolute;
-      top: 5px;
-      left: -11px;
+    position: absolute;
+    top: 5px;
+    left: -11px;
 
-      width: 5px;
-      height: 5px;
+    width: 5px;
+    height: 5px;
 
-      background-color: #f97676;
-      border-radius: 50%;
-    }
+    background-color: #f97676;
+    border-radius: 50%;
+  }
 
-    &--ready::before {
-      content: "";
+  &--ready::before {
+    content: "";
 
-      position: absolute;
-      top: 5px;
-      left: -11px;
+    position: absolute;
+    top: 5px;
+    left: -11px;
 
-      width: 5px;
-      height: 5px;
+    width: 5px;
+    height: 5px;
 
-      background-color: #81e31e;
-      border-radius: 50%;
-    }
+    background-color: #81e31e;
+    border-radius: 50%;
   }
 }
 
 .travelmates-item__image {
-  order: -1;
+  order: -2;
   width: 270px;
   height: 270px;
   margin-bottom: 25px;
@@ -71,11 +69,11 @@
 }
 
 .travelmates-item__countries-flags {
-  position: static;
-
-  order: 5;
-  width: 270px;
+  order: -1;
+  min-height: 24px;
+  margin-top: -35px;
   margin-bottom: 21px;
+  padding-left: 17px;
 }
 
 .travelmates-item__profile-link {
@@ -186,7 +184,22 @@
   }
 
   .travelmates-item__countries-flags {
+    order: 5;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     margin-bottom: 19px;
+  }
+
+  .travelmates-item__countries-flags-item {
+    margin-bottom: 10px;
+    padding-left: 41px;
+
+    &::before {
+      width: 26px;
+      height: 18px;
+    }
   }
 
   .travelmates-item__transport-list {
@@ -305,10 +318,19 @@
     }
 
     .travelmates-item__countries-flags {
-      display: flex;
+      flex-direction: row;
       order: 7;
-      width: auto;
       margin: 0;
+    }
+
+    .travelmates-item__countries-flags-item {
+      margin-right: 27px;
+      padding-left: 52px;
+
+      &::before {
+        width: 36px;
+        height: 24px;
+      }
     }
 
     .travelmates-item__likes {
@@ -470,6 +492,15 @@
 
       width: auto;
       margin: 0;
+    }
+
+    .travelmates-item__countries-flags-item {
+      padding-left: 52px;
+
+      &::before {
+        width: 36px;
+        height: 24px;
+      }
     }
 
     .travelmates-item__likes {

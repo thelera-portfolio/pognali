@@ -10,7 +10,7 @@ $padding-bottom-desktop: 123px;
 }
 
 .user-info__inner {
-  position: relative;
+  flex-direction: row;
   padding-top: $padding-top-mobile;
   padding-bottom: $padding-bottom-mobile;
 }
@@ -22,11 +22,11 @@ $padding-bottom-desktop: 123px;
 }
 
 .user-info__photo {
-  position: absolute;
-  right: 42px;
-
   width: 100px;
   height: 100px;
+  margin-right: 20px;
+  margin-bottom: 19px;
+
   border-radius: 50%;
 }
 
@@ -95,10 +95,9 @@ $padding-bottom-desktop: 123px;
   }
 
   .user-info__photo {
-    position: static;
-
     width: 94px;
     height: 94px;
+    margin: 0;
 
     border-radius: 8px;
   }
@@ -160,7 +159,6 @@ $padding-bottom-desktop: 123px;
 @media (min-width: $desktop-width) {
   .user-info {
     margin-top: -190px;
-    //padding-bottom: 65px + $radius-5;
   }
 
   .user-info__inner {
@@ -181,12 +179,18 @@ $padding-bottom-desktop: 123px;
     color: #ffffff;
   }
 
-  .user-info__photo {
-    position: static;
+  .user-info__picture {
+    position: relative;
     z-index: 1;
 
     width: 190px;
     height: 190px;
+  }
+
+  .user-info__photo {
+    width: 190px;
+    height: 190px;
+    margin: 0;
     margin-left: 33px;
 
     border-radius: 0;

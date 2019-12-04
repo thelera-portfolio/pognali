@@ -46,11 +46,43 @@
   list-style: none;
 }
 
+.menu__item {
+  overflow: hidden;
+}
+
 .menu__link {
+  position: relative;
+
+  display: inline-block;
+
   font-size: 30px;
-  line-height: 1.2;
+  line-height: 1;
   text-decoration: none;
   color: inherit;
+
+  transition: transform 0.3s;
+
+  &::before {
+    content: attr(data-hover);
+
+    position: absolute;
+    top: 100%;
+
+    line-height: 1;
+    font-weight: 500;
+  }
+
+  &:hover {
+    color: $yellow-1;
+
+    cursor: pointer;
+
+    transform: translateY(-100%);
+  }
+
+  &:active {
+    color: rgba($yellow-1, 0.3);
+  }
 }
 
 .menu__login-button {
@@ -100,11 +132,7 @@
   }
 
   .menu__logo {
-    width: 166px;
-    height: 42px;
     margin-bottom: 105px;
-
-    background-image: url("../../img/logo-tablet-white@1x.png");
   }
 
   .menu__list {
@@ -164,13 +192,8 @@
   .menu__logo {
     position: relative;
 
-    width: 200px;
-    height: 52px;
     margin: 0;
     margin-right: 145px;
-
-    background-image: url("../../img/logo-tablet-white@1x.png");
-    background-repeat: no-repeat;
 
     &::before {
       content: "";
