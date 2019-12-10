@@ -13,7 +13,7 @@ $padding-bottom-desktop: 130px;
   background-image: url("../../img/globe-back-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 100% 405px;
+  background-size: auto 405px;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../../img/globe-back-mobile@2x.jpg");
@@ -242,6 +242,8 @@ $padding-bottom-desktop: 130px;
   }
 
   .intro__inner {
+    position: relative;
+
     flex-direction: row;
     padding-top: $padding-top-desktop;
     padding-bottom: $padding-bottom-desktop;
@@ -266,12 +268,10 @@ $padding-bottom-desktop: 130px;
     text-align: left;
   }
 
-  .intro__contacts {
-    display: none;
-  }
-
-  .intro__login-button {
-    display: none;
+  .intro__contacts-inner {
+    position: absolute;
+    top: -61px;
+    right: $desktop-padding;
   }
 
   .intro__review {

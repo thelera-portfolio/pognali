@@ -3,8 +3,10 @@
   width: 270px;
   height: 62px;
   padding: 0;
+  padding-left: 24px;
 
   @include font-name;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1;
   vertical-align: middle;
@@ -12,9 +14,9 @@
 
   background-color: #ffffff;
   border: 0;
+  border-radius: $radius-1;
 
   &::placeholder {
-    padding-left: 24px;
     color: rgba($grey-5, 0.3);
   }
 
@@ -39,13 +41,12 @@
       color: transparent;
     }
   }
-}
 
-@media (max-width: $mobile-width-only) {
-  .input-field {
-    font-size: 18px;
+  &--error {
+    color: #ff0000;
 
-    border-radius: $radius-1;
+    border: 0;
+    background-color: #ffefef;
   }
 }
 

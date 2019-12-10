@@ -6,20 +6,25 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.38;
-  color: rgba($grey-5, 0.6);
+  color: $grey-5;
+
 
   background-color: transparent;
   border: none;
   resize: none;
 
   &::placeholder {
-    color: $grey-5;
+    color: rgba($grey-5, 0.6);
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
   }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .tags__text-input {
-
     font-size: 20px;
     line-height: 1.2;
   }

@@ -1,6 +1,12 @@
 .logo {
   width: 100px;
   height: 19px;
+
+  cursor: pointer;
+
+  &--no-cursor {
+    cursor: default;
+  }
 }
 
 .logo__image {

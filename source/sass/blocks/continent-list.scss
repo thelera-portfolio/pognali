@@ -17,9 +17,22 @@
   font-weight: 700;
   line-height: 1.38;
   text-transform: uppercase;
+}
+
+.continent-list__link {
+  text-decoration: none;
   color: rgba($blue-2, 0.3);
 
   &--checked {
+    color: $blue-2;
+  }
+
+  &:hover {
+    color: rgba($blue-2, 0.6);
+  }
+
+  &:focus,
+  &:active {
     color: $blue-2;
   }
 }

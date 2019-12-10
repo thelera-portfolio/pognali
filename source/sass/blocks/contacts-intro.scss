@@ -1,0 +1,97 @@
+.contacts-intro__button {
+  position: relative;
+
+  padding-left: 40px;
+
+  //круглый фон
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+
+  //картинки в круглом фоне
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 40px;
+    height: 40px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--tel {
+    &::before {
+      background-color: $yellow-3;
+    }
+
+    &::after {
+      background-image: url("../../img/topmenu-phone-blue.svg");
+      background-size: 18px 18px;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      background-color: $yellow-6;
+    }
+
+    &:focus::after,
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+
+  &--email {
+    &::before {
+      background-color: $yellow-2;
+    }
+
+    &::after {
+      background-image: url("../../img/topmenu-mail-blue.svg");
+      background-size: 18px 14px;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
+      background-color: $yellow-3;
+    }
+
+    &:focus::after,
+    &:active::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-intro__button {
+    padding-left: 50px;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+
+    &::after {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+

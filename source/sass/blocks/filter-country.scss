@@ -63,6 +63,17 @@
   background-color: transparent;
   border: 0;
 
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+
   //блок скрыт
   &::before {
     content: "показать все";
@@ -94,7 +105,7 @@
   }
 
   &--expanded::after {
-    background-image: url("../../img/small-cross.svg");
+    background-image: url("../../img/small-cross-blue.svg");
     background-position: right center;
     background-size: 12px 12px;
   }
@@ -112,6 +123,8 @@
 .filter-country__button-close {
   margin-bottom: 27px;
 
+  cursor: pointer;
+
   &--text {
     position: relative;
 
@@ -127,13 +140,27 @@
       width: 12px;
       height: 12px;
 
-      background-image: url("../../img/small-cross.svg");
+      background-image: url("../../img/small-cross-blue.svg");
       background-repeat: no-repeat;
     }
   }
 
   &--hide {
     display: none;
+  }
+
+  &:hover {
+    background-color: $grey-12;
+  }
+
+  &:focus,
+  &:active {
+    background-color: $grey-12;
+  }
+
+  &:focus .filter-country__button-text,
+  &:active .filter-country__button-text {
+    opacity: 0.3;
   }
 }
 

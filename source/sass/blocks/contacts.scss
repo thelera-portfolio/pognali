@@ -4,7 +4,7 @@
   font-weight: 700;
   line-height: 1.38;
   text-transform: uppercase;
-  color: $blue-2;
+  color: $blue-1;
 
   list-style: none;
 }
@@ -14,13 +14,15 @@
 
   display: flex;
   align-items: center;
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 12px;
+  padding-bottom: 11px;
   padding-left: 60px;
 
   font: inherit;
   text-decoration: none;
   color: inherit;
+
+  fill: $yellow-1;
 
   //круглый фон
   &::before {
@@ -30,96 +32,58 @@
     top: 0;
     left: 0;
 
-    display: block;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
 
     background-color: $blue-3;
-    background-position: 50%;
+    background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
+  }
+
+  &--color-yellow {
+    color: $yellow-1;
 
     &:hover {
-      background-color: $yellow-3;
+      color: $yellow-2;
+
+      fill: $yellow-2;
+    }
+
+    &:focus,
+    &:active {
+      color: rgba($yellow-2, 0.3);
+
+      fill: rgba($yellow-2, 0.3);
     }
   }
-
-  //картинки в круглом фоне
-  &::after {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 40px;
-    height: 40px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--tel::after {
-    background-image: url("../../img/contacts-phone-yellow.svg");
-    background-size: 18px 18px;
-  }
-
-  &--email::after {
-    background-image: url("../../img/contacts-mail-yellow.svg");
-    background-size: 18px 13px;
-  }
-
-  &--address::after {
-    background-image: url("../../img/contacts-location-yellow.svg");
-    background-size: 14px 22px;
-  }
-
-  // &--address--mobile::before {
-  //   top: 10px;
-  // }
 }
 
-@media (max-width: $mobile-width-only) {
-  .contacts__button {
-    &--tel-intro {
-      padding-left: 40px;
+.contacts__button-icon {
+  position: absolute;
 
-      &::before {
-        background-color: $yellow-3;
-      }
+  &--phone {
+    top: 14px;
+    left: 14px;
 
-      &::after {
-        //width: 40px;
-        //height: 40px;
+    width: 18px;
+    height: 18px;
+  }
 
-        background-image: url("../../img/topmenu-phone-blue.svg");
-        background-size: 18px 18px;
-      }
+  &--email {
+    top: 15px;
+    left: 14px;
 
-      &:hover::before,
-      &:focus::before,
-      &:active::before {
-        background-color: $yellow-6;
-      }
+    width: 18px;
+    height: 13px;
+  }
 
-      &:focus::after,
-      &:active::after {
-        opacity: 0.3;
-      }
-    }
+  &--address {
+    top: 20px;
+    left: 16px;
 
-    &--email-intro {
-      padding-left: 40px;
-
-      &::before {
-        width: 40px;
-        height: 40px;
-
-        background-color: $yellow-2;
-        background-image: url("../../img/topmenu-mail-blue.svg");
-        background-size: 18px 14px;
-      }
-    }
+    width: 14px;
+    height: 22px;
   }
 }
 
@@ -138,17 +102,31 @@
       width: 67px;
       height: 67px;
     }
+  }
 
-    &--tel::before {
-      background-size: 27px 27px;
+  .contacts__button-icon {
+    &--phone {
+      top: 21px;
+      left: 21px;
+
+      width: 27px;
+      height: 27px;
     }
 
-    &--email::before {
-      background-size: 27px 19px;
+    &--email {
+      top: 25px;
+      left: 20px;
+
+      width: 27px;
+      height: 19px;
     }
 
-    &--address::before {
-      background-size: 14px 22px;
+    &--address {
+      top: 20px;
+      left: 23px;
+
+      width: 21px;
+      height: 31px;
     }
   }
 }
@@ -169,52 +147,38 @@
       height: 90px;
     }
 
-    &--tel::before {
-      background-size: 36px 36px;
-    }
-
-    &--email::before {
-      background-size: 36px 26px;
-    }
-
-    &--address::before {
-      background-size: 28px 43px;
-    }
-
-    &--tel-topmenu {
-      width: 50px;
-      height: 50px;
-      padding: 0;
-
-      &::before {
-        width: 50px;
-        height: 50px;
-        background-color: $yellow-3;
-        background-image: url("../../img/topmenu-phone.svg");
-        background-size: 18px 18px;
-      }
-    }
-
-    &--email-topmenu {
-      width: 50px;
-      height: 50px;
-      padding: 0;
-
-      &::before {
-        width: 50px;
-        height: 50px;
-        background-color: $yellow-2;
-        background-image: url("../../img/topmenu-mail.svg");
-        background-size: 18px 14px;
-      }
-    }
-
     &--margin {
       margin-right: 112px;
     }
 
     &:last-of-type {
       margin-right: 0;
+    }
+  }
+
+  .contacts__button-icon {
+    &--phone {
+      top: 26px;
+      left: 28px;
+
+      width: 36px;
+      height: 36px;
+    }
+
+    &--email {
+      top: 31px;
+      left: 28px;
+
+      width: 36px;
+      height: 26px;
+    }
+
+    &--address {
+      top: 21px;
+      left: 31px;
+
+      width: 28px;
+      height: 43px;
     }
   }
 }

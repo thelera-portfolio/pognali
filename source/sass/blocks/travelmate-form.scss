@@ -1,4 +1,6 @@
 .travelmate-form__fieldset {
+  position: relative;
+
   display: flex;
   margin: 0;
   padding: 0;
@@ -20,6 +22,15 @@
   color: $blue-4;
 
   border-top: 1px solid #f3c72b;
+
+  &:hover {
+    color: rgba($blue-4, 0.6);
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($blue-4, 0.3);
+  }
 }
 
 .travelmate-form__label {
@@ -33,6 +44,8 @@
   line-height: 1;
   color: $grey-5;
 
+  cursor: pointer;
+
   &::before {
     content: "";
 
@@ -44,6 +57,24 @@
 
     background-color: #ffffff;
     border-radius: 4px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.travelmate-form__label-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--hidden {
+    display: none;
   }
 }
 
@@ -60,12 +91,10 @@
   margin-bottom: 19px;
 }
 
-.travelmate-form__label--range {
-  position: static;
+.travelmate-form__label-range {
+  position: relative;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 220px;
   height: 35px;
   margin-bottom: 24px;
@@ -78,10 +107,67 @@
   color: $blue-4;
 
   background-color: #ffffff;
-  border: solid 1px $grey-2;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 103px;
+    top: 12px;
+
+    width: 16px;
+    height: 11px;
+
+    background-color: #ffffff;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 102px;
+    top: 16px;
+
+    width: 16px;
+    height: 1px;
+
+    background-color: $grey-2;
+  }
 }
 
-.travelmate-form__range--custom-range {
+.travelmate-form__range-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 111px;
+  height: 35px;
+
+  border: solid 1px $grey-2;
+
+  &:first-child {
+    border-right: none;
+  }
+
+  &:hover {
+    border-color: $grey-10;
+  }
+
+  &:hover:first-child + &:last-child {
+    border-left-color: $grey-10;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $blue-1;
+  }
+
+  &:focus:first-child + &:last-child,
+  &:active:first-child + &:last-child {
+    border-left-color: $blue-1;
+  }
+}
+
+.travelmate-form__custom-range {
   position: relative;
   display: block;
   width: 220px;
@@ -89,33 +175,76 @@
   margin-bottom: 26px;
 
   background-image: linear-gradient(to right, rgba($blue-4, 0.2) 76px, $blue-4 76px);
+}
 
-  &::before {
-    content: "";
+.travelmate-form__filter-slider {
+  position: absolute;
 
-    position: absolute;
+  width: 10px;
+  height: 10px;
+
+  background-color: $blue-4;
+  border-radius: 50%;
+
+  &--one {
     top: -4px;
     left: 71px;
-
-    width: 10px;
-    height: 10px;
-
-    background-color: $blue-4;
-    border-radius: 50%;
   }
 
-  &::after {
-    content: "";
-
-    position: absolute;
+  &--two {
     top: -4px;
     left: 210px;
+  }
 
-    width: 10px;
-    height: 10px;
+  &:hover {
+    top: -9px;
 
-    background-color: $blue-4;
-    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+  }
+
+  &:focus,
+  &:active {
+    top: -9px;
+
+    width: 19px;
+    height: 19px;
+
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
+}
+
+.travelmate-form__close-button {
+  position: absolute;
+  top: 9px;
+  right: 0;
+
+  width: 8px;
+  height: 4px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+
+  fill: $blue-2;
+
+  cursor: pointer;
+
+  &--close {
+    .travelmate-form__close-button-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+
+    opacity: 0.3;
   }
 }
 
@@ -123,6 +252,17 @@
   width: 230px;
 
   background-color: #ffffff;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($blue-4, 0.3);
+
+    background-color: $yellow-7;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
@@ -179,6 +319,10 @@
     }
   }
 
+  .travelmate-form__label-wrapper {
+    flex-direction: row;
+  }
+
   .travelmate-form__checkbox {
 
   }
@@ -195,7 +339,7 @@
     margin-left: 125px;
   }
 
-  .travelmate-form__label--range {
+  .travelmate-form__label-range {
     display: flex;
     align-items: center;
     width: 150px;
@@ -214,11 +358,62 @@
     }
 
     &::before {
-      width: 0;
+      content: "";
+
+      position: absolute;
+      left: 64px;
+      top: 15px;
+
+      width: 15px;
+      height: 15px;
+
+      background-color: #ffffff;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 64px;
+      top: 20px;
+
+      width: 21px;
+      height: 1px;
+
+      background-color: $grey-2;
     }
   }
 
-  .travelmate-form__range--custom-range {
+  .travelmate-form__range-value {
+    width: 75px;
+    height: 46px;
+
+    border: solid 1px $grey-2;
+
+    &:first-child {
+      border-right: none;
+    }
+
+    &:hover {
+      border-color: $grey-10;
+    }
+
+    &:hover:first-child + &:last-child {
+      border-left-color: $grey-10;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $blue-1;
+    }
+
+    &:focus:first-child + &:last-child,
+    &:active:first-child + &:last-child {
+      border-left-color: $blue-1;
+    }
+  }
+
+  .travelmate-form__custom-range {
     position: absolute;
     top: 10px;
     width: 277px;
@@ -227,23 +422,28 @@
     margin-left: 125px;
 
     background-image: linear-gradient(to right, rgba($blue-4, 0.2) 76px, $blue-4 76px);
-
-    &::before {
-      top: -4px;
-      left: 70px;
-      width: 13px;
-      height: 13px;
-    }
-
-    &::after {
-      top: -4px;
-      left: 264px;
-      width: 13px;
-      height: 13px;
-    }
   }
 
-  .travelmate-form__button {
+.travelmate-form__filter-slider {
+  width: 13px;
+  height: 13px;
+
+  &--one {
+    top: -4px;
+    left: 70px;
+  }
+
+  &--two {
+    top: -4px;
+    left: 264px;
+  }
+}
+
+.travelmate-form__close-button {
+  display: none;
+}
+
+.travelmate-form__button {
     width: 618px;
   }
 }
@@ -290,7 +490,7 @@
     margin-bottom: 36px;
   }
 
-  .travelmate-form__label--range {
+  .travelmate-form__label-range {
     width: 191px;
     height: 46px;
     margin-bottom: 36px;
@@ -302,31 +502,95 @@
     letter-spacing: 2px;
 
     &::before {
-      width: 0;
-      height: 0;
+      content: "";
+
+      position: absolute;
+      left: 86px;
+      top: 15px;
+
+      width: 15px;
+      height: 15px;
+
+      background-color: #ffffff;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 86px;
+      top: 20px;
+
+      width: 21px;
+      height: 1px;
+
+      background-color: $grey-2;
     }
   }
 
-  .travelmate-form__range--custom-range {
+  .travelmate-form__range-value {
+    width: 96px;
+    height: 46px;
+
+    border: solid 1px $grey-2;
+
+    &:first-child {
+      border-right: none;
+    }
+
+    &:hover {
+      border-color: $grey-10;
+    }
+
+    &:hover:first-child + &:last-child {
+      border-left-color: $grey-10;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $blue-1;
+    }
+
+    &:focus:first-child + &:last-child,
+    &:active:first-child + &:last-child {
+      border-left-color: $blue-1;
+    }
+  }
+
+  .travelmate-form__custom-range {
     width: 191px;
     height: 3px;
     margin-bottom: 43px;
 
     background-image: linear-gradient(to right, rgba($blue-4, 0.2) 66px, $blue-4 66px);
+  }
 
-    &::before {
+  .travelmate-form__filter-slider {
+    width: 13px;
+    height: 13px;
+
+    &--one {
       top: -4px;
       left: 60px;
-      width: 13px;
-      height: 13px;
     }
 
-    &::after {
+    &--two {
       top: -4px;
       left: 178px;
-      width: 13px;
-      height: 13px;
     }
+  }
+
+  .travelmate-form__close-button {
+    top: 0;
+    right: 0;
+
+    width: 10px;
+    height: 5px;
+  }
+
+  .travelmate-form__close-button-icon {
+    width: 10px;
+    height: 5px;
   }
 
   .travelmate-form__button {

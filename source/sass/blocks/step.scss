@@ -17,6 +17,10 @@
 
   background-color: #ffffff;
   border-radius: $radius-1;
+
+  &--hide {
+    display: none;
+  }
 }
 
 .step__title {
@@ -24,10 +28,10 @@
   margin-bottom: 18px;
 
   font-size: 20px;
+}
 
-  &--new-line {
-    display: block;
-  }
+.step__title-new-line {
+  display: block;
 }
 
 .step__controls-list {
@@ -56,7 +60,8 @@
 
   font-size: 15px;
   font-weight: 500;
-  color: $grey-5;
+
+  fill: $blue-2;
 
   &::before {
     content: "";
@@ -71,15 +76,41 @@
     border: 1px solid $grey-2;
     border-radius: 4px;
   }
+
+  &:hover::before {
+    border-color: $grey-10;
+
+    cursor: pointer;
+  }
+
+  &:focus::before,
+  &:active::before {
+    background-color: $grey-11;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  &:focus .step__checkbox-icon,
+  &:active .step__checkbox-icon {
+    opacity: 0.3;
+  }
 }
 
-.step__checkbox:checked + .step__checkbox-label {
-  &::before {
-    background-image: url("../../img/tick.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 9px 9px;
+.step__checkbox-icon {
+  display: none;
+
+  position: absolute;
+  top: 2px;
+  left: 9px;
+
+  &:hover {
+    cursor: pointer;
   }
+}
+
+.step__checkbox:checked + .step__checkbox-label .step__checkbox-icon {
+  display: inline;
 }
 
 .step__button {
@@ -95,6 +126,7 @@
   padding-bottom: 15px;
   padding-left: 15px;
 
+  font-weight: 500;
   text-transform: uppercase;
   color: #ffffff;
 
@@ -107,38 +139,28 @@
   position: relative;
 
   display: flex;
+  justify-content: center;
+  width: 100%;
   padding-bottom: 22px;
 
-  // градиент
+  // маленькая стрелочка вниз
   &::before {
     content: "";
 
     position: absolute;
-    top: 4px;
-    left: 118px;
+    top: 47px;
+    left: 170px;
 
-    width: 49px;
-    height: 36px;
+    width: 5px;
+    height: 10px;
 
-    background-image: linear-gradient(to right, transparent 5%, #ffffff 40%);
-  }
-
-  // кнопка выпадающего списка
-  &::after {
-    content: "";
-
-    position: absolute;
-    left: 118px;
-
-    width: 49px;
-    height: 40px;
-
-    background-image: url("../../img/dropdown-form.svg");
-    background-position: 24px 16px;
-    background-repeat: no-repeat;
-    background-size: 12px 7px;
+    background-image: url("../../img/small-arrow.svg");
 
     opacity: 0.3;
+  }
+
+  &--add-country::before {
+    display: none;
   }
 
   &:nth-of-type(4) {
@@ -157,6 +179,7 @@
   line-height: 1.29;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  color: $blue-4;
 
   background-color: transparent;
   border-radius: 4px;
@@ -165,10 +188,68 @@
   //-webkit-appearance: none;
   //-moz-appearance: none;
   appearance: none;
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: $grey-10;
+  }
+
+  &:hover + .step__select-dropdown {
+    fill: $grey-10;
+  }
+
+  &--choose-country {
+    width: 220px;
+  }
+
+  &--add-country {
+    width: 220px;
+
+    border: none;
+
+    &:hover {
+      background-color: $grey-1;
+      border: none;
+    }
+
+    &:focus,
+    &:active {
+      color: rgba($blue-4, 0.3);
+      background-color: $grey-3;
+    }
+  }
+}
+
+// кнопка выпадающего списка
+.step__select-dropdown {
+  position: absolute;
+  left: 119px;
+
+  width: 50px;
+  height: 40px;
+  padding-top: 11px;
+  padding-left: 26px;
+
+  background-image: linear-gradient(to right, transparent 5%, #ffffff 40%);
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 50px 37px;
+
+  fill: rgba(#000000, 0.3);
+
+  cursor: pointer;
+
+
+  &--choose-country {
+    right: 7px;
+    left: auto;
+  }
 }
 
 .step__select-button {
   position: relative;
+  z-index: 1;
 
   display: block;
   width: 53px;
@@ -178,7 +259,21 @@
   border-radius: 4px;
   border: solid 1px $grey-2;
 
-  //черный круг
+  &--bosnia {
+    background-image: url("../../img/flag-bosnia.svg");
+    background-position: center;
+    background-size: 35px 24px;
+    background-repeat: no-repeat;
+  }
+
+  &--czech {
+    background-image: url("../../img/flag-czech.svg");
+    background-position: center;
+    background-size: 35px 24px;
+    background-repeat: no-repeat;
+  }
+
+  // черный круг
   &::before {
     content: "";
 
@@ -194,7 +289,22 @@
     border-radius: 50%;
   }
 
-  // кнопка-крестик
+  &--choose-country::before {
+    left: -57px;
+
+    background-color: #ffffff;
+    border: 1px solid $grey-2;
+  }
+
+  // черный круг
+  &--add-country::before {
+    left: -57px;
+
+    background-color: $grey-1;
+    border: 1px solid $grey-2;
+  }
+
+  // фон для кнопки-крестик
   &::after {
     content: "";
 
@@ -206,21 +316,83 @@
     height: 21px;
 
     background-color: $grey-1;
-    background-image: url("../../img/filter-close.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 9px 9px;
     border-radius: 50%;
+  }
+
+  &--choose-country::after {
+    left: -11px;
+  }
+
+  &--add-country::after {
+    display: none;
+  }
+
+  // поле "Выберите страну"
+  &--choose-country {
+    width: 0;
+    background: none;
+    border: 0;
+  }
+
+  // поле "Добавить страну"
+  &--add-country {
+    width: 0;
+    background: none;
+    border: 0;
   }
 
   &--hide {
     display: none;
   }
+
+  &:last-of-type::after {
+    border: none;
+  }
+}
+
+//кнопка-крестик
+.step__select-button-image {
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  right: -5px;
+
+  opacity: 0.1;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.1;
+  }
+
+  // в поле "Добавить страну" заменяется на "плюс"
+  &--add-country {
+    top: 10px;
+    right: 12px;
+    width: 16px;
+    height: 14px;
+
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 0.3;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.1;
+    }
+  }
 }
 
 .step__country-dropdown {
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   top: 317px;
   left: auto;
 
@@ -241,6 +413,7 @@
 .step__country {
   position: relative;
 
+  display: block;
   margin-bottom: 16px;
   padding-left: 12px;
 
@@ -268,7 +441,6 @@
 .step__country-plan {
   width: 220px;
   height: 220px;
-  margin-bottom: 28px;
   padding-top: 13px;
   padding-right: 15px;
   padding-left: 15px;
@@ -287,6 +459,53 @@
   &::placeholder {
     color: rgba($grey-5, 0.3);
   }
+
+  &:hover {
+    border-color: $grey-10;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: $blue-1;
+  }
+}
+
+.step__country-plan-wrapper {
+  position: relative;
+
+  margin-bottom: 28px;
+
+  &--error {
+    font-weight: 400;
+    line-height: 1.2;
+
+    .step__country-plan {
+      border-color: #f47e7e;
+    }
+  }
+
+  &--error::before {
+    content: "Это поле должно быть заполнено";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 220px;
+    height: 57px;
+    padding-top: 10px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    color: #ff0000;
+
+    background-color: #ffefef;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: solid 1px #f47e7e;
+    border-top: none;
+  }
 }
 
 .step__dropdown-close-button {
@@ -296,20 +515,46 @@
 
   background-color: transparent;
   border: 0;
+
+  fill: #ffffff;
+  opacity: 0.3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .step__dropdown-button-image {
   width: 9px;
   height: 9px;
-
-  fill: #ffffff;
 }
+
+// .step__button--back {
+//   &--back:hover {
+//     background-color: transparent;
+
+//     opacity: 0.7;
+//   }
+
+//   &--back:focus,
+//   &--back:active {
+//     background-color: transparent;
+
+//     opacity: 0.3;
+//   }
+// }
 
 @media (max-width: $mobile-width-only) {
   .step__button {
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 230px;
     padding-top: 5px;
     padding-right: 24px;
     padding-bottom: 5px;
@@ -343,10 +588,10 @@
     margin-bottom: 37px;
 
     font-size: 36px;
+  }
 
-    &--new-line {
-      display: block;
-    }
+  .step__title-new-line {
+    display: block;
   }
 
   .step__controls-list {
@@ -383,20 +628,23 @@
       top: -6px;
       left: 0;
 
-      width: 26px;
-      height: 26px;
+      width: 36px;
+      height: 36px;
 
       border-radius: 4px;
     }
   }
 
-  .step__checkbox:checked + .step__checkbox-label {
-    &::before {
-      background-size: 12px 12px;
-    }
+  .step__checkbox-icon {
+    top: 6px;
+    left: 12px;
+
+    width: 12px;
+    height: 12px;
   }
 
   .step__select-wrapper {
+    justify-content: flex-start;
     padding-bottom: 15px;
 
     //вертикальная линия
@@ -412,18 +660,12 @@
 
       background-color: $grey-6;
       background-image: none;
+
+      opacity: 1;
     }
 
-    // кнопка выпадающего списка
-    &::after {
-      left: 325px;
-      top: 27px;
-
-      width: 17px;
-      height: 9px;
-
-      background-position: 0 0;
-      background-size: 17px 9px;
+    &--add-country::before {
+      display: block;
     }
 
     &:first-of-type {
@@ -451,36 +693,69 @@
     letter-spacing: 2px;
   }
 
+  .step__select-dropdown {
+    bottom: 30px;
+    left: 315px;
+
+    &--add-country {
+      bottom: 0;
+    }
+  }
+
+  .step__select-dropdown-image {
+    width: 17px;
+    height: 9px;
+
+    &--add-country {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   .step__select-button {
-    width: 113px;
+    width: 162px;
     height: 70px;
-    margin-left: 26px;
 
     border-radius: 0;
     border: none;
 
+    &--bosnia {
+      background-size: 70px 47px;
+    }
+
+    &--czech {
+      background-size: 70px 47px;
+    }
+
     // черный круг
     &::before {
-      left: -4px;
+      left: 22px;
       top: 25px;
 
       width: 15px;
       height: 15px;
     }
 
-    // кнопка-крестик
+    // фон для кнопки-крестик
     &::after {
-      right: 0;
-      top: 25px;
+      display: none;
+    }
+  }
 
-      width: 17px;
-      height: 17px;
+  .step__select-button-image {
+    top: 30px;
+    right: 0;
 
-      background-color: transparent;
-      background-position: center;
-      background-size: 17px 17px;
+    width: 17px;
+    height: 17px;
 
-      opacity: 0.1;
+    // в поле "Добавить страну" заменяется на "плюс"
+    &--add-country {
+      top: 23px;
+      right: 173px;
+
+      width: 20px;
+      height: 20px;
     }
   }
 
@@ -533,6 +808,10 @@
     justify-content: space-between;
   }
 
+  .step__button--back {
+    width: 224px;
+  }
+
   .step__country {
     margin-bottom: 37px;
     padding: 0;
@@ -548,7 +827,6 @@
   .step__country-plan {
     width: 527px;
     height: 142px;
-    margin-bottom: 47px;
     padding-top: 21px;
     padding-right: 19px;
     padding-left: 19px;
@@ -556,6 +834,17 @@
 
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  .step__country-plan-wrapper {
+    margin-bottom: 47px;
+
+    font-size: 20px;
+
+    &--error::before {
+      width: 527px;
+      padding-top: 19px;
+    }
   }
 }
 
@@ -579,10 +868,10 @@
 
     font-size: 36px;
     line-height: 1.39;
+  }
 
-    &--new-line {
-      display: inline;
-    }
+  .step__title-new-line {
+    display: inline;
   }
 
   .step__controls-list {
@@ -650,13 +939,16 @@
     }
   }
 
-  .step__checkbox:checked + .step__checkbox-label {
-    &::before {
-      background-size: 12px 12px;
-    }
+  .step__checkbox-icon {
+    top: 1px;
+    left: 12px;
+
+    width: 12px;
+    height: 12px;
   }
 
   .step__select-wrapper {
+    justify-content: flex-start;
     padding-bottom: 15px;
 
     //вертикальная линия
@@ -672,6 +964,12 @@
 
       background-color: $grey-6;
       background-image: none;
+
+      opacity: 1;
+    }
+
+    &--add-country::before {
+      display: block;
     }
 
     // кнопка выпадающего списка
@@ -711,36 +1009,70 @@
     letter-spacing: 2px;
   }
 
+  .step__select-dropdown {
+    bottom: 30px;
+    left: 665px;
+
+    background: none;
+  }
+
+  .step__select-dropdown-image {
+    width: 17px;
+    height: 9px;
+
+    &--add-country {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
   .step__select-button {
-    width: 146px;
+    width: 269px;
     height: 70px;
-    margin-left: 26px;
 
     border-radius: 0;
     border: none;
 
+    background-position: 87px center;
+
+    &--bosnia {
+      background-size: 70px 47px;
+    }
+
+    &--czech {
+      background-size: 70px 47px;
+    }
+
     // черный круг
     &::before {
-      left: 10px;
+      left: 40px;
       top: 25px;
 
       width: 15px;
       height: 15px;
+      margin: 0;
     }
 
-    // кнопка-крестик
+    // фон для кнопки-крестик
     &::after {
-      right: 0;
-      top: 25px;
+      display: none;
+    }
+  }
 
-      width: 17px;
-      height: 17px;
+  .step__select-button-image {
+    top: 30px;
+    right: 0;
 
-      background-color: transparent;
-      background-position: center;
-      background-size: 17px 17px;
+    width: 17px;
+    height: 17px;
 
-      opacity: 0.1;
+    // в поле "Добавить страну" заменяется на "плюс"
+    &--add-country {
+      top: 23px;
+      left: -40px;
+
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -788,6 +1120,10 @@
     width: 100%;
   }
 
+  .step__button--back {
+    width: 224px;
+  }
+
   .step__country {
     margin-bottom: 37px;
     padding: 0;
@@ -803,7 +1139,6 @@
   .step__country-plan {
     width: 730px;
     height: 142px;
-    margin-bottom: 56px;
     padding-top: 28px;
     padding-right: 27px;
     padding-left: 27px;
@@ -811,5 +1146,16 @@
 
     font-size: 20px;
     line-height: 1.2;
+  }
+
+  .step__country-plan-wrapper {
+    margin-bottom: 56px;
+
+    font-size: 20px;
+
+    &--error::before {
+      width: 730px;
+      padding-top: 19px;
+    }
   }
 }
