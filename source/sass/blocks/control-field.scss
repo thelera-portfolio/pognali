@@ -49,6 +49,8 @@
   border: 1px solid $grey-2;
   border-radius: 4px;
 
+  appearance: textfield;
+
   &:hover {
     border-color: $grey-10;
   }
@@ -76,6 +78,11 @@
     &:active {
       border-color: $grey-2;
     }
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
   }
 }
 

@@ -136,13 +136,23 @@
 }
 
 .travelmate-form__range-value {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 111px;
   height: 35px;
 
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1.5;
+  color: $blue-4;
+  text-align: center;
+
   border: solid 1px $grey-2;
+
+  appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
 
   &:first-child {
     border-right: none;
@@ -159,6 +169,8 @@
   &:focus,
   &:active {
     border-color: $blue-1;
+
+    outline: none;
   }
 
   &:focus:first-child + &:last-child,
@@ -323,10 +335,6 @@
     flex-direction: row;
   }
 
-  .travelmate-form__checkbox {
-
-  }
-
   .travelmate-form__checkbox:checked + .travelmate-form__label {
     &::before {
       background-size: 12px 12px;
@@ -388,6 +396,9 @@
     width: 75px;
     height: 46px;
 
+    font-size: 20px;
+    letter-spacing: 2;
+
     border: solid 1px $grey-2;
 
     &:first-child {
@@ -424,26 +435,26 @@
     background-image: linear-gradient(to right, rgba($blue-4, 0.2) 76px, $blue-4 76px);
   }
 
-.travelmate-form__filter-slider {
-  width: 13px;
-  height: 13px;
+  .travelmate-form__filter-slider {
+    width: 13px;
+    height: 13px;
 
-  &--one {
-    top: -4px;
-    left: 70px;
+    &--one {
+      top: -4px;
+      left: 70px;
+    }
+
+    &--two {
+      top: -4px;
+      left: 264px;
+    }
   }
 
-  &--two {
-    top: -4px;
-    left: 264px;
+  .travelmate-form__close-button {
+    display: none;
   }
-}
 
-.travelmate-form__close-button {
-  display: none;
-}
-
-.travelmate-form__button {
+  .travelmate-form__button {
     width: 618px;
   }
 }
@@ -474,10 +485,6 @@
       width: 24px;
       height: 24px;
     }
-  }
-
-  .travelmate-form__checkbox {
-
   }
 
   .travelmate-form__checkbox:checked + .travelmate-form__label {
@@ -531,6 +538,9 @@
   .travelmate-form__range-value {
     width: 96px;
     height: 46px;
+
+    font-size: 20px;
+    letter-spacing: 2;
 
     border: solid 1px $grey-2;
 
