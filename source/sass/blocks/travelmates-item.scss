@@ -75,6 +75,9 @@
   width: 270px;
   height: 270px;
   overflow: hidden;
+
+  border-top-right-radius: $radius-1;
+  border-top-left-radius: $radius-1;
 }
 
 .travelmates-item__image {
@@ -357,6 +360,11 @@
     font-size: 24px;
   }
 
+  .travelmates-item__image-wrapper {
+    border-top-right-radius: $radius-2;
+    border-top-left-radius: $radius-2;
+  }
+
   .travelmates-item__image {
     width: 285px;
     height: 285px;
@@ -536,6 +544,11 @@
     margin-bottom: 22px;
 
     font-size: 24px;
+  }
+
+  .travelmates-item__image-wrapper {
+    border-top-right-radius: $radius-2;
+    border-top-left-radius: $radius-2;
   }
 
   .travelmates-item__image {
