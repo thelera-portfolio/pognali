@@ -40,6 +40,15 @@
 .countries-list__link {
   text-decoration: none;
   color: $grey-5;
+
+  &:hover {
+    color: $blue-4;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($blue-4, 0.3);
+  }
 }
 
 .countries-list__letter {
@@ -54,17 +63,6 @@
 .countries-list__item {
   font-size: 16px;
   line-height: 1.38;
-}
-
-.countries-list__link {
-  &:hover {
-      color: $blue-4;
-    }
-
-  &:focus,
-  &:active {
-    color: rgba($blue-4, 0.3);
-  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
