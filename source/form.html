@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -216,9 +215,9 @@
                 <label class="control-field__label control-field__label--travelmates" for="travelmates-number">Ищу попутчиков:</label>
 
                 <div class="control-field__inner">
-                  <button class="control-field__button control-field__button--minus" type="button" aria-label="Minus"></button>
-                  <input class="control-field__input" type="number" step="1" name="travelmates-number" value="2" id="travelmates-number">
-                  <button class="control-field__button control-field__button--plus" type="button" aria-label="Plus"></button>
+                  <button class="control-field__button control-field__button--minus control-field__button--minus-travelmates" type="button" aria-label="Minus"></button>
+                  <input class="control-field__input control-field__input--travelmates" type="number" step="1" name="travelmates-number" value="2" id="travelmates-number">
+                  <button class="control-field__button control-field__button--plus control-field__button--plus-travelmates" type="button" aria-label="Plus"></button>
                 </div>
               </div>
             
@@ -226,9 +225,9 @@
                 <label class="control-field__label control-field__label--days" for="days-amount">Длительность:</label>
 
                 <div class="control-field__inner">
-                  <button class="control-field__button control-field__button--minus" type="button" aria-label="Minus"></button>
-                  <input class="control-field__input" type="number" step="1" name="days-amount" value="2" id="days-amount">
-                  <button class="control-field__button control-field__button--plus" type="button" aria-label="Plus"></button>
+                  <button class="control-field__button control-field__button--minus control-field__button--minus-days" type="button" aria-label="Minus"></button>
+                  <input class="control-field__input control-field__input--days" type="number" step="1" name="days-amount" value="2" id="days-amount">
+                  <button class="control-field__button control-field__button--plus control-field__button--plus-days" type="button" aria-label="Plus"></button>
                 </div>
               </div>
 
@@ -248,7 +247,7 @@
                       <use xlink:href="img/sprite.svg#month-arrow-left"></use>
                     </svg>
                   </button>
-                  <input class="control-field__input control-field__input--date" type="text" name="date" value="Март 2019" id="date">
+                  <input class="control-field__input control-field__input--date" type="month" name="date" value="2019-03" id="date">
                   <button class="control-field__button control-field__button--forward" type="button" aria-label="Plus">
                     <svg class="control-field__button-icon" width="9" height="18">
                       <use xlink:href="img/sprite.svg#month-arrow-right"></use>
@@ -819,7 +818,17 @@
       var stepOneControlButton = document.querySelector(".controls-list__item--step-one");
       var stepTwoControlButton = document.querySelector(".controls-list__item--step-two");
       var stepThreeControlButton = document.querySelector(".controls-list__item--step-three");
-      
+
+      var buttonPlusTravelmates = document.querySelector(".control-field__button--plus-travelmates");
+      var buttonMinusTravelmates = document.querySelector(".control-field__button--minus-travelmates");
+      var buttonPlusDays = document.querySelector(".control-field__button--plus-days");
+      var buttonMinusDays = document.querySelector(".control-field__button--minus-days");
+      var buttonDateForward = document.querySelector(".control-field__button--forward");
+      var buttonDateBack = document.querySelector(".control-field__button--back");
+
+      var inputFieldTravelmates = document.querySelector(".control-field__input--travelmates");
+      var inputFieldDays = document.querySelector(".control-field__input--days");
+      var inputDate = document.querySelector(".control-field__input--date");
 
       mainMenu.classList.remove("menu--no-js");
 
@@ -891,6 +900,42 @@
         stepOne.classList.remove("step--hide");
         stepOneControlButton.classList.add("controls-list__item--active");
         stepTwoControlButton.classList.remove("controls-list__item--active");
+      });
+
+      buttonPlusTravelmates.addEventListener("click", function (evt) {
+        evt.preventDefault();
+          
+        inputFieldTravelmates.stepUp();
+      });
+
+      buttonMinusTravelmates.addEventListener("click", function (evt) {
+        evt.preventDefault();
+
+        inputFieldTravelmates.stepDown();
+      });
+
+      buttonPlusDays.addEventListener("click", function (evt) {
+        evt.preventDefault();
+
+        inputFieldDays.stepUp();
+      });
+
+      buttonMinusDays.addEventListener("click", function (evt) {
+        evt.preventDefault();
+
+        inputFieldDays.stepDown();
+      });
+
+      buttonDateForward.addEventListener("click", function (evt) {
+        evt.preventDefault();
+
+        inputDate.stepUp();
+      });
+
+      buttonDateBack.addEventListener("click", function (evt) {
+        evt.preventDefault();
+
+        inputDate.stepDown();
       });
     </script>
   </body>
