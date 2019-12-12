@@ -10,11 +10,39 @@
 }
 
 .travelmates-filtered__button {
+  position: relative;
+
+  width: 155px;
   margin: 0 auto;
+  padding-left: 33px;
+
   background-color: transparent;
 
   &::before {
+    content: "";
 
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../../img/show-more-plus.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover {
+    opacity: 0.6;
+
+    background-color: transparent;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+
+    background-color: transparent;
   }
 }
 
@@ -24,7 +52,21 @@
   }
 
   .travelmates-filtered__button {
+    width: 190px;
+    margin: 0 auto;
     margin-bottom: 30px;
+    padding-left: 52px;
+
+    &::before {
+      top: 10px;
+      left: 0;
+
+      width: 27px;
+      height: 27px;
+
+      background-image: url("../../img/show-more-plus.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -44,7 +86,21 @@
   }
 
   .travelmates-filtered__button {
+    width: 190px;
+    margin: 0 auto;
     margin-bottom: 70px;
+    padding-left: 52px;
+
+    &::before {
+      top: 10px;
+      left: 0;
+
+      width: 27px;
+      height: 27px;
+
+      background-image: url("../../img/show-more-plus.svg");
+      background-repeat: no-repeat;
+    }
   }
 
   .travelmates-filtered__pagination {

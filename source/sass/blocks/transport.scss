@@ -4,98 +4,57 @@
 }
 
 .transport__icon {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 33px;
   height: 33px;
-  position: relative;
 
   background-color: #ffffff;
   border-radius: 50%;
+  fill: rgba(#000000, 0.15);
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  &--active {
+    fill: $blue-4;
   }
 
-  &--plane::before {
-    width: 19px;
-    height: 21px;
-    margin-left: calc(50% - 10px);
-    margin-top: calc(50% - 10px);
-    background-image: url("../../img/plane.svg");
-    opacity: 0.15;
-  }
+  &--button {
+    cursor: pointer;
 
-  &--plane--active::before {
-    background-image: url("../../img/plane-on.svg");
-    opacity: 1;
-  }
+    &:hover {
+      fill: rgba(#000000, 0.3);
+    }
 
-  &--bus::before {
-    width: 17px;
-    height: 21px;
-    margin-left: calc(50% - 8px);
-    margin-top: calc(50% - 10px);
-    background-image: url("../../img/bus.svg");
-    opacity: 0.15;
-  }
-
-  &--bus--active::before {
-    background-image: url("../../img/bus-on.svg");
-    opacity: 1;
-  }
-
-  &--cycle::before {
-    width: 24px;
-    height: 21px;
-    margin-left: calc(50% - 12px);
-    margin-top: calc(50% - 10px);
-    background-image: url("../../img/bike.svg");
-    opacity: 0.15;
-  }
-
-  &--cycle--active::before {
-    background-image: url("../../img/cycle-on.svg");
-    opacity: 1;
-  }
-
-  &--foot::before {
-    width: 20px;
-    height: 21px;
-    margin-left: calc(50% - 10px);
-    margin-top: calc(50% - 10px);
-    background-image: url("../../img/run.svg");
-    opacity: 0.15;
-  }
-
-  &--foot--active::before {
-    background-image: url("../../img/run-on.svg");
-    opacity: 1;
+    &:focus,
+    &:active {
+      background-color: $grey-4;
+      fill: rgba(#000000, 0.1);
+    }
   }
 }
 
-.transport__checkbox:checked + .transport__icon--plane::before {
-  background-image: url("../../img/plane-on.svg");
-  opacity: 1;
+.transport__checkbox:checked + .transport__icon--button {
+  fill: $blue-4;
+
+  &:hover {
+    fill: rgba($blue-6, 0.7);
+  }
+
+  &:focus,
+  &:active {
+    background-color: $grey-4;
+    fill: rgba($blue-6, 0.3);
+  }
 }
 
-.transport__checkbox:checked + .transport__icon--bus::before {
-  background-image: url("../../img/bus-on.svg");
-  opacity: 1;
-}
-
-.transport__checkbox:checked + .transport__icon--cycle::before {
-  background-image: url("../../img/bike-on.svg");
-  opacity: 1;
-}
-
-.transport__checkbox:checked + .transport__icon--foot::before {
-  background-image: url("../../img/run-on.svg");
-  opacity: 1;
+@media (max-width: $mobile-width-only) {
+  .transport__icon {
+    &--bgc {
+      background-color: $grey-1;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
@@ -104,11 +63,55 @@
     height: 43px;
     //margin-right: 13px;
   }
+
+  .transport__icon-img {
+    &--plane {
+      width: 19px;
+      height: 21px;
+    }
+
+    &--bus {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--cycle {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--foot {
+      width: 20px;
+      height: 21px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .transport__icon {
     width: 43px;
     height: 43px;
+  }
+
+  .transport__icon-img {
+    &--plane {
+      width: 19px;
+      height: 21px;
+    }
+
+    &--bus {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--cycle {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--foot {
+      width: 20px;
+      height: 21px;
+    }
   }
 }

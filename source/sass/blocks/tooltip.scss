@@ -1,0 +1,75 @@
+.tooltip {
+  position: relative;
+  z-index: 1;
+
+  &:hover::before {
+    content: "";
+
+    position: absolute;
+    //z-index: 1;
+    top: 43px;
+    left: 17px;
+
+    font-weight: 500;
+    text-transform: none;
+    white-space: nowrap;
+
+    padding-top: 19px;
+    padding-right: 24px;
+    padding-bottom: 19px;
+    padding-left: 24px;
+
+    color: #ffffff;
+
+    background-color: $blue-8;
+
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    content: "";
+
+    position: absolute;
+    //z-index: 1;
+    top: 18px;
+
+    border: 16px solid transparent;
+    border-bottom-color: $blue-8;
+  }
+
+  &--plane:hover::before {
+    content: "Автотранспорт";
+  }
+
+  &--bus:hover::before {
+    content: "Авиаперелет";
+  }
+
+  &--cycle:hover::before {
+    content: "Велосипед";
+  }
+
+  &--foot:hover::before {
+    content: "Пешком";
+  }
+
+  &--shri-lanka:hover::before {
+    content: "Шри-Ланка";
+  }
+
+  &--thailand:hover::before {
+    content: "Таиланд";
+  }
+
+  &--seychelles:hover::before {
+    content: "Сейшеллы";
+  }
+
+  &--belgium:hover::before {
+    content: "Бельгия";
+  }
+
+  &--czech:hover::before {
+    content: "Чехия";
+  }
+}

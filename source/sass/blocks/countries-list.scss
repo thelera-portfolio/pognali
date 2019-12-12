@@ -40,6 +40,15 @@
 .countries-list__link {
   text-decoration: none;
   color: $grey-5;
+
+  &:hover {
+    color: $blue-4;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($blue-4, 0.3);
+  }
 }
 
 .countries-list__letter {

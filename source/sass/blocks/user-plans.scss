@@ -80,6 +80,15 @@ $padding-bottom-desktop: 123px;
   text-decoration: none;
   text-transform: uppercase;
   color: rgba(#000000, 0.3);
+
+  &:hover {
+    color: rgba(#000000, 0.6);
+  }
+
+  &:focus,
+  &:active {
+    color: rgba(#000000, 0.1);
+  }
 }
 
 
@@ -123,12 +132,12 @@ $padding-bottom-desktop: 123px;
 
     font-size: 24px;
     line-height: 2.08;
+  }
 
-    &--number {
-      position: absolute;
+  .user-plans__item-title-number {
+    position: absolute;
 
-      right: 32px;
-    }
+    right: 32px;
   }
 
   .user-plans__info {
@@ -188,13 +197,14 @@ $padding-bottom-desktop: 123px;
 
     font-size: 24px;
     line-height: 2.08;
-
-    &--number {
-      margin-right: 40px;
-      font-size: 20px;
-      font-weight: 500;
-    }
   }
+
+  .user-plans__item-title-number {
+    margin-right: 40px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
 
   .user-plans__info {
     width: 177px;

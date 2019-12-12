@@ -49,6 +49,19 @@
   border: none;
   border-bottom-right-radius: $radius-2;
   border-bottom-left-radius: $radius-2;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $grey-1;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($blue-4, 0.3);
+
+    background-color: $grey-1;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {

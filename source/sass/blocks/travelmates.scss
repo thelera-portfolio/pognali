@@ -234,8 +234,9 @@ $padding-bottom-desktop: 133px;
 
       position: absolute;
       z-index: -1;
-      bottom: 80px;
+      top: auto;
       left: 191px;
+      bottom: 80px;
 
       width: 285px;
       height: 285px;
@@ -308,6 +309,7 @@ $padding-bottom-desktop: 133px;
 
   .travelmates__item {
     margin-right: 60px;
+    margin-bottom: 0;
 
     &:last-of-type {
       margin-right: 0;

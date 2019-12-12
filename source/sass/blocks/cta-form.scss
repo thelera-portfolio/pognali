@@ -38,6 +38,15 @@ $padding-bottom-desktop: 104px;
 
 .cta-form__login-link {
   color: $yellow-1;
+
+  &:hover {
+    color: $yellow-3;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($yellow-3, 0.3);
+  }
 }
 
 .cta-form__button {
@@ -121,6 +130,14 @@ $padding-bottom-desktop: 104px;
     margin-bottom: 60px;
   }
 
+  .cta-form__contacts-button {
+    margin-right: 112px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
   .cta-form__login-form {
     margin-bottom: 70px;
   }
@@ -139,6 +156,8 @@ $padding-bottom-desktop: 104px;
 
     width: 325px;
     height: 81px;
+
+    font-size: 24px;
 
     background-position: 278px center;
     border-top-left-radius: 0;

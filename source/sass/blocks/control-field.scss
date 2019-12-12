@@ -42,21 +42,62 @@
   @include font-name;
   font-size: 15px;
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 1;
   text-align: center;
   color: $blue-4;
 
-  border: 1px solid $grey-6;
+  border: 1px solid $grey-2;
   border-radius: 4px;
+
+  appearance: textfield;
+
+  &:hover {
+    border-color: $grey-10;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border-color: $blue-1;
+  }
 
   &--date {
     font-size: 20px;
     font-weight: 700;
     text-align: center;
 
+    background-color: transparent;
     border-radius: 0;
     border-left: none;
     border-right: none;
+
+    &:hover {
+      border-color: $grey-2;
+    }
+
+    &:focus,
+    &:active {
+      border-color: $grey-2;
+    }
+  }
+
+  &--date::-webkit-clear-button {
+    display: none;
+  }
+
+  &--date::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+
+  &--date::-webkit-datetime-edit {
+    text-align: center;
+
+    background-color: transparent;
+  }
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    display: none;
   }
 }
 
@@ -67,17 +108,29 @@
 
   border: none;
 
-  opacity: 0.3;
+  cursor: pointer;
 
   &--minus {
-    top: 21px;
+    top: 15px;
     left: 14px;
 
     width: 14px;
-    height: 2px;
+    height: 14px;
 
     background-image: url("../../img/qty-minus-mobile.svg");
+    background-position: center;
     background-size: 14px 2px;
+
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   &--plus {
@@ -89,29 +142,48 @@
 
     background-image: url("../../img/qty-plus-mobile.svg");
     background-size: 14px 14px;
+
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 0.4;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
+  &--back,
+  &--forward {
+    margin-top: 11px;
+    padding: 0;
+
+    opacity: 0.3;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   &--back {
-    top: 12px;
     left: 0;
-
-    width: 9px;
-    height: 17px;
-
-    background-image: url("../../img/month-arrow-left.svg");
-    background-size: 9px 17px;
   }
 
   &--forward {
-    top: 12px;
     right: 0;
-
-    width: 9px;
-    height: 17px;
-
-    background-image: url("../../img/month-arrow-right.svg");
-    background-size: 9px 17px;
   }
+}
+
+.control-field__button-icon {
+  width: 9px;
+  height: 18px;
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
@@ -158,11 +230,11 @@
 
   .control-field__button {
     &--minus {
-      top: 34px;
+      top: 25px;
       left: 23px;
 
       width: 20px;
-      height: 2px;
+      height: 20px;
 
       background-image: url("../../img/qty-minus.svg");
       background-size: 20px 2px;
@@ -179,27 +251,15 @@
       background-size: 20px 20px;
     }
 
-    &--back {
-      top: 29px;
-      left: 0;
-
-      width: 15px;
-      height: 28px;
-
-      background-image: url("../../img/month-arrow-left.svg");
-      background-size: 15px 28px;
-    }
-
+    &--back,
     &--forward {
-      top: 29px;
-      right: 0;
-
-      width: 15px;
-      height: 28px;
-
-      background-image: url("../../img/month-arrow-right.svg");
-      background-size: 15px 28px;
+      margin-top: 22px;
     }
+  }
+
+  .control-field__button-icon {
+    width: 19px;
+    height: 34px;
   }
 }
 
@@ -255,11 +315,11 @@
 
   .control-field__button {
     &--minus {
-      top: 34px;
+      top: 25px;
       left: 20px;
 
       width: 20px;
-      height: 2px;
+      height: 20px;
 
       background-image: url("../../img/qty-minus.svg");
       background-size: 20px 2px;
@@ -276,26 +336,14 @@
       background-size: 20px 20px;
     }
 
-    &--back {
-      top: 27px;
-      left: 0;
-
-      width: 18px;
-      height: 34px;
-
-      background-image: url("../../img/month-arrow-left.svg");
-      background-size: 18px 34px;
-    }
-
+    &--back,
     &--forward {
-      top: 27px;
-      right: 0;
-
-      width: 18px;
-      height: 34px;
-
-      background-image: url("../../img/month-arrow-right.svg");
-      background-size: 18px 34px;
+      margin-top: 22px;
     }
+  }
+
+  .control-field__button-icon {
+    width: 19px;
+    height: 34px;
   }
 }

@@ -18,6 +18,8 @@
   border: none;
   border-radius: $radius-2;
 
+  cursor: pointer;
+
   &:hover {
     background-color: $yellow-2;
   }

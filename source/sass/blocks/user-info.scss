@@ -32,6 +32,17 @@ $padding-bottom-desktop: 123px;
 
 .user-info__change-photo-button {
   margin-bottom: 27px;
+
+  &:hover {
+    background-color: $grey-8;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba($blue-4, 0.3);
+
+    background-color: $grey-8;
+  }
 }
 
 .user-info__fieldset {
@@ -56,6 +67,16 @@ $padding-bottom-desktop: 123px;
     padding-right: 26px;
     padding-bottom: 26px;
     padding-left: 26px;
+
+    &:focus-within,
+    &:active {
+      border-color: $blue-1;
+    }
+
+    &:focus-within::after,
+    &:active::after {
+      background-color: $blue-1;
+    }
   }
 
   &--transport {
@@ -120,7 +141,8 @@ $padding-bottom-desktop: 123px;
   }
 
   .user-info__fieldset {
-    font-size: 20px;
+    position: relative;
+    font-weight: 500;
     line-height: 0.9;
 
     margin-bottom: 19px;
@@ -131,6 +153,19 @@ $padding-bottom-desktop: 123px;
       padding-right: 26px;
       padding-bottom: 16px;
       padding-left: 26px;
+
+      font-size: 0;
+
+      &::before {
+        content: "тэги";
+
+        left: 50%;
+
+        width: 83px;
+        margin-left: -41px;
+
+        font-size: 20px;
+      }
     }
 
     &--transport {
@@ -140,15 +175,49 @@ $padding-bottom-desktop: 123px;
       padding-right: 24px;
       padding-bottom: 20px;
       padding-left: 24px;
+
+      font-size: 0;
+
+      &::before {
+        content: "транспорт";
+
+        left: 50%;
+
+        width: 153px;
+        margin-left: -76px;
+
+        font-size: 20px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: -20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+
+      background-color: $grey-1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 50%;
+
+      width: 153px;
+      height: 1px;
+      margin-left: -80px;
+
+      background-color: $grey-2;
     }
 
     &:last-of-type {
       margin-bottom: 0;
     }
-  }
-
-  .user-info__legend {
-    align: bottom;
   }
 
   .user-info__transport {
@@ -175,8 +244,6 @@ $padding-bottom-desktop: 123px;
     margin: 0;
     margin-top: 50px;
     margin-left: 837px;
-
-    color: #ffffff;
   }
 
   .user-info__picture {
@@ -191,7 +258,7 @@ $padding-bottom-desktop: 123px;
     width: 190px;
     height: 190px;
     margin: 0;
-    margin-left: 33px;
+    margin-left: 39px;
 
     border-radius: 0;
     border-top-left-radius: $radius-1;
@@ -223,9 +290,9 @@ $padding-bottom-desktop: 123px;
   }
 
   .user-info__fieldset {
+    position: relative;
     margin: 0;
 
-    font-size: 20px;
     line-height: 0.9;
 
     &--tags {
@@ -234,6 +301,18 @@ $padding-bottom-desktop: 123px;
       padding-right: 26px;
       padding-bottom: 12px;
       padding-left: 26px;
+
+      font-size: 0;
+
+      &::before {
+        content: "тэги";
+
+        left: 39px;
+
+        width: 83px;
+
+        font-size: 20px;
+      }
     }
 
     &--transport {
@@ -243,6 +322,45 @@ $padding-bottom-desktop: 123px;
       padding-right: 25px;
       padding-bottom: 25px;
       padding-left: 25px;
+
+
+      font-size: 0;
+
+      &::before {
+        content: "транспорт";
+
+        left: 50%;
+
+        width: 153px;
+        margin-left: -76px;
+
+        font-size: 20px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      bottom: -20px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+
+      background-color: $grey-1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: 50%;
+
+      width: 153px;
+      height: 1px;
+      margin-left: -80px;
+
+      background-color: $grey-2;
     }
 
     &:last-of-type {

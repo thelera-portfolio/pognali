@@ -21,30 +21,64 @@
   background-color: $grey-1;
   border: 1px solid $grey-6;
 
+  &--checked {
+    color: $grey-2;
+
+    background-color: $blue-7;
+  }
+
+  &:hover {
+    color: $grey-2;
+
+    background-color: $blue-4;
+    border: 2px solid $yellow-5;
+    outline: 3px solid $yellow-5;
+
+    cursor: pointer;
+  }
+
   &--disabled {
     color: rgba($grey-5, 0.3);
 
     background-color: #ffffff;
-  }
 
-  &--checked {
-    color: #ffffff;
+    &:hover {
+      color: rgba($grey-5, 0.3);
 
-    background-color: $blue-4;
-  }
+      background-color: #ffffff;
+      border: 1px solid $grey-6;
+      outline: none;
 
-  &--text {
-    display: none;
+      cursor: default;
+    }
   }
+}
+
+.calendar__item-text {
+  display: none;
 }
 
 .calendar__days-of-week .calendar__item {
   background-color: transparent;
   border: none;
+
+  &:hover {
+    color: inherit;
+
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+
+    cursor: default;
+  }
 }
 
-.calendar__item--weekend {
+.calendar__days-of-week .calendar__item--weekend {
   color: $yellow-5;
+
+  &:hover {
+    color: $yellow-5;
+  }
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
@@ -59,10 +93,10 @@
   .calendar__item {
     width: 75px;
     height: 70px;
+  }
 
-    &--text {
-      display: none;
-    }
+  .calendar__item-text {
+    display: none;
   }
 }
 
@@ -84,9 +118,9 @@
 
     text-align: left;
     vertical-align: top;
+  }
 
-    &--text {
-      display: inline;
-    }
+  .calendar__item-text {
+    display: none;
   }
 }

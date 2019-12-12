@@ -22,16 +22,13 @@
   border-radius: $radius-1;
   background-color: $yellow-1;
 
+  cursor: pointer;
+
   &:hover {
     background-color: $yellow-2;
   }
 
-  &:focus {
-    color: rgba($blue-1, 0.3);
-
-    background-color: $yellow-2;
-  }
-
+  &:focus,
   &:active {
     color: rgba($blue-1, 0.3);
 
@@ -46,30 +43,52 @@
     text-align: center;
   }
 
+  // треугольник вправо
   &::after {
     content: "";
 
     position: absolute;
     top: calc(50% - 7px);
-    right: 23px;
+    right: 12px;
 
-    width: 10px;
-    height: 14px;
-
-    background-image: url("../../img/triangle-arrow-right.svg");
-    background-repeat: no-repeat;
+    border-top-width: 7px;
+    border-right-width: 10px;
+    border-bottom-width: 7px;
+    border-left-width: 10px;
+    border-style: solid;
+    border-color: transparent;
+    border-left-color: $blue-4;
   }
 
+  &:focus::after,
+  &:active::after {
+    border-left-color: rgba($blue-4, 0.3);
+  }
+
+  // треугольник влево
   &--back::after {
-    content: "";
+    right: auto;
+    left: 12px;
+    border-color: transparent;
+    border-right-color: $blue-4;
+  }
 
-    position: absolute;
+  &--back:hover {
+    background-color: transparent;
+    opacity: 0.7;
+  }
 
-    width: 10px;
-    height: 14px;
+  &--back:focus,
+  &--back:active {
+    color: rgba($blue-1, 0.3);
 
-    background-image: url("../../img/triangle-arrow-left.svg");
-    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  &--back:focus::after,
+  &--back:active::after {
+    border-color: transparent;
+    border-right-color: rgba($blue-4, 0.3);
   }
 }
 
@@ -84,7 +103,7 @@
 
     &::after {
       top: calc(50% - 7px);
-      right: 36px;
+      right: 25px;
     }
 
     &--back {
@@ -92,6 +111,7 @@
     }
 
     &--back::after {
+      right: auto;
       top: calc(50% - 7px);
       left: 36px;
     }
@@ -109,7 +129,7 @@
 
     &::after {
       top: calc(50% - 7px);
-      right: 36px;
+      right: 25px;
     }
 
     &--back {
@@ -118,6 +138,7 @@
 
     &--back::after {
       top: calc(50% - 7px);
+      right: auto;
       left: 36px;
     }
   }

@@ -46,10 +46,6 @@
   list-style: none;
 }
 
-.menu__item {
-  overflow: hidden;
-}
-
 .menu__link {
   position: relative;
 
@@ -59,30 +55,6 @@
   line-height: 1;
   text-decoration: none;
   color: inherit;
-
-  transition: transform 0.3s;
-
-  &::before {
-    content: attr(data-hover);
-
-    position: absolute;
-    top: 100%;
-
-    line-height: 1;
-    font-weight: 500;
-  }
-
-  &:hover {
-    color: $yellow-1;
-
-    cursor: pointer;
-
-    transform: translateY(-100%);
-  }
-
-  &:active {
-    color: rgba($yellow-1, 0.3);
-  }
 }
 
 .menu__login-button {
@@ -90,6 +62,8 @@
   margin-bottom: 51px;
   padding-top: 10px;
   padding-bottom: 10px;
+
+  cursor: pointer;
 }
 
 .menu__contacts {
@@ -112,6 +86,8 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   border: 0;
+
+  cursor: pointer;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -200,7 +176,7 @@
 
       position: absolute;
       top: 21px;
-      right: -75px;
+      right: -95px;
 
       width: 60px;
       height: 2px;
@@ -215,17 +191,44 @@
     margin: 0;
 
     font-size: 20px;
-    line-height: 1.5;
+    line-height: 1;
     color: #ffffff;
+  }
+
+  .menu__item {
+    overflow: hidden;
+
+    margin-right: 36px;
   }
 
   .menu__link {
     font-size: 20px;
-    line-height: 1.5;
-  }
+    line-height: 1;
 
-  .menu__item {
-    margin-right: 36px;
+    transition: transform 0.3s;
+
+    &::before {
+      content: attr(data-hover);
+
+      position: absolute;
+      top: 100%;
+
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    &:hover {
+      color: $yellow-1;
+
+      cursor: pointer;
+
+      transform: translateY(-100%);
+    }
+
+    &:focus,
+    &:active {
+      color: rgba($yellow-1, 0.3);
+    }
   }
 
   .menu__socials {
@@ -233,17 +236,11 @@
   }
 
   .menu__login-button {
-    order: 1;
-    width: 188px;
-    margin: 0;
+    display: none;
   }
 
   .menu__contacts {
-    flex-direction: row;
-    margin: 0;
-    margin-left: auto;
-
-    font-size: 0;
+    display: none;
   }
 
   .menu__close-button {
