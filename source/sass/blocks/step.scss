@@ -154,7 +154,7 @@
     width: 5px;
     height: 10px;
 
-    background-image: url("../../img/small-arrow.svg");
+    background-image: url("../img/small-arrow.svg");
 
     opacity: 0.3;
   }
@@ -260,14 +260,14 @@
   border: solid 1px $grey-2;
 
   &--bosnia {
-    background-image: url("../../img/flag-bosnia.svg");
+    background-image: url("../img/flag-bosnia.svg");
     background-position: center;
     background-size: 35px 24px;
     background-repeat: no-repeat;
   }
 
   &--czech {
-    background-image: url("../../img/flag-czech.svg");
+    background-image: url("../img/flag-czech.svg");
     background-position: center;
     background-size: 35px 24px;
     background-repeat: no-repeat;
@@ -431,7 +431,7 @@
     width: 17px;
     height: 287px;
 
-    background-image: url("../../img/line.png");
+    background-image: url("../img/line.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 17px 287px;

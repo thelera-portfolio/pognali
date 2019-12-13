@@ -39,7 +39,7 @@
     width: 15px;
     height: 10px;
 
-    background-image: url("../../img/filter.svg");
+    background-image: url("../img/filter.svg");
     background-repeat: no-repeat;
   }
 }
@@ -93,7 +93,7 @@
     width: 17px;
     height: 16px;
 
-    background-image: url("../../img/dots.svg");
+    background-image: url("../img/dots.svg");
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 17px 3px;
@@ -105,7 +105,7 @@
   }
 
   &--expanded::after {
-    background-image: url("../../img/small-cross-blue.svg");
+    background-image: url("../img/small-cross-blue.svg");
     background-position: right center;
     background-size: 12px 12px;
   }
@@ -140,7 +140,7 @@
       width: 12px;
       height: 12px;
 
-      background-image: url("../../img/small-cross-blue.svg");
+      background-image: url("../img/small-cross-blue.svg");
       background-repeat: no-repeat;
     }
   }

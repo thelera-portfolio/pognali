@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Погнали</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <!-- Шапка сайта -->
   <header class="header">
     <div class="header__inner header__inner--hide inner">
       <!-- Логотип -->
       <a class="header__logo logo" href="index.html">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+          <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
           <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
         </picture>
       </a>
 
       <button class="header__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">
         <svg class="header__toggle-icon" width="25" height="11">
-          <use xlink:href="img/sprite.svg#menu"></use>
+          <use xlink:href="#icon-menu"></use>
         </svg>
       </button>
 
@@ -33,8 +39,11 @@
       <div class="menu__inner inner">
         <a class="menu__logo logo" href="index.html">
           <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
             <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
           </picture>
         </a>
@@ -57,12 +66,12 @@
         <div class="menu__contacts contacts">
           <a class="contacts__button contacts__button--tel contacts__button--tel-topmenu" href="tel:+78005558628">
             <svg class="contacts__button-icon contacts__button-icon--phone" width="18" height="18">
-              <use xlink:href="img/sprite.svg#contacts-phone"></use>
+              <use xlink:href="#icon-contacts-phone"></use>
             </svg>
             8 800 555-86-28</a>
           <a class="contacts__button contacts__button--email contacts__button--email-topmenu" href="mailto:mail@htmlacademy.ru">
             <svg class="contacts__button-icon contacts__button-icon--email" width="18" height="13">
-              <use xlink:href="img/sprite.svg#contacts-mail"></use>
+              <use xlink:href="#icon-contacts-mail"></use>
             </svg>
             mail@htmlacademy.ru</a>
         </div>
@@ -71,21 +80,21 @@
           <li class="socials__item">
             <a class="socials__link socials__link--facebook socials__link--facebook--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» в Фейсбук">
               <svg class="socials__item-icon socials__item-icon--facebook" width="11" height="21">
-                <use xlink:href="img/sprite.svg#facebook"></use>
+                <use xlink:href="#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--vkontakte socials__link--vkontakte--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» во Вконтакте">
               <svg class="socials__item-icon socials__item-icon--vkontakte" width="23" height="12">
-                <use xlink:href="img/sprite.svg#vk"></use>
+                <use xlink:href="#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a class="socials__link socials__link--instagram socials__link--instagram--header socials__link--color-white" href="#" aria-label="Сервис «Погнали» в Инстаграм">
               <svg class="socials__item-icon socials__item-icon--instagram" width="18" height="18">
-                <use xlink:href="img/sprite.svg#instagram"></use>
+                <use xlink:href="#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -446,7 +455,7 @@
 
             <button class="travelmate-form__close-button travelmate-form__close-button--hobby" type="button" aria-label="Кнопка открыть / закрыть блок «Хобби»">
               <svg class="travelmate-form__close-button-icon" width="8" height="4">
-                <use xlink:href="img/sprite.svg#dropdown"></use>
+                <use xlink:href="#icon-dropdown"></use>
               </svg>
             </button>
           </fieldset>
@@ -467,7 +476,7 @@
 
             <button class="travelmate-form__close-button travelmate-form__close-button--music" type="button" aria-label="Кнопка открыть / закрыть блок «Музыка»">
               <svg class="travelmate-form__close-button-icon" width="8" height="4">
-                <use xlink:href="img/sprite.svg#dropdown"></use>
+                <use xlink:href="#icon-dropdown"></use>
               </svg>
             </button>
           </fieldset>
@@ -488,7 +497,7 @@
 
             <button class="travelmate-form__close-button travelmate-form__close-button--food" type="button" aria-label="Кнопка открыть / закрыть блок «Еда»">
               <svg class="travelmate-form__close-button-icon" width="8" height="4">
-                <use xlink:href="img/sprite.svg#dropdown"></use>
+                <use xlink:href="#icon-dropdown"></use>
               </svg>
             </button>
           </fieldset>
@@ -501,28 +510,28 @@
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="plane" id="plane" checked>
                 <label class="transport__icon transport__icon--button" for="plane" aria-label="Авиаперелет">
                   <svg class="transport__icon-img  transport__icon-img--plane" width="14" height="16">
-                    <use xlink:href="img/sprite.svg#plane"></use>
+                    <use xlink:href="#icon-plane"></use>
                   </svg>
                 </label>
 
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bus" id="bus" checked>
                 <label class="transport__icon transport__icon--button" for="bus" aria-label="Автотранспорт">
                   <svg class="transport__icon-img transport__icon-img--bus" width="13" height="16">
-                    <use xlink:href="img/sprite.svg#bus"></use>
+                    <use xlink:href="#icon-bus"></use>
                   </svg>
                 </label>
 
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="cycle" id="cycle">
                 <label class="transport__icon transport__icon--button" for="cycle" aria-label="Велосипед">
                   <svg class="transport__icon-img transport__icon-img--cycle" width="19" height="17">
-                    <use xlink:href="img/sprite.svg#bike"></use>
+                    <use xlink:href="#icon-bike"></use>
                   </svg>
                 </label>
 
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="foot" id="foot" checked>
                 <label class="transport__icon transport__icon--button" for="foot" aria-label="Пешком">
                   <svg class="transport__icon-img transport__icon-img--foot" width="15" height="17">
-                    <use xlink:href="img/sprite.svg#run"></use>
+                    <use xlink:href="#icon-run"></use>
                   </svg>
                 </label>
               </div>
@@ -530,7 +539,7 @@
 
             <button class="travelmate-form__close-button travelmate-form__close-button--transport" type="button" aria-label="Кнопка открыть / закрыть блок «Транспорт»">
               <svg class="travelmate-form__close-button-icon" width="8" height="4">
-                <use xlink:href="img/sprite.svg#dropdown"></use>
+                <use xlink:href="#icon-dropdown"></use>
               </svg>
             </button>
           </fieldset>
@@ -552,7 +561,7 @@
 
             <button class="travelmate-form__close-button travelmate-form__close-button--level" type="button" aria-label="Кнопка открыть / закрыть блок «Левел»">
               <svg class="travelmate-form__close-button-icon" width="8" height="4">
-                <use xlink:href="img/sprite.svg#dropdown"></use>
+                <use xlink:href="#icon-dropdown"></use>
               </svg>
             </button>
           </fieldset>
@@ -571,8 +580,11 @@
 
             <div class="travelmates-item__image-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
                 <img class="travelmates-item__image" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Фото девушки в бассейне">
               </picture>
             </div>
@@ -599,22 +611,22 @@
             <ul class="travelmates-item__transport-list transport">
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">
                 <svg class="transport__icon-img transport__icon-img--plane" width="14" height="16">
-                  <use xlink:href="img/sprite.svg#plane"></use>
+                  <use xlink:href="#icon-plane"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Автотранспорт">
                 <svg class="transport__icon-img transport__icon-img--bus" width="13" height="16">
-                  <use xlink:href="img/sprite.svg#bus"></use>
+                  <use xlink:href="#icon-bus"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Велосипед">
                 <svg class="transport__icon-img transport__icon-img--cycle" width="19" height="17">
-                  <use xlink:href="img/sprite.svg#bike"></use>
+                  <use xlink:href="#icon-bike"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Пешком">
                 <svg class="transport__icon-img transport__icon-img--foot" width="15" height="17">
-                  <use xlink:href="img/sprite.svg#run"></use>
+                  <use xlink:href="#icon-run"></use>
                 </svg>
               </li>
             </ul>
@@ -635,8 +647,11 @@
 
             <div class="travelmates-item__image-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
                 <img class="travelmates-item__image" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Фото мужчины с бородой в шапке и темных очках">
               </picture>
             </div>
@@ -661,22 +676,22 @@
             <ul class="travelmates-item__transport-list transport">
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">
                 <svg class="transport__icon-img transport__icon-img--plane" width="14" height="16">
-                  <use xlink:href="img/sprite.svg#plane"></use>
+                  <use xlink:href="#icon-plane"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Автотранспорт">
                 <svg class="transport__icon-img transport__icon-img--bus" width="13" height="16">
-                  <use xlink:href="img/sprite.svg#bus"></use>
+                  <use xlink:href="#icon-bus"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Велосипед">
                 <svg class="transport__icon-img transport__icon-img--cycle" width="19" height="17">
-                  <use xlink:href="img/sprite.svg#bike"></use>
+                  <use xlink:href="#icon-bike"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Пешком">
                 <svg class="transport__icon-img transport__icon-img--foot" width="15" height="17">
-                  <use xlink:href="img/sprite.svg#run"></use>
+                  <use xlink:href="#icon-run"></use>
                 </svg>
               </li>
             </ul>
@@ -697,8 +712,11 @@
 
             <div class="travelmates-item__image-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
                 <img class="travelmates-item__image" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Фото мужчины в белой майке и шортах">
               </picture>
             </div>
@@ -724,22 +742,22 @@
             <ul class="travelmates-item__transport-list transport">
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">
                 <svg class="transport__icon-img transport__icon-img--plane" width="14" height="16">
-                  <use xlink:href="img/sprite.svg#plane"></use>
+                  <use xlink:href="#icon-plane"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Автотранспорт">
                 <svg class="transport__icon-img transport__icon-img--bus" width="13" height="16">
-                  <use xlink:href="img/sprite.svg#bus"></use>
+                  <use xlink:href="#icon-bus"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Велосипед">
                 <svg class="transport__icon-img transport__icon-img--cycle" width="19" height="17">
-                  <use xlink:href="img/sprite.svg#bike"></use>
+                  <use xlink:href="#icon-bike"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Пешком">
                 <svg class="transport__icon-img transport__icon-img--foot" width="15" height="17">
-                  <use xlink:href="img/sprite.svg#run"></use>
+                  <use xlink:href="#icon-run"></use>
                 </svg>
               </li>
             </ul>
@@ -759,8 +777,11 @@
 
             <div class="travelmates-item__image-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
                 <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
+                <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
                 <img class="travelmates-item__image" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Фото девушки в синем деловом костюме">
               </picture>
             </div>
@@ -784,22 +805,22 @@
             <ul class="travelmates-item__transport-list transport">
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Авиаперелет">
                 <svg class="transport__icon-img transport__icon-img--plane" width="14" height="16">
-                  <use xlink:href="img/sprite.svg#plane"></use>
+                  <use xlink:href="#icon-plane"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--active transport__icon--bgc" aria-label="Автотранспорт">
                 <svg class="transport__icon-img transport__icon-img--bus" width="13" height="16">
-                  <use xlink:href="img/sprite.svg#bus"></use>
+                  <use xlink:href="#icon-bus"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Велосипед">
                 <svg class="transport__icon-img transport__icon-img--cycle" width="19" height="17">
-                  <use xlink:href="img/sprite.svg#bike"></use>
+                  <use xlink:href="#icon-bike"></use>
                 </svg>
               </li>
               <li class="transport__icon transport__icon--bgc" aria-label="Пешком">
                 <svg class="transport__icon-img transport__icon-img--foot" width="15" height="17">
-                  <use xlink:href="img/sprite.svg#run"></use>
+                  <use xlink:href="#icon-run"></use>
                 </svg>
               </li>
             </ul>
@@ -836,8 +857,11 @@
     <div class="footer__inner inner">
       <a class="footer__logo logo" href="index.html">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
           <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
           <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
         </picture>
       </a>
@@ -846,21 +870,21 @@
         <li class="socials__item">
           <a class="socials__link" href="#" aria-label="Сервис «Погнали» в Фейсбук">
             <svg class="socials__item-icon socials__item-icon--facebook" width="11" height="21">
-              <use xlink:href="img/sprite.svg#facebook"></use>
+              <use xlink:href="#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link" href="#" aria-label="Сервис «Погнали» во Вконтакте">
             <svg class="socials__item-icon socials__item-icon--vkontakte" width="23" height="12">
-              <use xlink:href="img/sprite.svg#vk"></use>
+              <use xlink:href="#icon-vk"></use>
             </svg>
           </a>
         </li>
         <li class="socials__item">
           <a class="socials__link" href="#" aria-label="Сервис «Погнали» в Инстаграм">
             <svg class="socials__item-icon socials__item-icon--instagram" width="18" height="18">
-              <use xlink:href="img/sprite.svg#instagram"></use>
+              <use xlink:href="#icon-instagram"></use>
             </svg>
           </a>
         </li>
@@ -870,7 +894,7 @@
         <p class="copyright__text">Разработано</p>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
           <svg class="copyright__logo-image" width="27" height="34">
-            <use xlink:href="img/sprite.svg#html-academy"></use>
+            <use xlink:href="#icon-html-academy"></use>
           </svg>
         </a>
       </div>

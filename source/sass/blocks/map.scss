@@ -38,13 +38,13 @@ $padding-bottom-desktop: 57px;
   margin: 0;
   padding: 0;
 
-  background-image: url("../../img/map-mobile@1x.jpg");
+  background-image: url("../img/map-mobile@1x.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto 100%;
 
   @media (min-resolution: $retina-dppx) {
-    background-image: url("../../img/map-mobile@2x.jpg");
+    background-image: url("../img/map-mobile@2x.jpg");
   }
 }
 
@@ -115,10 +115,10 @@ $padding-bottom-desktop: 57px;
   .map__image {
     height: 581px;
 
-    background-image: url("../../img/map-tablet@1x.jpg");
+    background-image: url("../img/map-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/map-tablet@2x.jpg");
+      background-image: url("../img/map-tablet@2x.jpg");
     }
   }
 
@@ -163,10 +163,10 @@ $padding-bottom-desktop: 57px;
   .map__image {
     height: 516px;
 
-    background-image: url("../../img/map-desktop@1x.jpg");
+    background-image: url("../img/map-desktop@1x.jpg");
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/map-desktop@2x.jpg");
+      background-image: url("../img/map-desktop@2x.jpg");
     }
   }
 

@@ -132,7 +132,7 @@
 
     position: absolute;
 
-    background-image: url("../../img/heart.svg");
+    background-image: url("../img/heart.svg");
     background-position: center;
     background-size: 13px 11px;
     background-repeat: no-repeat;
@@ -161,7 +161,7 @@
   }
 
   &--active::after {
-    background-image: url("../../img/heart-active.svg");
+    background-image: url("../img/heart-active.svg");
   }
 
   &--active:hover::before {

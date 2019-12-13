@@ -51,11 +51,11 @@
   cursor: pointer;
 
   &--back {
-    background-image: url("../../img/triangle-arrow-left.svg");
+    background-image: url("../img/triangle-arrow-left.svg");
   }
 
   &--forward {
-    background-image: url("../../img/triangle-arrow-right.svg");
+    background-image: url("../img/triangle-arrow-right.svg");
   }
 
   &:hover {
