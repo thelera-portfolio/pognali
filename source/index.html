@@ -495,6 +495,12 @@
       var showBusinessRatesModalButton = document.querySelector(".rates__more-link");
       var businessRatesModalCloseButton = document.querySelector(".business-rates-modal__close-button");
 
+      var header = document.querySelector(".header");
+      var headerLogo = document.querySelector(".logo__image");
+      var headerToggle = document.querySelector(".header__toggle-icon");
+
+      var scrolled;
+
       mainMenu.classList.remove("menu--no-js");
 
       mainMenuCloseButton.addEventListener("click", function() {
@@ -515,8 +521,23 @@
       });
 
       businessRatesModalCloseButton.addEventListener("click", function () {
-          businessRatesModal.classList.remove("business-rates-modal--show");
-        });
+        businessRatesModal.classList.remove("business-rates-modal--show");
+      });
+
+      window.onscroll = function () {
+        scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrolled > 73 && mainMenu.classList.contains("menu--closed")) {
+          header.classList.add("header--scroll");
+          headerToggle.classList.add("header__toggle-icon--scroll");
+          //headerLogo.classList.add("header__logo--scroll");
+          headerLogo.setAttribute('src', 'img/logo-mobile-blue@1x.png');
+        }
+        if (73 > scrolled) {
+          header.classList.remove("header--scroll");
+          headerToggle.classList.remove("header__toggle-icon--scroll");
+          headerLogo.classList.remove("header__logo--scroll");
+        }
+      }
     </script>
   </body>
 </html>
