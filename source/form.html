@@ -137,7 +137,7 @@
 
             <fieldset class="user-info__fieldset user-info__fieldset--tags tags">
               <legend class="user-info__legend">Тэги:</legend>
-              <textarea class="tags__text-input" name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea class="tags__text-input" name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
 
             <fieldset class="user-info__fieldset user-info__fieldset--transport">
@@ -354,9 +354,7 @@
               <p class="step__text">Укажите страны, которые вы хотели по посетить.<br class="step__text--break"> Это может быть одна или сразу несколько.</p>
 
               <div class="step__select-wrapper">
-                <select class="step__select" name="country-one">
-                  <option value="bosnia">Босния и герцеговина</option>
-                </select>
+                <div class="step__select">Босния и герцеговина</div>
                 <span class="step__select-dropdown" aria-label="Кнопка выпадающего списка">
                   <svg class="step__select-dropdown-image" width="12" height="7">
                     <use xlink:href="#icon-dropdown-form"></use>
@@ -370,9 +368,7 @@
               </div>
 
               <div class="step__select-wrapper">
-                <select class="step__select" name="country-two">
-                  <option value="czech">Чехия</option>
-                </select>
+                <div class="step__select">Чехия</div>
                 <span class="step__select-dropdown" aria-label="Кнопка выпадающего списка">
                   <svg class="step__select-dropdown-image" width="12" height="7">
                     <use xlink:href="#icon-dropdown-form"></use>
@@ -386,9 +382,7 @@
               </div>
 
               <div class="step__select-wrapper step__select-wrapper--choose-country">
-                <select class="step__select step__select--choose-country" name="country-three">
-                  <option value="">Выберите страну</option>
-                </select>
+                <div class="step__select step__select--choose-country">Выберите страну</div>
                 <span class="step__select-dropdown step__select-dropdown--choose-country" aria-label="Кнопка выпадающего списка">
                   <svg class="step__select-dropdown-image" width="12" height="7">
                     <use xlink:href="#icon-dropdown-form"></use>
@@ -402,9 +396,7 @@
               </div>
 
               <div class="step__select-wrapper step__select-wrapper--add-country">
-                <select class="step__select step__select--add-country" name="country-four">
-                  <option value="">Добавить страну</option>
-                </select>
+                <div class="step__select step__select--add-country">Добавить страну</div>
                 <span class="step__select-button step__select-button--add-country" aria-label="Кнопка добавления страны">
                   <svg class="step__select-button-image step__select-button-image--add-country" width="14" height="14">
                     <use xlink:href="#icon-qty-plus"></use>
