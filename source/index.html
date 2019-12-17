@@ -348,12 +348,12 @@
               </div>
             </dl>
 
-            <a class="rates__more-link" href="#">Показать тарифы для бизнеса</a>
+            <a class="rates__more-link" href="rates.html">Показать тарифы для бизнеса</a>
           </div>
         </section>
 
         <!-- Модальное окно с бизнес-тарифами -->
-        <section class="business-rates-modal business-rates-modal--show">
+        <section class="business-rates-modal">
           <h2 class="business-rates-modal__title index-title">Бизнес-тарифы</h2>
 
           <dl class="business-rates-modal__list rates-list index-text index-text--modal">
@@ -431,7 +431,8 @@
 
         <!-- <img class="map__image" src="img/map-tablet@1x.jpg" srcset="img/map-tablet@2x.jpg 2x" width="768" height="700" alt="Офис компании по адресу: ул. Большая Конюшенная, 19/8"> -->
         <p class="map__image">
-        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CGdV6Tyc" frameborder="0" allowfullscreen="true"></iframe>
+        <!-- <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CGdV6Tyc" frameborder="0" allowfullscreen="true"></iframe> -->
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586858!2d30.32085335220845!3d59.93871648178724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1576499107677!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </p>
       </section>
     </main>
@@ -529,7 +530,6 @@
         if (scrolled > 73 && mainMenu.classList.contains("menu--closed")) {
           header.classList.add("header--scroll");
           headerToggle.classList.add("header__toggle-icon--scroll");
-          //headerLogo.classList.add("header__logo--scroll");
           headerLogo.setAttribute('src', 'img/logo-mobile-blue@1x.png');
         }
         if (73 > scrolled) {

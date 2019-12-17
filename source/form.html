@@ -243,12 +243,14 @@
                 </div>
               </div>
 
-              <input class="step__checkbox visually-hidden" type="checkbox" name="child" id="child" checked>
-              <label class="step__checkbox-label" for="child">
-                <svg class="step__checkbox-icon" width="9" height="9">
-                  <use xlink:href="#icon-tick"></use>
-                </svg>
-                Можно с детьми</label>
+              <div class="step__checkbox-wrapper">
+                <input class="step__checkbox visually-hidden" type="checkbox" name="child" id="child" checked>
+                <label class="step__checkbox-label" for="child">
+                  <svg class="step__checkbox-icon" width="9" height="9">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
+                  Можно с детьми</label>
+              </div>
 
               <div class="step__control-field control-field">
                 <label class="control-field__label" for="date" aria-label="Выбрать месяц и год поездки"></label>
@@ -405,7 +407,7 @@
               </div>
 
               <!-- Выпадающий список стран -->
-              <div class="step__country-dropdown step__country-dropdown--show">
+              <div class="step__country-dropdown">
                 <h4 class="step__country-dropdown-title">Выберите страну</h4>
 
                 <table class="step__country-keyboard country-keyboard">
@@ -812,6 +814,7 @@
 
       var countryDropdown = document.querySelector(".step__country-dropdown");
       var chooseCountrySelect = document.querySelector(".step__select--choose-country");
+      var stepSelectDropdownButton = document.querySelector(".step__select-dropdown--choose-country");
       var stepSelectButton = document.querySelector(".step__select-button--choose-country");
       var countryDropdownCloseButton = document.querySelector(".step__dropdown-close-button");
 
@@ -855,13 +858,19 @@
         evt.preventDefault();
         countryDropdown.classList.add("step__country-dropdown--show");
         stepSelectButton.classList.add("step__select-button--hide");
-      })
+      });
+
+      stepSelectDropdownButton.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          countryDropdown.classList.add("step__country-dropdown--show");
+          stepSelectButton.classList.add("step__select-button--hide");
+        });
 
       countryDropdownCloseButton.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          countryDropdown.classList.remove("step__country-dropdown--show");
-          stepSelectButton.classList.remove("step__select-button--hide");
-        })
+        evt.preventDefault();
+        countryDropdown.classList.remove("step__country-dropdown--show");
+        stepSelectButton.classList.remove("step__select-button--hide");
+      });
 
       //выход из формы при нажатии клавиши escape
       window.addEventListener("keydown", function (evt) {

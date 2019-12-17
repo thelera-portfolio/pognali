@@ -1,6 +1,8 @@
 .filter-country {
-  position: relative;
+  position: absolute;
+  z-index: 1;
 
+  width: 100%;
   margin-top: -$radius-2;
   padding-top: 40px;
 
@@ -257,6 +259,8 @@
 
 @media (min-width: $desktop-width) {
   .filter-country {
+    position: relative;
+
     margin-top: -$radius-5;
     padding-top: 117px;
 

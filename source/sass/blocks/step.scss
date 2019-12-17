@@ -52,10 +52,15 @@
   }
 }
 
-.step__checkbox-label {
+.step__checkbox-wrapper {
   position: relative;
 
   margin-bottom: 26px;
+}
+
+.step__checkbox-label {
+  position: relative;
+
   padding-left: 39px;
 
   font-size: 15px;
@@ -615,9 +620,12 @@
     order: -2;
   }
 
+  .step__checkbox-wrapper {
+    margin-bottom: 35px;
+  }
+
   .step__checkbox-label {
     order: -1;
-    margin-bottom: 35px;
     padding-left: 59px;
 
     font-size: 20px;
@@ -914,13 +922,17 @@
     }
   }
 
-  .step__checkbox-label {
+  .step__checkbox-wrapper {
+    margin-bottom: 0;
+
     position: absolute;
     top: 365px;
     right: 162px;
 
     order: -1;
-    margin: 0;
+  }
+
+  .step__checkbox-label {
     margin-left: auto;
     padding-left: 59px;
 
