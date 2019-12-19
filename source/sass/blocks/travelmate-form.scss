@@ -141,13 +141,13 @@
 
   font-size: 15px;
   font-weight: 500;
-  letter-spacing: 1.5;
+  letter-spacing: 1.5px;
   color: $blue-4;
   text-align: center;
 
   border: solid 1px $grey-2;
 
-  appearance: textfield;
+  //appearance: textfield;
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
@@ -197,6 +197,8 @@
 
   background-color: $blue-4;
   border-radius: 50%;
+
+  cursor: pointer;
 
   &--one {
     top: -4px;
@@ -397,7 +399,7 @@
     height: 46px;
 
     font-size: 20px;
-    letter-spacing: 2;
+    letter-spacing: 2px;
 
     border: solid 1px $grey-2;
 
@@ -540,7 +542,7 @@
     height: 46px;
 
     font-size: 20px;
-    letter-spacing: 2;
+    letter-spacing: 2px;
 
     border: solid 1px $grey-2;
 

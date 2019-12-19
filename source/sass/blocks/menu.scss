@@ -13,28 +13,104 @@
   }
 
   &--closed {
-    display: none;
+    background-color: $blue-1;
+
+    .menu__logo--blue,
+    .menu__close-button,
+    .menu__list,
+    .menu__login-button,
+    .menu__contacts,
+    .menu__socials {
+      display: none;
+    }
+
+    .menu__logo--white,
+    .menu__toggle {
+      display: block;
+    }
+  }
+
+  &--scrolled {
+    position: fixed;
+    z-index: 8;
+
+    width: 100%;
+
+    background-color: #ffffff;
+
+    .menu__logo--white {
+      display: none;
+    }
+
+    .menu__logo--blue,
+    .menu__toggle {
+      display: block;
+    }
+
+    .menu__toggle-icon {
+      fill: $grey-9;
+    }
   }
 
   &--opened {
-    display: block;
+    .menu__logo--white {
+      display: none;
+    }
+
+    .menu__toggle {
+      display: none;
+    }
   }
 }
 
 .menu__inner {
   position: relative;
+
+  flex-direction: row;
+  justify-content: center;
 }
 
 .menu__logo {
-  align-self: flex-start;
-  margin-bottom: 79px;
+  margin-right: auto;
+}
+
+.menu__toggle {
+  margin-left: auto;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.menu__close-button {
+  width: 19px;
+  height: 19px;
+  margin-left: auto;
+
+  background-color: transparent;
+  background-image: url("../img/menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.menu__toggle-icon {
+  fill: #ffffff;
+
+  &--scroll {
+    fill: $grey-9;
+  }
 }
 
 .menu__list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0;
+  margin-top: 79px;
   margin-bottom: 58px;
   padding: 0;
 
@@ -73,46 +149,56 @@
   margin-bottom: 42px;
 }
 
-.menu__close-button {
-  position: absolute;
-  top: 0;
-  right: 25px;
-
-  width: 19px;
-  height: 19px;
-
-  background-color: transparent;
-  background-image: url("../img/menu-close.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  border: 0;
-
-  cursor: pointer;
-}
-
-@media (max-width: $mobile-width-only) {
-  .menu__login-button {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+.menu__contacts-desktop {
+  display: none;
 }
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .menu {
     padding-top: 40px;
-    padding-bottom: 84px;
+    padding-bottom: 42px;
+
+    &--closed {
+      background-color: $blue-1;
+
+      .menu__login-button {
+        display: flex;
+      }
+    }
+
+    &--index {
+      background-color: $blue-2;
+    }
+
+    &--scrolled {
+      background-color: #ffffff;
+    }
+
+    &--opened {
+      background-color: #ffffff;
+    }
   }
 
   .menu__inner {
-    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .menu__logo {
-    margin-bottom: 105px;
+    order: -2;
+  }
+
+  .menu__toggle {
+    order: -2;
+    margin: 0;
+  }
+
+  .menu__toggle-icon {
+    fill: #ffffff;
   }
 
   .menu__list {
     align-items: flex-start;
+    margin-top: 115px;
     margin-bottom: 150px;
     margin-left: 59px;
   }
@@ -123,12 +209,10 @@
   }
 
   .menu__login-button {
-    position: absolute;
-    top: 0;
-    right: 40px;
-
+    order: -1;
     width: 188px;
     margin: 0;
+    margin-left: auto;
   }
 
   .menu__contacts {
@@ -145,24 +229,75 @@
     right: auto;
     left: 365px;
 
+    order: -1;
     width: 19px;
     height: 19px;
+    margin: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .menu {
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
     padding: 0;
+    padding-top: 49px;
+    padding-bottom: 20px;
 
     background-color: $blue-1;
+
+    .menu__logo--blue {
+      display: none;
+    }
+
+    .menu__logo--white {
+      display: block;
+    }
+
+    .menu__socials {
+      display: none;
+    }
+
+    .menu__login-button {
+      order: 2;
+      display: flex;
+      width: auto;
+      margin: 0;
+    }
+
+    .menu__contacts {
+      display: none;
+    }
+
+    .menu__close-button {
+      display: none;
+    }
+
+    &--scrolled {
+      padding-top: 20px;
+
+      background-color: #ffffff;
+
+      .menu__logo--white,
+      .menu__toggle {
+        display: none;
+      }
+
+      .menu__logo--blue {
+        display: block;
+      }
+
+      .menu__list {
+        color: $blue-2;
+      }
+
+      .menu__logo::before {
+        background-color: $blue-2;
+      }
+    }
   }
 
   .menu__inner {
-    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
   }
 
   .menu__logo {
@@ -183,6 +318,10 @@
 
       background-color: #ffffff;
     }
+  }
+
+  .menu__toggle {
+    display: none;
   }
 
   .menu__list {
@@ -231,19 +370,12 @@
     }
   }
 
-  .menu__socials {
-    display: none;
-  }
+  .menu__contacts-desktop {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    margin-left: auto;
 
-  .menu__login-button {
-    display: none;
-  }
-
-  .menu__contacts {
-    display: none;
-  }
-
-  .menu__close-button {
-    display: none;
+    font-size: 0;
   }
 }

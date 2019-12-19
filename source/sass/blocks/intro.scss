@@ -269,9 +269,7 @@ $padding-bottom-desktop: 130px;
   }
 
   .intro__contacts-inner {
-    position: absolute;
-    top: -61px;
-    right: $desktop-padding;
+    display: none;
   }
 
   .intro__review {
