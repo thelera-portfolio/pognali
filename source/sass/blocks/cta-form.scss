@@ -1,9 +1,9 @@
-$padding-top-mobile: 100px;
+$padding-top-mobile: 104px;
 $padding-bottom-mobile: 29px;
 $padding-top-tablet: 137px;
-$padding-bottom-tablet: 62px;
-$padding-top-desktop: 135px;
-$padding-bottom-desktop: 104px;
+$padding-bottom-tablet: 58px;
+$padding-top-desktop: 166px;
+$padding-bottom-desktop: 100px;
 
 .cta-form {
   background-color: $blue-2;
@@ -18,7 +18,7 @@ $padding-bottom-desktop: 104px;
 }
 
 .cta-form__title {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .cta-form__text {
@@ -26,10 +26,14 @@ $padding-bottom-desktop: 104px;
   margin-bottom: 30px;
 
   text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 18px;
+  }
 }
 
 .cta-form__input {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .cta-form__login-form {
@@ -62,6 +66,8 @@ $padding-bottom-desktop: 104px;
 }
 
 .cta-form__contacts {
+  align-self: flex-start;
+
   color: $yellow-1;
 }
 
@@ -77,16 +83,20 @@ $padding-bottom-desktop: 104px;
   }
 
   .cta-form__title {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
   }
 
   .cta-form__text {
     width: auto;
-    margin-bottom: 65px;
+    margin-bottom: 62px;
+
+    &:last-of-type {
+      margin-bottom: 43px;
+    }
   }
 
   .cta-form__login-form {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 
   .cta-form__input {
@@ -95,6 +105,7 @@ $padding-bottom-desktop: 104px;
 
   .cta-form__contacts {
     align-self: flex-start;
+    margin-left: 38px;
   }
 
   .cta-form__button {
@@ -127,7 +138,12 @@ $padding-bottom-desktop: 104px;
 
   .cta-form__text {
     width: auto;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
+
+    &:last-of-type {
+      letter-spacing: 0.4px;
+      margin-bottom: 45px;
+    }
   }
 
   .cta-form__contacts-button {
@@ -139,14 +155,16 @@ $padding-bottom-desktop: 104px;
   }
 
   .cta-form__login-form {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 
   .cta-form__input {
     width: 1175px;
+    padding-left: 32px;
   }
 
   .cta-form__contacts {
+    align-self: center;
     display: flex;
   }
 
@@ -156,6 +174,7 @@ $padding-bottom-desktop: 104px;
 
     width: 325px;
     height: 81px;
+    padding-left: 35px;
 
     font-size: 24px;
 

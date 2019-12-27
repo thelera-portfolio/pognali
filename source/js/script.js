@@ -42,8 +42,10 @@ var inputFieldDays = document.querySelector(".control-field__input--days");
 var inputDate = document.querySelector(".control-field__input--date");
 
 // каталог
-var filterCountryButton = document.querySelector(".filter-country__button");
-var filterCountryButtonClose = document.querySelector(".filter-country__button-close");
+var filterCountry = document.querySelector(".filter-country");
+var findTravelmate = document.querySelector(".catalog-main__find-travelmate");
+var filterCountryButton = document.querySelector(".filter-country__button");// кнопка "свернуть / показать все"
+var filterCountryButtonClose = document.querySelector(".filter-country__button-close");// кнопка "свернуть"
 var continentList = document.querySelector(".continent-list");
 var countryKeyboard = document.querySelector(".country-keyboard");
 var countriesList = document.querySelector(".countries-list");
@@ -96,11 +98,6 @@ if (menuToggle) {
     mainMenu.classList.add("menu--opened");
   });
 }
-
-// if (window.matchMedia("(min-width: 1440px)").matches) {
-//   mainMenu.classList.remove("menu--closed");
-//   mainMenu.classList.remove("menu--opened");
-// }
 
 if (showBusinessRatesModalButton) {
   showBusinessRatesModalButton.addEventListener("click", function (evt) {
@@ -264,8 +261,12 @@ if (buttonDateBack) {
   });
 }
 
-//блок "фильтрация по странам" по умолчанию скрыт
 if (continentList || filterCountryButtonClose || filterCountryButton) {
+  //блок "фильтрация по странам" по умолчанию скрыт
+  //тк js работает, показываем кнопки закрытия / открытия блока
+  filterCountryButton.classList.remove("filter-country__button--hide");
+  filterCountryButtonClose.classList.remove("filter-country__button-close--hide");
+
   window.addEventListener("resize", throttle(function () {
     if (window.matchMedia("(max-width: 767px)").matches) {//блок со странами убираем только для мобильных
       continentList.classList.add("continent-list--hide");
@@ -289,12 +290,16 @@ if (filterCountryButton) {
   filterCountryButton.addEventListener("click", function () {
 
     if (countryKeyboard.classList.contains("country-keyboard--hide") && countriesList.classList.contains("countries-list--hide")) {//если блок с выбором страны закрыт, то открываем его
+      filterCountry.classList.add("filter-country--absolute");//позиционируем блок абсолютно
+      findTravelmate.classList.add("catalog-main__find-travelmate--margin");//следующему в потоке блоку добавляем марджин, чтобы не было его смещения
       continentList.classList.remove("continent-list--hide");
       countryKeyboard.classList.remove("country-keyboard--hide");
       countriesList.classList.remove("countries-list--hide");
       filterCountryButtonClose.classList.remove("filter-country__button-close--hide");
       filterCountryButton.classList.add("filter-country__button--expanded");
     } else {//если открыт, то закрываем
+      filterCountry.classList.remove("filter-country--absolute");//убираем абсолютное позиционирование
+      findTravelmate.classList.remove("catalog-main__find-travelmate--margin");
       window.addEventListener("resize", throttle(function () {
         if (window.matchMedia("(max-width: 767px)").matches) {//блок со странами убираем только для мобильных
           continentList.classList.add("continent-list--hide");
@@ -313,6 +318,8 @@ if (filterCountryButton) {
 
 if (filterCountryButtonClose) {
   filterCountryButtonClose.addEventListener("click", function () {
+    filterCountry.classList.remove("filter-country--absolute");//убираем абсолютное позиционирование
+    findTravelmate.classList.remove("catalog-main__find-travelmate--margin");
     window.addEventListener("resize", throttle(function () {
       if (window.matchMedia("(max-width: 767px)").matches) {//блок со странами убираем только для мобильных
         continentList.classList.add("continent-list--hide");

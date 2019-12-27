@@ -1,4 +1,6 @@
 .catalog-main {
+  position: relative;
+
   padding-bottom: 77px;
 
   background-color: $grey-1;
@@ -6,7 +8,7 @@
 
 .catalog-main__title-wrapper {
   position: relative;
-  z-index: 2;
+  z-index: 4;
 
   background-color: $blue-1;
   border-bottom-right-radius: $radius-2;
@@ -17,7 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
   min-height: 70px;
-  padding-top: 27px;
+  padding-top: 20px;
 }
 
 .catalog-main__to-main-page-button {
@@ -63,7 +65,11 @@
 }
 
 .catalog-main__find-travelmate {
-  margin-top: 76px;
+  margin-top: 26px;
+
+  &--margin {
+    margin-top: 77px;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
@@ -83,14 +89,21 @@
   }
 
   .catalog-main__title-inner {
-    min-height: 70px;
-    padding-top: 94px;
+    padding-top: 87px;
     padding-right: 77px;
-    padding-left: 77px;
+    padding-left: 74px;
   }
 
   .catalog-main__find-travelmate {
-    margin-top: 182px;
+    margin-top: 50px;
+
+    &--margin {
+      margin-top: 184px;
+    }
+  }
+
+  .catalog-main__to-main-page-button {
+    padding-bottom: 60px;
   }
 }
 
@@ -110,10 +123,9 @@
   }
 
   .catalog-main__title-inner {
-    min-height: 243px;
-    padding-top: 118px;
-    padding-right: 69px;
-    padding-left: 129px;
+    padding-top: 110px;
+    padding-right: 123px;
+    padding-left: 127px;
   }
 
   .catalog-main__travelmates-filtered {
@@ -123,5 +135,15 @@
   .catalog-main__find-travelmate {
     order: 1;
     margin-top: 77px;
+  }
+
+  .catalog-main__to-main-page-button {
+    padding-top: 18px;
+
+    line-height: 2;
+
+    &::after {
+      top: 25px;
+    }
   }
 }

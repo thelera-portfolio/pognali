@@ -2,8 +2,8 @@
   position: relative;
   top: 0;
 
-  padding-top: 27px;
-  padding-bottom: 40px;
+  padding-top: 19px;
+  padding-bottom: 36px;
   background-color: #ffffff;
 
   &--no-js {
@@ -67,7 +67,7 @@
   position: relative;
 
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .menu__logo {
@@ -109,12 +109,16 @@
 .menu__list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  margin-top: 79px;
-  margin-bottom: 58px;
+  margin-top: 72px;
+  margin-right: auto;
+  margin-bottom: 53px;
+  margin-left: auto;
   padding: 0;
 
   @include font-name;
+  font-size: 30px;
   font-weight: 500;
   text-transform: uppercase;
   color: $blue-2;
@@ -135,7 +139,7 @@
 
 .menu__login-button {
   width: 100%;
-  margin-bottom: 51px;
+  margin-bottom: 52px;
   padding-top: 10px;
   padding-bottom: 10px;
 
@@ -145,18 +149,22 @@
 .menu__contacts {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
-  margin-bottom: 42px;
+  margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .menu__contacts-desktop {
   display: none;
 }
 
+.menu__socials {
+  margin: 0 auto;
+}
+
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .menu {
     padding-top: 40px;
-    padding-bottom: 42px;
+    padding-bottom: 75px;
 
     &--closed {
       background-color: $blue-1;
@@ -179,10 +187,6 @@
     }
   }
 
-  .menu__inner {
-    justify-content: flex-start;
-  }
-
   .menu__logo {
     order: -2;
   }
@@ -190,6 +194,7 @@
   .menu__toggle {
     order: -2;
     margin: 0;
+    margin-left: 21px;
   }
 
   .menu__toggle-icon {
@@ -198,9 +203,12 @@
 
   .menu__list {
     align-items: flex-start;
-    margin-top: 115px;
-    margin-bottom: 150px;
+    margin: 0;
+    margin-top: 93px;
+    margin-bottom: 135px;
     margin-left: 59px;
+
+    letter-spacing: -0.9px;
   }
 
   .menu__link {
@@ -216,7 +224,7 @@
   }
 
   .menu__contacts {
-    margin-bottom: 123px;
+    margin-bottom: 113px;
     margin-left: 59px;
   }
 
@@ -225,14 +233,10 @@
   }
 
   .menu__close-button {
-    top: 15px;
-    right: auto;
-    left: 365px;
-
     order: -1;
     width: 19px;
     height: 19px;
-    margin: 0;
+    margin-left: 25px;
   }
 }
 
@@ -240,7 +244,7 @@
   .menu {
     padding: 0;
     padding-top: 49px;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
 
     background-color: $blue-1;
 
@@ -297,7 +301,6 @@
 
   .menu__inner {
     align-items: center;
-    justify-content: flex-start;
   }
 
   .menu__logo {
@@ -310,8 +313,8 @@
       content: "";
 
       position: absolute;
-      top: 21px;
-      right: -95px;
+      top: 25px;
+      right: -103px;
 
       width: 60px;
       height: 2px;
@@ -327,6 +330,7 @@
   .menu__list {
     flex-direction: row;
     align-items: flex-start;
+    width: 650px;
     margin: 0;
 
     font-size: 20px;

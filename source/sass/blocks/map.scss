@@ -1,9 +1,9 @@
-$padding-top-mobile: 64px;
+$padding-top-mobile: 51px;
 $padding-bottom-mobile: 35px;
-$padding-top-tablet: 105px;
+$padding-top-tablet: 110px;
 $padding-bottom-tablet: 85px;
 $padding-top-desktop: 117px;
-$padding-bottom-desktop: 57px;
+$padding-bottom-desktop: 34px;
 
 .map__contacts {
   position: relative;
@@ -23,10 +23,41 @@ $padding-bottom-desktop: 57px;
 
 .map__address {
   width: 205px;
+  margin: 0;
+  margin-bottom: 20px;
 
   &::before,
   &::after {
     margin-top: 10px;
+  }
+}
+
+.map__route-button {
+  padding-bottom: 15px;
+  padding-left: 22px;
+
+  border: 3px solid $blue-2;
+
+  &:hover {
+    color: #ffffff;
+
+    background-color: $blue-2;
+  }
+
+  &:focus,
+  &:active {
+    color: rgba(#ffffff, 0.3);
+
+    background-color: $blue-2;
+  }
+
+  &:hover::after {
+    border-left-color: #ffffff;
+  }
+
+  &:focus::after,
+  &:active::after {
+    border-left-color: rgba(#ffffff, 0.3);
   }
 }
 
@@ -58,32 +89,6 @@ $padding-bottom-desktop: 57px;
   border: 0;
 }
 
-.map__route-button {
-  border: 3px solid $blue-2;
-
-  &:hover {
-    color: #ffffff;
-
-    background-color: $blue-2;
-  }
-
-  &:focus,
-  &:active {
-    color: rgba(#ffffff, 0.3);
-
-    background-color: $blue-2;
-  }
-
-  &:hover::after {
-    border-left-color: #ffffff;
-  }
-
-  &:focus::after,
-  &:active::after {
-    border-left-color: rgba(#ffffff, 0.3);
-  }
-}
-
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .map__contacts {
     margin-bottom: -$radius-5;
@@ -98,6 +103,8 @@ $padding-bottom-desktop: 57px;
 
   .map__address {
     width: auto;
+    margin-left: 36px;
+    margin-bottom: 42px;
 
     &::after {
       background-size: 21px 31px;
@@ -112,6 +119,8 @@ $padding-bottom-desktop: 57px;
   .map__route-button {
     width: 618px;
     height: 81px;
+    margin-left: 36px;
+    padding-left: 34px;
   }
 
   .map__image {
@@ -159,7 +168,9 @@ $padding-bottom-desktop: 57px;
   .map__route-button {
     width: 324px;
     height: 81px;
+    margin-top: -23px;
     margin-right: 75px;
+    padding-left: 35px;
   }
 
   .map__image {

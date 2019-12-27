@@ -27,12 +27,16 @@
       fill: rgba(#000000, 0.3);
     }
 
-    &:focus,
     &:active {
       background-color: $grey-4;
       fill: rgba(#000000, 0.1);
     }
   }
+}
+
+.transport__checkbox:focus + .transport__icon--button {
+  background-color: $grey-4;
+  fill: rgba($blue-6, 0.3);
 }
 
 .transport__checkbox:checked + .transport__icon--button {
@@ -42,7 +46,6 @@
     fill: rgba($blue-6, 0.7);
   }
 
-  &:focus,
   &:active {
     background-color: $grey-4;
     fill: rgba($blue-6, 0.3);

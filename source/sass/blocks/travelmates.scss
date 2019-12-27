@@ -1,6 +1,6 @@
-$padding-top-mobile: 133px;
+$padding-top-mobile: 100px;
 $padding-bottom-mobile: 30px;
-$padding-top-tablet: 200px;
+$padding-top-tablet: 202px;
 $padding-bottom-tablet: 85px;
 $padding-top-desktop: 190px;
 $padding-bottom-desktop: 133px;
@@ -25,8 +25,8 @@ $padding-bottom-desktop: 133px;
 
     position: absolute;
     z-index: -1;
-    top: 380px;
-    left: 0;
+    top: 340px;
+    left: -10px;
 
     width: 71px;
     height: 71px;
@@ -84,11 +84,11 @@ $padding-bottom-desktop: 133px;
 
 .travelmates__text {
   width: 220px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   margin-left: 25px;
 
   &:last-of-type {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   br {
@@ -131,7 +131,7 @@ $padding-bottom-desktop: 133px;
       position: absolute;
       z-index: -1;
       top: 143px;
-      right: 0;
+      right: 50px;
       left: auto;
 
       width: 285px;
@@ -168,8 +168,10 @@ $padding-bottom-desktop: 133px;
   .travelmates__title {
     position: relative;
 
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     margin-left: 36px;
+
+    letter-spacing: -0.5px;
 
     &::before {
       content: "";
@@ -189,11 +191,15 @@ $padding-bottom-desktop: 133px;
 
   .travelmates__text {
     width: 430px;
-    margin-bottom: 35px;
+    margin-bottom: 39px;
     margin-left: 36px;
 
     &:last-of-type {
-      margin-bottom: 50px;
+      margin-bottom: 58px;
+    }
+
+    br {
+      display: block;
     }
   }
 
@@ -204,6 +210,7 @@ $padding-bottom-desktop: 133px;
   }
 
   .travelmates__item {
+    margin: 0;
     margin-right: 48px;
 
     &:last-of-type {
@@ -214,6 +221,7 @@ $padding-bottom-desktop: 133px;
   .travelmates__button {
     width: 618px;
     margin-left: 36px;
+    padding-left: 35px;
   }
 }
 
@@ -254,7 +262,7 @@ $padding-bottom-desktop: 133px;
 
       position: absolute;
       z-index: -1;
-      top: auto;
+      top: 190px;
       left: 547px;
 
       width: 143px;
@@ -271,8 +279,10 @@ $padding-bottom-desktop: 133px;
   .travelmates__title {
     position: relative;
 
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     margin-left: 72px;
+
+    letter-spacing: -0.5px;
 
     &::before {
       content: "";
@@ -292,16 +302,21 @@ $padding-bottom-desktop: 133px;
 
   .travelmates__text {
     width: 430px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     margin-left: 72px;
 
     &:last-of-type {
       margin-bottom: 85px;
     }
+
+    br {
+      display: block;
+    }
   }
 
   .travelmates__list {
     position: absolute;
+    top: 190px;
     left: 750px;
 
     display: flex;
@@ -319,5 +334,6 @@ $padding-bottom-desktop: 133px;
   .travelmates__button {
     width: 280px;
     margin-left: 72px;
+    padding-left: 34px;
   }
 }

@@ -31,12 +31,21 @@
 
     opacity: 0.3;
   }
+
+  &--days::after {
+    content: "дн.";
+
+    position: absolute;
+    right: 0;
+
+    opacity: 0.3;
+  }
 }
 
 .control-field__input {
   width: 220px;
   height: 43px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   padding: 0;
 
   @include font-name;
@@ -49,7 +58,8 @@
   border: 1px solid $grey-2;
   border-radius: 4px;
 
-  //appearance: textfield;
+  appearance: textfield;
+  //-moz-appearance: textfield;
 
   &:hover {
     border-color: $grey-10;
@@ -61,7 +71,12 @@
     border-color: $blue-1;
   }
 
+  &--days {
+    margin-bottom: 26px;
+  }
+
   &--date {
+    margin-bottom: 18px;
     font-size: 20px;
     font-weight: 700;
     text-align: center;
@@ -98,6 +113,8 @@
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
     display: none;
+    appearance: none;
+    //-webkit-appearance: none;
   }
 }
 
@@ -157,7 +174,7 @@
 
   &--back,
   &--forward {
-    margin-top: 11px;
+    margin-top: 12px;
     padding: 0;
 
     opacity: 0.3;
@@ -177,6 +194,7 @@
   }
 
   &--forward {
+    top: 0;
     right: 0;
   }
 }
@@ -191,9 +209,16 @@
     position: relative;
 
     width: 100%;
+    margin-bottom: 22px;
+    padding-top: 25px;
 
     font-size: 20px;
     letter-spacing: 2px;
+
+    &--days,
+    &--travelmates {
+      border-top: 1px solid $grey-3;
+    }
 
     &--travelmates::after {
       content: "чел.";
@@ -212,6 +237,11 @@
 
       opacity: 0.3;
     }
+
+    &--date {
+      margin: 0;
+      padding-top: 26px;
+    }
   }
 
   .control-field__input {
@@ -223,6 +253,7 @@
 
     &--date {
       height: 85px;
+      margin-bottom: 33px;
 
       font-size: 36px;
     }
@@ -253,7 +284,15 @@
 
     &--back,
     &--forward {
-      margin-top: 22px;
+      margin-top: 26px;
+    }
+
+    &--forward {
+      margin-right: 12px;
+    }
+
+    &--back {
+      margin-left: 14px;
     }
   }
 
@@ -272,7 +311,7 @@
 
   .control-field__label {
     width: 200px;
-    margin-right: 32px;
+    margin-right: 18px;
 
     font-size: 20px;
     letter-spacing: 2px;
@@ -308,12 +347,23 @@
     &--date {
       width: 1000px;
       height: 85px;
+      margin-bottom: 7px;
 
       font-size: 36px;
     }
   }
 
   .control-field__button {
+    &--forward {
+      top: 5px;
+      right: 1px;
+    }
+
+    &--back {
+      top: 5px;
+      left: 1px;
+    }
+
     &--minus {
       top: 25px;
       left: 20px;

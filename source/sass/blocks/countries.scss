@@ -1,8 +1,8 @@
-$padding-top-mobile: 130px;
+$padding-top-mobile: 131px;
 $padding-bottom-mobile: 30px;
-$padding-top-tablet: 130px;
-$padding-bottom-tablet: 80px;
-$padding-top-desktop: 220px;
+$padding-top-tablet: 135px;
+$padding-bottom-tablet: 77px;
+$padding-top-desktop: 233px;
 $padding-bottom-desktop: 140px;
 
 .countries {
@@ -20,14 +20,16 @@ $padding-bottom-desktop: 140px;
 }
 
 .countries__title {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
   margin-left: 25px;
+
+  letter-spacing: 0.3px;
 }
 
 .countries__text {
   width: 200px;
   margin: 0;
-  margin-bottom: 65px;
+  margin-bottom: 60px;
   margin-left: 25px;
 
   color: $grey-5;
@@ -57,8 +59,8 @@ $padding-bottom-desktop: 140px;
       content: "";
 
       position: absolute;
-      top: $padding-top-tablet;
-      right: 0;
+      top: 140px;
+      right: 40px;
 
       width: 289px;
       height: 575px;
@@ -69,14 +71,16 @@ $padding-bottom-desktop: 140px;
   }
 
   .countries__title {
-    margin-bottom: 50px;
-    margin-left: 36px;
+    margin-bottom: 55px;
+    margin-left: 34px;
+
+    letter-spacing: -0.2px;
   }
 
   .countries__text {
     width: 345px;
-    margin-bottom: 115px;
-    margin-left: 36px;
+    margin-bottom: 105px;
+    margin-left: 34px;
   }
 
   .countries__list {
@@ -103,6 +107,7 @@ $padding-bottom-desktop: 140px;
   .countries__button {
     width: 616px;
     margin-left: 36px;
+    padding-left: 30px;
   }
 }
 
@@ -135,16 +140,18 @@ $padding-bottom-desktop: 140px;
   }
 
   .countries__title {
-    margin-bottom: 55px;
-    margin-left: 804px;
+    margin-top: -7px;
+    margin-bottom: 59px;
+    margin-left: 803px;
 
     font-size: 45px;
+    letter-spacing: -0.2px;
   }
 
   .countries__text {
     width: 525px;
-    margin-bottom: 100px;
-    margin-left: 804px;
+    margin-bottom: 95px;
+    margin-left: 801px;
     padding-right: 180px;
   }
 
@@ -156,8 +163,8 @@ $padding-bottom-desktop: 140px;
       content: "";
 
       position: absolute;
-      top: -39px;
-      left: -$tablet-padding;
+      top: -69px;
+      left: -70px;
 
       width: 141px;
       height: 141px;
@@ -168,6 +175,8 @@ $padding-bottom-desktop: 140px;
   }
 
   .countries__button {
+    width: 274px;
     margin-left: 804px;
+    padding-left: 35px;
   }
 }

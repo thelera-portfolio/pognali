@@ -2,6 +2,8 @@
   position: relative;
   z-index: 1;
 
+  margin-bottom: -$radius-2;
+
   background-color: $blue-1;
   border-bottom-right-radius: $radius-2;
   border-bottom-left-radius: $radius-2;
@@ -10,7 +12,11 @@
 .form-main__title-inner {
   align-items: flex-start;
   min-height: 70px;
-  padding-top: 27px;
+  padding-top: 20px;
+}
+
+.form-main__user-info {
+  padding-top: $radius-2;
 }
 
 .form-main__user-plans {
@@ -23,14 +29,20 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .form-main__title-wrapper {
+    margin-bottom: -$radius-5;
+
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;
   }
 
   .form-main__title-inner {
-    padding-top: 94px;
-    padding-right: 70px;
-    padding-left: 70px;
+    padding-top: 87px;
+    padding-right: 74px;
+    padding-left: 74px;
+  }
+
+  .form-main__user-info {
+    padding-top: $radius-5;
   }
 
   .form-main__user-plans {
@@ -44,15 +56,21 @@
 
 @media (min-width: $desktop-width) {
   .form-main__title-wrapper {
+    margin-bottom: -$radius-5;
+
     border-bottom-right-radius: $radius-5;
     border-bottom-left-radius: $radius-5;
   }
 
   .form-main__title-inner {
-    min-height: 243px;
-    padding-top: 118px;
+    //min-height: 243px;
+    padding-top: 108px;
     padding-right: 124px;
     padding-left: 124px;
+  }
+
+  .form-main__user-info {
+    padding-top: 0;
   }
 
   .form-main__user-plans {

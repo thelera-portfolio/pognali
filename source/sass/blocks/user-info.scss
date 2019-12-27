@@ -1,7 +1,7 @@
-$padding-top-mobile: 73px;
-$padding-bottom-mobile: 73px;
-$padding-top-tablet: 124px;
-$padding-bottom-tablet: 85px;
+$padding-top-mobile: 22px;
+$padding-bottom-mobile: 63px;
+$padding-top-tablet: 62px;
+$padding-bottom-tablet: 71px;
 $padding-top-desktop: 0;
 $padding-bottom-desktop: 123px;
 
@@ -17,21 +17,21 @@ $padding-bottom-desktop: 123px;
 
 .user-info__user-level {
   margin-right: auto;
-  margin-bottom: 19px;
-  margin-left: 20px;
+  margin-bottom: 16px;
+  margin-left: 22px;
 }
 
 .user-info__photo {
   width: 100px;
   height: 100px;
-  margin-right: 20px;
-  margin-bottom: 19px;
+  margin-right: 17px;
+  margin-bottom: 16px;
 
   border-radius: 50%;
 }
 
 .user-info__change-photo-button {
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 
   &:hover {
     background-color: $grey-8;
@@ -63,10 +63,11 @@ $padding-bottom-desktop: 123px;
   border-radius: $radius-1;
 
   &--tags {
-    padding-top: 26px;
-    padding-right: 26px;
-    padding-bottom: 26px;
-    padding-left: 26px;
+    margin-bottom: 16px;
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+    padding-left: 25px;
 
     &:focus-within,
     &:active {
@@ -80,9 +81,9 @@ $padding-bottom-desktop: 123px;
   }
 
   &--transport {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-right: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     padding-left: 15px;
   }
 
@@ -94,6 +95,7 @@ $padding-bottom-desktop: 123px;
 .user-info__legend {
   padding-right: 17px;
   padding-left: 17px;
+  margin: 0 auto;
 }
 
 .user-info__transport {
@@ -125,8 +127,8 @@ $padding-bottom-desktop: 123px;
 
   .user-info__change-photo-button {
     width: 100%;
-    margin-top: 52px;
-    margin-bottom: 51px;
+    margin-top: 50px;
+    margin-bottom: 48px;
     padding-top: 22px;
     padding-bottom: 22px;
     padding-left: 24px;
@@ -144,15 +146,16 @@ $padding-bottom-desktop: 123px;
     position: relative;
     font-weight: 500;
     line-height: 0.9;
+    letter-spacing: 1.5px;
 
     margin-bottom: 19px;
 
     &--tags {
       width: 618px;
-      padding-top: 36px;
-      padding-right: 26px;
-      padding-bottom: 16px;
-      padding-left: 26px;
+      padding-top: 34px;
+      padding-right: 30px;
+      padding-bottom: 10px;
+      padding-left: 40px;
 
       font-size: 0;
 
@@ -171,9 +174,9 @@ $padding-bottom-desktop: 123px;
     &--transport {
       order: -1;
       width: 308px;
-      padding-top: 20px;
+      padding-top: 24px;
       padding-right: 24px;
-      padding-bottom: 20px;
+      padding-bottom: 24px;
       padding-left: 24px;
 
       font-size: 0;
@@ -223,6 +226,14 @@ $padding-bottom-desktop: 123px;
   .user-info__transport {
     justify-content: center;
   }
+
+  .user-info__transport-icon {
+    margin-right: 8px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -242,8 +253,7 @@ $padding-bottom-desktop: 123px;
     z-index: 1;
 
     margin: 0;
-    margin-top: 50px;
-    margin-left: 837px;
+    margin-left: 700px;
   }
 
   .user-info__picture {
@@ -258,7 +268,7 @@ $padding-bottom-desktop: 123px;
     width: 190px;
     height: 190px;
     margin: 0;
-    margin-left: 39px;
+    margin-left: 40px;
 
     border-radius: 0;
     border-top-left-radius: $radius-1;
@@ -268,7 +278,7 @@ $padding-bottom-desktop: 123px;
   .user-info__change-photo-button {
     width: 190px;
     margin-bottom: 26px;
-    margin-left: 970px;
+    margin-left: 874px;
     padding-top: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -298,16 +308,16 @@ $padding-bottom-desktop: 123px;
     &--tags {
       width: 730px;
       padding-top: 32px;
-      padding-right: 26px;
+      padding-right: 40px;
       padding-bottom: 12px;
-      padding-left: 26px;
+      padding-left: 40px;
 
       font-size: 0;
 
       &::before {
         content: "тэги";
 
-        left: 39px;
+        left: 20px;
 
         width: 83px;
 
@@ -340,12 +350,14 @@ $padding-bottom-desktop: 123px;
 
     &::before {
       position: absolute;
-      bottom: -20px;
+      bottom: -22px;
 
       display: flex;
       justify-content: center;
       align-items: center;
       height: 40px;
+
+      letter-spacing: 1.8px;
 
       background-color: $grey-1;
     }
