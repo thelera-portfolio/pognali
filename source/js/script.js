@@ -85,6 +85,24 @@ const throttle = (func, limit) => {
 // меню в шапке сайта
 mainMenu.classList.remove("menu--no-js");
 
+// если работает js, то меню на мобильной и планшетной версии закрыто
+if (window.matchMedia("(max-width: 1439px)").matches) {
+  mainMenu.classList.add("menu--closed");
+  mainMenu.classList.remove("menu--opened");
+}
+
+window.addEventListener("resize", throttle(function () {
+  if (window.matchMedia("(max-width: 1439px)").matches) {
+    mainMenu.classList.add("menu--closed");
+    mainMenu.classList.remove("menu--opened");
+  }
+
+  if (window.matchMedia("(min-width: 1439px)").matches) {
+    mainMenu.classList.remove("menu--closed");
+    mainMenu.classList.add("menu--opened");
+  }
+}, 500));
+
 if (menuCloseButton) {
   menuCloseButton.addEventListener("click", function () {
     mainMenu.classList.add("menu--closed");

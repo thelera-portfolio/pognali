@@ -3,7 +3,7 @@
   top: 0;
 
   padding-top: 19px;
-  padding-bottom: 36px;
+  padding-bottom: 28px;
   background-color: #ffffff;
 
   &--no-js {
@@ -60,6 +60,10 @@
     .menu__toggle {
       display: none;
     }
+  }
+
+  &--index {
+    padding-top: 27px;
   }
 }
 
