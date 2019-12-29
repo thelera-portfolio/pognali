@@ -4,49 +4,61 @@
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/bloggersans-light.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
-    <div style="display: none;">
+    <div class="sprite--hide">
       <include src="build/img/sprite.svg"></include>
     </div>
     <!-- Шапка сайта -->
     <header class="header header--color">
-      <div class="header__inner header__inner--hide inner">
-        <!-- Логотип -->
-        <a class="header__logo logo logo--no-cursor">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-            <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
-          </picture>
-        </a>
-
-        <button class="header__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">
-          <svg class="header__toggle-icon" width="25" height="11">
-            <use xlink:href="#icon-menu"></use>
-          </svg>
-        </button>
-
-        <a class="header__login-button button-one" href="#">Авторизация</a>
-      </div>
-
       <!-- Основное меню -->
-      <nav class="header__menu menu menu--opened menu--no-js">
+      <nav class="header__menu menu menu--opened menu--no-js menu--index">
         <div class="menu__inner inner">
-          <a class="menu__logo logo logo--no-cursor">
+          <!-- Логотип белый -->
+          <a class="menu__logo menu__logo--white logo logo--no-cursor">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+            </picture>
+          </a>
+
+          <!-- Логотип синий -->
+          <a class="menu__logo menu__logo--blue logo logo--no-cursor">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
               <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
               <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
             </picture>
           </a>
+
+          <button class="menu__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">
+            <svg class="menu__toggle-icon" width="25" height="11">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
+
+          <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
 
           <!-- Меню, которе появляется при клике на гамбургер -->
           <ul class="menu__list">
@@ -64,16 +76,22 @@
           <a class="menu__login-button button-one" href="#">Авторизация</a>
 
           <div class="menu__contacts contacts">
-            <a class="contacts__button contacts__button--tel contacts__button--tel-topmenu" href="tel:+78005558628">
+            <a class="menu__contacts-button menu__contacts-button--tel contacts__button contacts__button--tel contacts__button--tel-topmenu" href="tel:+78005558628" aria-label="Контактный номер">
                 <svg class="contacts__button-icon contacts__button-icon--phone" width="18" height="18">
                   <use xlink:href="#icon-contacts-phone"></use>
                 </svg>
               8 800 555-86-28</a>
-            <a class="contacts__button contacts__button--email contacts__button--email-topmenu" href="mailto:mail@htmlacademy.ru">
+            <a class="menu__contacts-button menu__contacts-button--email contacts__button contacts__button--email contacts__button--email-topmenu" href="mailto:mail@htmlacademy.ru" aria-label="Электронная почта">
                 <svg class="contacts__button-icon contacts__button-icon--email" width="18" height="13">
                   <use xlink:href="#icon-contacts-mail"></use>
                 </svg>
               mail@htmlacademy.ru</a>
+          </div>
+
+          <!-- кнопки контактов в шапке на десктопе -->
+          <div class="menu__contacts-desktop contacts-intro">
+            <a class="contacts-intro__button contacts-intro__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contacts-intro__button contacts-intro__button--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
 
           <ul class="menu__socials socials">
@@ -99,8 +117,6 @@
               </a>
             </li>
           </ul>
-
-          <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
         </div>
       </nav>
     </header>
@@ -133,8 +149,8 @@
           <ul class="intro__promo-list">
             <li class="intro__promo-item">Выберите направление</li>
             <li class="intro__promo-item">Изучите идеи путешественников</li>
-            <li class="intro__promo-item">Находите тех, кто похож на вас</li>
-            <li class="intro__promo-item">Путешествуйте вместе</li>
+            <li class="intro__promo-item">Находите тех,<br>кто похож на вас</li>
+            <li class="intro__promo-item">Путешествуйте вместе!</li>
           </ul>
         </div>
       </section>
@@ -144,7 +160,7 @@
         <div class="about__inner inner">
           <h2 class="about__title index-title">О сервисе</h2>
 
-          <p class="about__text index-text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий и черпайте вдохновение в&nbsp;чужих.</p>
+          <p class="about__text index-text">Любое путешествие веселее с&nbsp;попутчиками, которые на одной волне с&nbsp;тобой! Делитесь своими идеями путешествий&nbsp;<br>и черпайте вдохновение в&nbsp;чужих.</p>
 
           <p class="about__text index-text index-text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
 
@@ -161,9 +177,7 @@
 
           <ul class="countries__list">
             <li class="countries__item countries-item">
-              <div class="countries-item__title-wrapper">
-                <h3 class="countries-item__title countries-item__title--thailand">Таиланд</h3>
-              </div>
+              <h3 class="countries-item__title countries-item__title--thailand">Таиланд</h3>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/thailand-desktop@1x.webp 1x, img/thailand-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
@@ -175,9 +189,7 @@
             </li>
 
             <li class="countries__item countries-item">
-              <div class="countries-item__title-wrapper">
-                <h3 class="countries-item__title countries-item__title--france">Франция</h3>
-              </div>
+              <h3 class="countries-item__title countries-item__title--france">Франция</h3>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/france-desktop@1x.webp 1x, img/france-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
@@ -189,9 +201,7 @@
             </li>
 
             <li class="countries__item countries-item">
-              <div class="countries-item__title-wrapper">
-                <h3 class="countries-item__title countries-item__title--czech">Чехия</h3>
-              </div>
+              <h3 class="countries-item__title countries-item__title--czech">Чехия</h3>
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/czech-desktop@1x.webp 1x, img/czech-desktop@2x.webp 2x">
                 <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
@@ -212,8 +222,8 @@
         <div class="travelmates__inner inner">
           <h2 class="travelmates__title index-title">Попутчики</h2>
 
-          <p class="travelmates__text index-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,<br> а другому маршрут для хайкинга.</p>
-          <p class="travelmates__text index-text index-text--bold">Теперь можно легко<br> найти единомышленников!</p>
+          <p class="travelmates__text index-text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,&nbsp;<br>а другому маршрут для хайкинга.</p>
+          <p class="travelmates__text index-text index-text--bold">Теперь можно легко&nbsp;<br> найти единомышленников!</p>
 
           <ul class="travelmates__list">
             <li class="travelmates__item travelmates-item">
@@ -242,22 +252,22 @@
               </ul>
 
               <ul class="travelmates-item__transport-list transport">
-                <li class="transport__icon transport__icon--active tooltip tooltip--plane" aria-label="Авиаперелет">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active tooltip tooltip--plane" aria-label="Авиаперелет">
                   <svg class="transport__icon-img transport__icon-img--plane" width="19" height="21">
                     <use xlink:href="#icon-plane"></use>
                   </svg>
                 </li>
-                <li class="transport__icon tooltip tooltip--bus" aria-label="Автотранспорт">
+                <li class="travelmates-item__transport-list-icon transport__icon tooltip tooltip--bus" aria-label="Автотранспорт">
                   <svg class="transport__icon-img transport__icon-img--bus" width="17" height="21">
                     <use xlink:href="#icon-bus"></use>
                   </svg>
                 </li>
-                <li class="transport__icon tooltip tooltip--cycle" aria-label="Велосипед">
+                <li class="travelmates-item__transport-list-icon transport__icon tooltip tooltip--cycle" aria-label="Велосипед">
                   <svg class="transport__icon-img transport__icon-img--cycle" width="24" height="21">
                     <use xlink:href="#icon-bike"></use>
                   </svg>
                 </li>
-                <li class="transport__icon tooltip tooltip--foot" aria-label="Пешком">
+                <li class="travelmates-item__transport-list-icon transport__icon tooltip tooltip--foot" aria-label="Пешком">
                   <svg class="transport__icon-img transport__icon-img--foot" width="20" height="21">
                     <use xlink:href="#icon-run"></use>
                   </svg>
@@ -293,22 +303,22 @@
               </ul>
 
               <ul class="travelmates-item__transport-list transport">
-                <li class="transport__icon transport__icon--active tooltip tooltip--plane" aria-label="Авиаперелет">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active tooltip tooltip--plane" aria-label="Авиаперелет">
                   <svg class="transport__icon-img transport__icon-img--plane " width="19" height="21">
                     <use xlink:href="#icon-plane"></use>
                   </svg>
                 </li>
-                <li class="transport__icon transport__icon--active tooltip tooltip--bus" aria-label="Автотранспорт">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active tooltip tooltip--bus" aria-label="Автотранспорт">
                   <svg class="transport__icon-img transport__icon-img--bus" width="17" height="21">
                     <use xlink:href="#icon-bus"></use>
                   </svg>
                 </li>
-                <li class="transport__icon tooltip tooltip--cycle" aria-label="Велосипед">
+                <li class="travelmates-item__transport-list-icon transport__icon tooltip tooltip--cycle" aria-label="Велосипед">
                   <svg class="transport__icon-img transport__icon-img--cycle" width="24" height="21">
                     <use xlink:href="#icon-bike"></use>
                   </svg>
                 </li>
-                <li class="transport__icon transport__icon--active tooltip tooltip--foot" aria-label="Пешком">
+                <li class="travelmates-item__transport-list-icon transport__icon transport__icon--active tooltip tooltip--foot" aria-label="Пешком">
                   <svg class="transport__icon-img transport__icon-img--foot" width="20" height="21">
                     <use xlink:href="#icon-run"></use>
                   </svg>
@@ -348,12 +358,12 @@
               </div>
             </dl>
 
-            <a class="rates__more-link" href="#">Показать тарифы для бизнеса</a>
+            <a class="rates__more-link" href="rates.html">Показать тарифы для бизнеса</a>
           </div>
         </section>
 
         <!-- Модальное окно с бизнес-тарифами -->
-        <section class="business-rates-modal business-rates-modal--show">
+        <section class="business-rates-modal">
           <h2 class="business-rates-modal__title index-title">Бизнес-тарифы</h2>
 
           <dl class="business-rates-modal__list rates-list index-text index-text--modal">
@@ -369,7 +379,7 @@
 
             <div class="rates-list__inner rates-list__inner--business">
               <dt class="rates-list__item-title">Лайки от ботов</dt>
-              <dd class="rates-list__item-desc">20 коп./лайк</dd>
+              <dd class="rates-list__item-desc">от 20 коп./лайк</dd>
             </div>
             <div class="rates-list__inner rates-list__inner--business">
               <dt class="rates-list__item-title">Ваш продакт-плейсмент</dt>
@@ -401,12 +411,12 @@
           <p class="cta-form__text index-text">Остались вопросы? Мы&nbsp;с&nbsp;радостью&nbsp;на&nbsp;них&nbsp;ответим!</p>
 
           <div class="cta-form__contacts contacts">
-            <a class="cta-form__contacts-button contacts__button contacts__button--tel contacts__button--color-yellow" href="tel:+78005558628">
+            <a class="cta-form__contacts-button contacts__button contacts__button--tel contacts__button--color-yellow" href="tel:+78005558628" aria-label="Контактный номер">
               <svg class="contacts__button-icon contacts__button-icon--phone" width="18" height="18">
                 <use xlink:href="#icon-contacts-phone"></use>
               </svg>
               8 800 555-86-28</a>
-            <a class="cta-form__contacts-button contacts__button contacts__button--email contacts__button--color-yellow" href="mailto:mail@htmlacademy.ru">
+            <a class="cta-form__contacts-button contacts__button contacts__button--email contacts__button--color-yellow" href="mailto:mail@htmlacademy.ru" aria-label="Электронная почта">
                 <svg class="contacts__button-icon contacts__button-icon--email" width="18" height="13">
                   <use xlink:href="#icon-contacts-mail"></use>
                 </svg>
@@ -421,17 +431,16 @@
           <div class="map__inner inner">
             <h2 class="visually-hidden">Карта офиса</h2>
             <p class="map__address contacts__button contacts__button--address">
-              <svg class="contacts__button-icon contacts__button-icon--address" width="14" height="22">
+              <svg class="contacts__button-icon contacts__button-icon--address" width="14" height="22" aria-label="Адрес офиса">
                 <use xlink:href="#icon-contacts-location"></use>
               </svg>
             ул. Большая Конюшенная, 19/8</p>
-            <a class="map__route-button button-two" href="https://yandex.ru/maps/2/saint-petersburg/?ll=30.323055%2C59.938631&mode=routes&rtext=59.938631%2C30.323055&rtt=comparison&ruri=ymapsbm1%3A%2F%2Fgeo%3Fll%3D30.323%252C59.939%26spn%3D0.001%252C0.001%26text%3D%25D0%25A0%25D0%25BE%25D1%2581%25D1%2581%25D0%25B8%25D1%258F%252C%2520%25D0%25A1%25D0%25B0%25D0%25BD%25D0%25BA%25D1%2582-%25D0%259F%25D0%25B5%25D1%2582%25D0%25B5%25D1%2580%25D0%25B1%25D1%2583%25D1%2580%25D0%25B3%252C%2520%25D0%2591%25D0%25BE%25D0%25BB%25D1%258C%25D1%2588%25D0%25B0%25D1%258F%2520%25D0%259A%25D0%25BE%25D0%25BD%25D1%258E%25D1%2588%25D0%25B5%25D0%25BD%25D0%25BD%25D0%25B0%25D1%258F%2520%25D1%2583%25D0%25BB%25D0%25B8%25D1%2586%25D0%25B0%252C%252019%252F8&z=16">Проложить маршрут</a>
+            <a class="map__route-button button-two" href="https://www.google.com/maps/dir/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186//@59.9387164,30.3186593,16z/data=!4m9!4m8!1m5!1m1!1s0x4696310fca145cc1:0x42b32648d8238007!2m2!1d30.3230474!2d59.9387165!1m0!3e0">Проложить маршрут</a>
           </div>
         </div>
 
-        <!-- <img class="map__image" src="img/map-tablet@1x.jpg" srcset="img/map-tablet@2x.jpg 2x" width="768" height="700" alt="Офис компании по адресу: ул. Большая Конюшенная, 19/8"> -->
         <p class="map__image">
-        <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/-/CGdV6Tyc" frameborder="0" allowfullscreen="true"></iframe>
+        <iframe class="map__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586858!2d30.32085335220845!3d59.93871648178724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1576499107677!5m2!1sru!2sru" width="600" height="450" style="border: 0;" allowfullscreen=""></iframe>
         </p>
       </section>
     </main>
@@ -485,38 +494,6 @@
       </div>
     </footer>
 
-    <script>
-      var mainMenu = document.querySelector(".menu");
-      var headerToggle = document.querySelector(".header__toggle");
-      var mainMenuCloseButton = document.querySelector(".menu__close-button");
-      var headerTopMenu = document.querySelector(".header__inner");
-
-      var businessRatesModal = document.querySelector(".business-rates-modal");
-      var showBusinessRatesModalButton = document.querySelector(".rates__more-link");
-      var businessRatesModalCloseButton = document.querySelector(".business-rates-modal__close-button");
-
-      mainMenu.classList.remove("menu--no-js");
-
-      mainMenuCloseButton.addEventListener("click", function() {
-        mainMenu.classList.remove("menu--opened");
-        mainMenu.classList.add("menu--closed");
-        headerTopMenu.classList.remove("header__inner--hide");
-      });
-
-      headerToggle.addEventListener("click", function () {
-        mainMenu.classList.remove("menu--closed");
-        mainMenu.classList.add("menu--opened");
-        headerTopMenu.classList.add("header__inner--hide");
-      });
-
-      showBusinessRatesModalButton.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        businessRatesModal.classList.add("business-rates-modal--show");
-      });
-
-      businessRatesModalCloseButton.addEventListener("click", function () {
-          businessRatesModal.classList.remove("business-rates-modal--show");
-        });
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

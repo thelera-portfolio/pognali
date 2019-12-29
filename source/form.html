@@ -4,49 +4,61 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/bloggersans-light.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement("picture");
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
-    <div style="display: none;">
+    <div class="sprite--hide">
       <include src="build/img/sprite.svg"></include>
     </div>
     <!-- Шапка сайта -->
-    <header class="header">
-      <div class="header__inner header__inner--hide inner">
-        <!-- Логотип -->
-        <a class="header__logo logo" href="index.html">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
-            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
-            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-            <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-            <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
-          </picture>
-        </a>
-
-        <button class="header__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">
-          <svg class="header__toggle-icon" width="25" height="11">
-            <use xlink:href="#icon-menu"></use>
-          </svg>
-        </button>
-
-        <a class="header__login-button button-one" href="#">Авторизация</a>
-      </div>
-
+    <header class="header header--color">
       <!-- Основное меню -->
       <nav class="header__menu menu menu--opened menu--no-js">
         <div class="menu__inner inner">
-          <a class="menu__logo logo" href="index.html">
+          <!-- Логотип белый -->
+          <a class="menu__logo menu__logo--white logo" href="index.html">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+              <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
+              <img class="logo__image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
+            </picture>
+          </a>
+
+          <!-- Логотип синий -->
+          <a class="menu__logo menu__logo--blue logo" href="index.html">
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
               <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
               <img class="logo__image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса поиска попутчиков «Погнали»">
             </picture>
           </a>
+
+          <button class="menu__toggle" type="button" aria-label="Кнопка-гамбургер открытия главного меню">
+            <svg class="menu__toggle-icon" width="25" height="11">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
+
+          <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
 
           <!-- Меню, которе появляется при клике на гамбургер -->
           <ul class="menu__list">
@@ -64,16 +76,22 @@
           <a class="menu__login-button button-one" href="#">Авторизация</a>
 
           <div class="menu__contacts contacts">
-            <a class="contacts__button contacts__button--tel contacts__button--tel-topmenu" href="tel:+78005558628">
+            <a class="menu__contacts-button menu__contacts-button--tel contacts__button contacts__button--tel contacts__button--tel-topmenu" href="tel:+78005558628" aria-label="Контактный номер">
               <svg class="contacts__button-icon contacts__button-icon--phone" width="18" height="18">
                 <use xlink:href="#icon-contacts-phone"></use>
               </svg>
               8 800 555-86-28</a>
-            <a class="contacts__button contacts__button--email contacts__button--email-topmenu" href="mailto:mail@htmlacademy.ru">
+            <a class="menu__contacts-button menu__contacts-button--email contacts__button contacts__button--email contacts__button--email-topmenu" href="mailto:mail@htmlacademy.ru" aria-label="Электронная почта">
               <svg class="contacts__button-icon contacts__button-icon--email" width="18" height="13">
                 <use xlink:href="#icon-contacts-mail"></use>
               </svg>
               mail@htmlacademy.ru</a>
+          </div>
+
+          <!-- кнопки контактов в шапке на десктопе -->
+          <div class="menu__contacts-desktop contacts-intro">
+            <a class="contacts-intro__button contacts-intro__button--tel" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contacts-intro__button contacts-intro__button--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
 
           <ul class="menu__socials socials">
@@ -99,8 +117,6 @@
               </a>
             </li>
           </ul>
-
-          <button class="menu__close-button" type="button" aria-label="Кнопка-крестик закрытия главного меню"></button>
         </div>
       </nav>
     </header>
@@ -137,7 +153,7 @@
 
             <fieldset class="user-info__fieldset user-info__fieldset--tags tags">
               <legend class="user-info__legend">Тэги:</legend>
-              <textarea class="tags__text-input" name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea class="tags__text-input" name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов" aria-label="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </fieldset>
 
             <fieldset class="user-info__fieldset user-info__fieldset--transport">
@@ -145,28 +161,28 @@
 
               <div class="user-info__transport transport">
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="plane" id="plane" checked>
-                <label class="transport__icon transport__icon--button" for="plane" aria-label="Авиаперелет">
+                <label class="user-info__transport-icon transport__icon transport__icon--button" for="plane" aria-label="Авиаперелет">
                   <svg class="transport__icon-img transport__icon-img--plane" width="14" height="16">
                     <use xlink:href="#icon-plane"></use>
                   </svg>
                 </label>
 
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="bus" id="bus" checked>
-                <label class="transport__icon transport__icon--button" for="bus" aria-label="Автотранспорт">
+                <label class="user-info__transport-icon transport__icon transport__icon--button" for="bus" aria-label="Автотранспорт">
                   <svg class="transport__icon-img transport__icon-img--bus" width="13" height="16">
                     <use xlink:href="#icon-bus"></use>
                   </svg>
                 </label>
 
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="cycle" id="cycle">
-                <label class="transport__icon transport__icon--button" for="cycle" aria-label="Велосипед">
+                <label class="user-info__transport-icon transport__icon transport__icon--button" for="cycle" aria-label="Велосипед">
                   <svg class="transport__icon-img transport__icon-img--cycle" width="19" height="17">
                     <use xlink:href="#icon-bike"></use>
                   </svg>
                 </label>
 
                 <input class="transport__checkbox visually-hidden" type="checkbox" name="transport" value="foot" id="foot" checked>
-                <label class="transport__icon transport__icon--button" for="foot" aria-label="Пешком">
+                <label class="user-info__transport-icon transport__icon transport__icon--button" for="foot" aria-label="Пешком">
                   <svg class="transport__icon-img transport__icon-img--foot" width="15" height="17">
                     <use xlink:href="#icon-run"></use>
                   </svg>
@@ -207,7 +223,7 @@
             <!-- Маркеры, показывающие актуальный шаг -->
             <ul class="add-plan__controls-list controls-list">
               <li class="controls-list__item controls-list__item--step-one controls-list__item--active">Даты</li>
-              <li class="controls-list__item controls-list__item--step-two">Маршруты</li>
+              <li class="controls-list__item controls-list__item--step-two">Маршрут</li>
               <li class="controls-list__item controls-list__item--step-three">Развлечения</li>
             </ul>
 
@@ -217,7 +233,7 @@
               <!-- Маркеры, показывающие актуальный шаг -->
               <ul class="step__controls-list controls-list">
                 <li class="controls-list__item controls-list__item--active">Даты</li>
-                <li class="controls-list__item">Маршруты</li>
+                <li class="controls-list__item">Маршрут</li>
                 <li class="controls-list__item">Развлечения</li>
               </ul>
 
@@ -243,15 +259,17 @@
                 </div>
               </div>
 
-              <input class="step__checkbox visually-hidden" type="checkbox" name="child" id="child" checked>
-              <label class="step__checkbox-label" for="child">
-                <svg class="step__checkbox-icon" width="9" height="9">
-                  <use xlink:href="#icon-tick"></use>
-                </svg>
-                Можно с детьми</label>
+              <div class="step__checkbox-wrapper">
+                <input class="step__checkbox visually-hidden" type="checkbox" name="child" id="child" checked>
+                <label class="step__checkbox-label" for="child">
+                  <svg class="step__checkbox-icon" width="9" height="9">
+                    <use xlink:href="#icon-tick"></use>
+                  </svg>
+                  Можно с детьми</label>
+              </div>
 
               <div class="step__control-field control-field">
-                <label class="control-field__label" for="date" aria-label="Выбрать месяц и год поездки"></label>
+                <label class="control-field__label control-field__label--date" for="date" aria-label="Выбрать месяц и год поездки"></label>
 
                 <div class="control-field__inner">
                   <button class="control-field__button control-field__button--back" type="button" aria-label="Minus">
@@ -259,7 +277,7 @@
                       <use xlink:href="#icon-month-arrow-left"></use>
                     </svg>
                   </button>
-                  <input class="control-field__input control-field__input--date" type="month" name="date" value="2019-03" id="date">
+                  <input class="control-field__input control-field__input--date" type="text" name="date" value="Март 2019" id="date">
                   <button class="control-field__button control-field__button--forward" type="button" aria-label="Plus">
                     <svg class="control-field__button-icon" width="9" height="18">
                       <use xlink:href="#icon-month-arrow-right"></use>
@@ -288,7 +306,7 @@
                     <td class="calendar__item calendar__item--disabled">26</td>
                     <td class="calendar__item calendar__item--disabled">27</td>
                     <td class="calendar__item calendar__item--disabled">28</td>
-                    <td class="calendar__item calendar__item--disabled">1</td>
+                    <td class="calendar__item calendar__item--disabled">1<span class="calendar__item-1st-of-month">&nbsp;мар</span></td>
                   </tr>
                   <tr>
                     <td class="calendar__item calendar__item--disabled">2</td>
@@ -321,15 +339,15 @@
                     <td class="calendar__item calendar__item--disabled">23</td>
                     <td class="calendar__item calendar__item--disabled">24</td>
                     <td class="calendar__item calendar__item--disabled">25</td>
-                    <td class="calendar__item calendar__item--checked">26<span class="calendar__item-text">Заезд</span></td>
-                    <td class="calendar__item calendar__item--checked">27</td>
-                    <td class="calendar__item calendar__item--checked">28<span class="calendar__item-text">Выезд</span></td>
+                    <td class="calendar__item calendar__item--checked" tabindex="0">26<span class="calendar__item-text">Заезд</span></td>
+                    <td class="calendar__item calendar__item--checked" tabindex="0">27</td>
+                    <td class="calendar__item calendar__item--checked" tabindex="0">28<span class="calendar__item-text">Выезд</span></td>
                     <td class="calendar__item">29</td>
                   </tr>
                   <tr>
                     <td class="calendar__item">30</td>
                     <td class="calendar__item">31</td>
-                    <td class="calendar__item">1</td>
+                    <td class="calendar__item">1<span class="calendar__item-1st-of-month">&nbsp;апр</span></td>
                     <td class="calendar__item">2</td>
                     <td class="calendar__item">3</td>
                     <td class="calendar__item">4</td>
@@ -347,16 +365,14 @@
               <!-- Маркеры, показывающие актуальный шаг -->
               <ul class="step__controls-list controls-list">
                 <li class="controls-list__item controls-list__item--active">Даты</li>
-                <li class="controls-list__item">Маршруты</li>
+                <li class="controls-list__item">Маршрут</li>
                 <li class="controls-list__item">Развлечения</li>
               </ul>
 
-              <p class="step__text">Укажите страны, которые вы хотели по посетить.<br class="step__text--break"> Это может быть одна или сразу несколько.</p>
+              <p class="step__text step__text--step-two">Укажите страны, которые вы хотели посетить.&nbsp;<br class="step__text--break">Это может быть одна или сразу несколько.</p>
 
               <div class="step__select-wrapper">
-                <select class="step__select" name="country-one">
-                  <option value="bosnia">Босния и герцеговина</option>
-                </select>
+                <div class="step__select" tabindex="0">Босния и герцеговина</div>
                 <span class="step__select-dropdown" aria-label="Кнопка выпадающего списка">
                   <svg class="step__select-dropdown-image" width="12" height="7">
                     <use xlink:href="#icon-dropdown-form"></use>
@@ -370,9 +386,7 @@
               </div>
 
               <div class="step__select-wrapper">
-                <select class="step__select" name="country-two">
-                  <option value="czech">Чехия</option>
-                </select>
+                <div class="step__select" tabindex="0">Чехия</div>
                 <span class="step__select-dropdown" aria-label="Кнопка выпадающего списка">
                   <svg class="step__select-dropdown-image" width="12" height="7">
                     <use xlink:href="#icon-dropdown-form"></use>
@@ -386,15 +400,13 @@
               </div>
 
               <div class="step__select-wrapper step__select-wrapper--choose-country">
-                <select class="step__select step__select--choose-country" name="country-three">
-                  <option value="">Выберите страну</option>
-                </select>
+                <div class="step__select step__select--choose-country" tabindex="0">Выберите страну</div>
                 <span class="step__select-dropdown step__select-dropdown--choose-country" aria-label="Кнопка выпадающего списка">
                   <svg class="step__select-dropdown-image" width="12" height="7">
                     <use xlink:href="#icon-dropdown-form"></use>
                   </svg>
                 </span>
-                <span class="step__select-button step__select-button--choose-country step__select-button--hide" aria-label="Кнопка удалить из выбранного списка стран">
+                <span class="step__select-button step__select-button--choose-country" aria-label="Кнопка удалить из выбранного списка стран">
                   <svg class="step__select-button-image" width="9" height="9">
                     <use xlink:href="#icon-small-cross"></use>
                   </svg>
@@ -402,9 +414,7 @@
               </div>
 
               <div class="step__select-wrapper step__select-wrapper--add-country">
-                <select class="step__select step__select--add-country" name="country-four">
-                  <option value="">Добавить страну</option>
-                </select>
+                <div class="step__select step__select--add-country" tabindex="0">Добавить страну</div>
                 <span class="step__select-button step__select-button--add-country" aria-label="Кнопка добавления страны">
                   <svg class="step__select-button-image step__select-button-image--add-country" width="14" height="14">
                     <use xlink:href="#icon-qty-plus"></use>
@@ -413,7 +423,7 @@
               </div>
 
               <!-- Выпадающий список стран -->
-              <div class="step__country-dropdown step__country-dropdown--show">
+              <div class="step__country-dropdown">
                 <h4 class="step__country-dropdown-title">Выберите страну</h4>
 
                 <table class="step__country-keyboard country-keyboard">
@@ -737,24 +747,24 @@
               <!-- Маркеры, показывающие актуальный шаг -->
               <ul class="step__controls-list controls-list">
                 <li class="controls-list__item controls-list__item--active">Даты</li>
-                <li class="controls-list__item">Маршруты</li>
+                <li class="controls-list__item">Маршрут</li>
                 <li class="controls-list__item">Развлечения</li>
               </ul>
 
-              <p class="step__text">Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.</p>
+              <p class="step__text step__text--step-three">Наконец, расскажите о своих планах времяпровождения.<br> Можно писать в свободной форме и ставить тэги.</p>
 
-              <div class="step__country-plan-wrapper step__country-plan-wrapper--error">
-                <label class="step__country step__country--empty" for="bosnia">Босния и герцеговина</label>
+              <div class="step__country-plan-wrapper step__country-plan-wrapper--error step__country-plan-wrapper--bosnia">
+                <label class="step__country step__country--bosnia step__country--empty" for="bosnia">Босния и герцеговина</label>
                 <textarea class="step__country-plan step__country-plan--error" name="country-one-plan" id="bosnia" placeholder="План действий"></textarea>
               </div>
 
-              <div class="step__country-plan-wrapper">
+              <div class="step__country-plan-wrapper step__country-plan-wrapper--czech">
                 <label class="step__country" for="czech">Чехия</label>
                 <textarea class="step__country-plan" name="country-two-plan" id="czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </div>
 
             <div class="step__button-wrapper">
-              <button class="step__button button-two">Отправить</button>
+              <button class="step__button button-two step__button--forward">Отправить</button>
               <a class="step__button step__button--back-step-two step__button--back button-two button-two--back" href="#step-two">На шаг назад</a>
             </div>
             </section>
@@ -812,146 +822,6 @@
       </div>
     </footer>
 
-    <script>
-      var mainMenu = document.querySelector(".menu");
-      var headerToggle = document.querySelector(".header__toggle");
-      var mainMenuCloseButton = document.querySelector(".menu__close-button");
-      var headerTopMenu = document.querySelector(".header__inner");
-
-      var countryDropdown = document.querySelector(".step__country-dropdown");
-      var chooseCountrySelect = document.querySelector(".step__select--choose-country");
-      var stepSelectButton = document.querySelector(".step__select-button--choose-country");
-      var countryDropdownCloseButton = document.querySelector(".step__dropdown-close-button");
-
-      var stepOne = document.querySelector(".step--one");
-      var stepTwo = document.querySelector(".step--two");
-      var stepThree = document.querySelector(".step--three");
-      var toStepTwoButton = document.querySelector(".step__button--to-step-two");
-      var toStepThreeButton = document.querySelector(".step__button--to-step-three");
-      var backStepOneButton = document.querySelector(".step__button--back-step-one");
-      var backStepTwoButton = document.querySelector(".step__button--back-step-two");
-      var stepOneControlButton = document.querySelector(".controls-list__item--step-one");
-      var stepTwoControlButton = document.querySelector(".controls-list__item--step-two");
-      var stepThreeControlButton = document.querySelector(".controls-list__item--step-three");
-
-      var buttonPlusTravelmates = document.querySelector(".control-field__button--plus-travelmates");
-      var buttonMinusTravelmates = document.querySelector(".control-field__button--minus-travelmates");
-      var buttonPlusDays = document.querySelector(".control-field__button--plus-days");
-      var buttonMinusDays = document.querySelector(".control-field__button--minus-days");
-      var buttonDateForward = document.querySelector(".control-field__button--forward");
-      var buttonDateBack = document.querySelector(".control-field__button--back");
-
-      var inputFieldTravelmates = document.querySelector(".control-field__input--travelmates");
-      var inputFieldDays = document.querySelector(".control-field__input--days");
-      var inputDate = document.querySelector(".control-field__input--date");
-
-      mainMenu.classList.remove("menu--no-js");
-
-      mainMenuCloseButton.addEventListener("click", function () {
-        mainMenu.classList.remove("menu--opened");
-        mainMenu.classList.add("menu--closed");
-        headerTopMenu.classList.remove("header__inner--hide");
-      });
-
-      headerToggle.addEventListener("click", function () {
-        mainMenu.classList.remove("menu--closed");
-        mainMenu.classList.add("menu--opened");
-        headerTopMenu.classList.add("header__inner--hide");
-      });
-
-      chooseCountrySelect.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        countryDropdown.classList.add("step__country-dropdown--show");
-        stepSelectButton.classList.add("step__select-button--hide");
-      })
-
-      countryDropdownCloseButton.addEventListener("click", function (evt) {
-          evt.preventDefault();
-          countryDropdown.classList.remove("step__country-dropdown--show");
-          stepSelectButton.classList.remove("step__select-button--hide");
-        })
-
-      //выход из формы при нажатии клавиши escape
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          if (countryDropdown.classList.contains("step__country-dropdown--show")) {
-            evt.preventDefault();
-            countryDropdown.classList.remove("step__country-dropdown--show");
-            stepSelectButton.classList.remove("step__select-button--hide");
-          }
-        }
-      });
-
-      stepTwo.classList.add("step--hide");
-      stepThree.classList.add("step--hide");
-
-      toStepTwoButton.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        stepOne.classList.add("step--hide");
-        stepTwo.classList.remove("step--hide");
-        stepTwoControlButton.classList.add("controls-list__item--active");
-        stepOneControlButton.classList.remove("controls-list__item--active");
-      });
-
-      toStepThreeButton.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        stepTwo.classList.add("step--hide");
-        stepThree.classList.remove("step--hide");
-        stepThreeControlButton.classList.add("controls-list__item--active");
-        stepTwoControlButton.classList.remove("controls-list__item--active");
-      });
-
-      backStepTwoButton.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        stepThree.classList.add("step--hide");
-        stepTwo.classList.remove("step--hide");
-        stepTwoControlButton.classList.add("controls-list__item--active");
-        stepThreeControlButton.classList.remove("controls-list__item--active");
-      });
-
-      backStepOneButton.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        stepTwo.classList.add("step--hide");
-        stepOne.classList.remove("step--hide");
-        stepOneControlButton.classList.add("controls-list__item--active");
-        stepTwoControlButton.classList.remove("controls-list__item--active");
-      });
-
-      buttonPlusTravelmates.addEventListener("click", function (evt) {
-        evt.preventDefault();
-
-        inputFieldTravelmates.stepUp();
-      });
-
-      buttonMinusTravelmates.addEventListener("click", function (evt) {
-        evt.preventDefault();
-
-        inputFieldTravelmates.stepDown();
-      });
-
-      buttonPlusDays.addEventListener("click", function (evt) {
-        evt.preventDefault();
-
-        inputFieldDays.stepUp();
-      });
-
-      buttonMinusDays.addEventListener("click", function (evt) {
-        evt.preventDefault();
-
-        inputFieldDays.stepDown();
-      });
-
-      buttonDateForward.addEventListener("click", function (evt) {
-        evt.preventDefault();
-
-        inputDate.stepUp();
-      });
-
-      buttonDateBack.addEventListener("click", function (evt) {
-        evt.preventDefault();
-
-        inputDate.stepDown();
-      });
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

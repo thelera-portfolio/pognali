@@ -1,14 +1,19 @@
+$step-mobile-width: 220px;
+$step-tablet-width: 531px;
+
 .step {
   position: relative;
 
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
+  width: 270px;
   margin-bottom: 10px;
   padding-top: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
-  padding-left: 24px;
+  //padding-right: 29px;
+  padding-bottom: 16px;
+  //padding-left: 24px;
 
   @include font-name;
   font-weight: 700;
@@ -21,11 +26,17 @@
   &--hide {
     display: none;
   }
+
+  &--two,
+  &--three {
+    padding-bottom: 0;
+  }
 }
 
 .step__title {
+  width: $step-mobile-width;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 
   font-size: 20px;
 }
@@ -39,7 +50,9 @@
 }
 
 .step__text {
-  margin-bottom: 25px;
+  width: $step-mobile-width;
+  margin: 0;
+  margin-bottom: 21px;
   padding: 0;
 
   font-size: 16px;
@@ -52,10 +65,25 @@
   }
 }
 
+.step__checkbox-wrapper {
+  position: relative;
+
+  width: $step-mobile-width;
+  margin-bottom: 16px;
+
+  &:focus-within .step__checkbox-label::before {
+    background-color: $grey-11;
+    border: none;
+  }
+}
+
+.step__control-field {
+  width: $step-mobile-width;
+}
+
 .step__checkbox-label {
   position: relative;
 
-  margin-bottom: 26px;
   padding-left: 39px;
 
   font-size: 15px;
@@ -83,7 +111,6 @@
     cursor: pointer;
   }
 
-  &:focus::before,
   &:active::before {
     background-color: $grey-11;
     border: none;
@@ -114,6 +141,8 @@
 }
 
 .step__button {
+  margin-bottom: 6px;
+
   &--back {
     background-color: transparent;
   }
@@ -164,11 +193,13 @@
   }
 
   &:nth-of-type(4) {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
   }
 }
 
 .step__select {
+  display: flex;
+  align-items: center;
   width: 168px;
   height: 42px;
   padding-left: 12px;
@@ -179,15 +210,14 @@
   line-height: 1.29;
   letter-spacing: 1.4px;
   text-transform: uppercase;
+  white-space: nowrap;
   color: $blue-4;
 
   background-color: transparent;
   border-radius: 4px;
   border: solid 1px $grey-2;
 
-  //-webkit-appearance: none;
-  //-moz-appearance: none;
-  appearance: none;
+  overflow: hidden;
 
   cursor: pointer;
 
@@ -224,14 +254,14 @@
 // кнопка выпадающего списка
 .step__select-dropdown {
   position: absolute;
-  left: 119px;
+  left: 139px;
 
   width: 50px;
   height: 40px;
   padding-top: 11px;
   padding-left: 26px;
 
-  background-image: linear-gradient(to right, transparent 5%, #ffffff 40%);
+  background-image: linear-gradient(to right, rgba(#ffffff, 0.0001) 5%, #ffffff 40%);
   background-position: right center;
   background-repeat: no-repeat;
   background-size: 50px 37px;
@@ -242,7 +272,7 @@
 
 
   &--choose-country {
-    right: 7px;
+    right: 29px;
     left: auto;
   }
 }
@@ -393,7 +423,7 @@
 .step__country-dropdown {
   position: absolute;
   z-index: 10;
-  top: 317px;
+  top: 294px;
   left: auto;
 
   flex-direction: column;
@@ -414,18 +444,18 @@
   position: relative;
 
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   padding-left: 12px;
 
   font-size: 18px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.5;
 
-  &--empty::before {
+  &--bosnia::before {
     content: "";
 
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: -14px;
 
     width: 17px;
@@ -441,9 +471,9 @@
 .step__country-plan {
   width: 220px;
   height: 220px;
-  padding-top: 13px;
+  padding-top: 8px;
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 14px;
   padding-bottom: 13px;
 
   @include font-name;
@@ -474,7 +504,30 @@
 .step__country-plan-wrapper {
   position: relative;
 
-  margin-bottom: 28px;
+  margin-bottom: 17px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 85px;
+    height: 25px;
+
+    background-size: contain, 35px 24px;
+    background-position: 0 0, right;
+    background-repeat: no-repeat;
+  }
+
+  &--bosnia::after {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5%, #ffffff 49px, rgba(255, 255, 255, 0) 49px), url("../../img/flag-bosnia.svg");
+  }
+
+  &--czech::after {
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 5%, #ffffff 49px, rgba(255, 255, 255, 0) 49px), url("../../img/flag-czech.svg");
+  }
 
   &--error {
     font-weight: 400;
@@ -535,21 +588,6 @@
   height: 9px;
 }
 
-// .step__button--back {
-//   &--back:hover {
-//     background-color: transparent;
-
-//     opacity: 0.7;
-//   }
-
-//   &--back:focus,
-//   &--back:active {
-//     background-color: transparent;
-
-//     opacity: 0.3;
-//   }
-// }
-
 @media (max-width: $mobile-width-only) {
   .step__button {
     justify-content: center;
@@ -559,8 +597,8 @@
     padding-right: 24px;
     padding-bottom: 5px;
 
-    font-size: 20px;
-    line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.76;
     text-transform: uppercase;
 
     border-radius: $radius-3;
@@ -573,19 +611,29 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .step {
+    align-items: flex-start;
     width: 618px;
     margin-bottom: 40px;
-    padding-top: 49px;
+    padding-top: 48px;
     padding-right: 43px;
-    padding-bottom: 55px;
+    padding-bottom: 49px;
     padding-left: 43px;
 
     border-radius: $radius-4;
+
+    &--two {
+      margin-bottom: 48px;
+    }
+
+    &--three {
+      padding-bottom: 44px;
+    }
   }
 
   .step__title {
     order: -4;
-    margin-bottom: 37px;
+    width: $step-tablet-width;
+    margin-bottom: 33px;
 
     font-size: 36px;
   }
@@ -600,7 +648,8 @@
 
   .step__text {
     order: -3;
-    margin-bottom: 42px;
+    width: $step-tablet-width;
+    margin-bottom: 38px;
 
     font-size: 20px;
     line-height: 1.2;
@@ -608,15 +657,31 @@
     &--break {
       display: block;
     }
+
+    &--step-two {
+      margin-bottom: 34px;
+    }
+
+    &--step-three {
+      margin-bottom: 32px;
+    }
+  }
+
+  .step__control-field {
+    width: $step-tablet-width;
   }
 
   .step__control-field:first-of-type {
     order: -2;
   }
 
-  .step__checkbox-label {
+  .step__checkbox-wrapper {
     order: -1;
-    margin-bottom: 35px;
+    width: $step-tablet-width;
+    margin-bottom: 34px;
+  }
+
+  .step__checkbox-label {
     padding-left: 59px;
 
     font-size: 20px;
@@ -652,7 +717,7 @@
       content: "";
       position: absolute;
 
-      left: 398px;
+      left: 396px;
       top: 0;
 
       width: 1px;
@@ -679,7 +744,7 @@
     }
 
     &:nth-of-type(4) {
-      margin-bottom: 49px;
+      margin-bottom: 34px;
     }
   }
 
@@ -695,7 +760,7 @@
 
   .step__select-dropdown {
     bottom: 30px;
-    left: 315px;
+    left: 300px;
 
     &--add-country {
       bottom: 0;
@@ -718,6 +783,8 @@
 
     border-radius: 0;
     border: none;
+
+    background-position: 54px center;
 
     &--bosnia {
       background-size: 70px 47px;
@@ -743,8 +810,8 @@
   }
 
   .step__select-button-image {
-    top: 30px;
-    right: 0;
+    top: 27px;
+    right: -3px;
 
     width: 17px;
     height: 17px;
@@ -752,7 +819,7 @@
     // в поле "Добавить страну" заменяется на "плюс"
     &--add-country {
       top: 23px;
-      right: 173px;
+      right: 187px;
 
       width: 20px;
       height: 20px;
@@ -760,7 +827,7 @@
   }
 
   .step__country-dropdown {
-    top: 550px;
+    top: 518px;
     left: auto;
 
     flex-direction: row;
@@ -803,32 +870,50 @@
     height: 17px;
   }
 
+  .step__button {
+    padding-left: 34px;
+
+    &--back {
+      justify-content: flex-end;
+      width: 249px;
+    }
+  }
+
   .step__button-wrapper {
     display: flex;
     justify-content: space-between;
   }
 
-  .step__button--back {
-    width: 224px;
-  }
-
   .step__country {
-    margin-bottom: 37px;
+    margin-bottom: 40px;
     padding: 0;
+    padding-top: 45px;
 
     font-size: 30px;
     line-height: 0.6;
 
-    &--empty::before {
-      display: none;
+    &--bosnia {
+      border-top: 1px solid #d6d9e6;
+    }
+
+    &--bosnia::before {
+      top: auto;
+      right: -35px;
+      left: auto;
+
+      width: 15px;
+      height: 276px;
+
+      background-image: url("../img/line-tablet.png");
+      background-size: 15px 276px;
     }
   }
 
   .step__country-plan {
-    width: 527px;
+    width: 499px;
     height: 142px;
     padding-top: 21px;
-    padding-right: 19px;
+    padding-right: 29px;
     padding-left: 19px;
     padding-bottom: 21px;
 
@@ -842,8 +927,22 @@
     font-size: 20px;
 
     &--error::before {
-      width: 527px;
+      width: 499px;
       padding-top: 19px;
+    }
+
+    &--bosnia {
+      margin-bottom: 8px;
+    }
+
+    &::after {
+      top: 30px;
+      right: 0;
+
+      width: 70px;
+      height: 47px;
+
+      background-size: 0, 70px 47px;
     }
   }
 }
@@ -854,9 +953,9 @@
     margin-bottom: 44px;
     flex-direction: column;
     align-items: flex-start;
-    padding-top: 100px;
+    padding-top: 92px;
     padding-right: 162px;
-    padding-bottom: 105px;
+    padding-bottom: 99px;
     padding-left: 162px;
 
     border-radius: $radius-5;
@@ -864,10 +963,12 @@
 
   .step__title {
     order: -4;
-    margin-bottom: 37px;
+    width: 500px;
+    margin-bottom: 27px;
 
     font-size: 36px;
     line-height: 1.39;
+    letter-spacing: -0.3px;
   }
 
   .step__title-new-line {
@@ -876,8 +977,8 @@
 
   .step__controls-list {
     position: absolute;
-    top: 115px;
-    right: 203px;
+    top: 110px;
+    right: 206px;
 
     display: block;
   }
@@ -885,7 +986,7 @@
   .step__text {
     order: -3;
     width: 600px;
-    margin-bottom: 56px;
+    margin-bottom: 54px;
 
     font-size: 20px;
     line-height: 1.2;
@@ -893,6 +994,10 @@
     &--break {
       display: block;
     }
+  }
+
+  .step__control-field {
+    width: auto;
   }
 
   .step__control-field:first-of-type {
@@ -913,13 +1018,24 @@
     }
   }
 
-  .step__checkbox-label {
+  .step__control-field:nth-of-type(2) {
+    margin-bottom: 10px;
+  }
+
+  .step__checkbox-wrapper {
+    width: 245px;
+    margin-top: -36px;
+    margin-right: -2px;
+    margin-bottom: 0;
+
     position: absolute;
     top: 365px;
     right: 162px;
 
     order: -1;
-    margin: 0;
+  }
+
+  .step__checkbox-label {
     margin-left: auto;
     padding-left: 59px;
 
@@ -985,7 +1101,7 @@
     }
 
     &:first-of-type {
-      padding-top: 41px;
+      padding-top: 61px;
 
       border-top: 1px solid $grey-6;
     }
@@ -995,14 +1111,14 @@
     }
 
     &:nth-of-type(4) {
-      margin-bottom: 59px;
+      margin-bottom: 40px;
     }
   }
 
   .step__select {
     width: 730px;
     height: 70px;
-    padding-left: 27px;
+    padding-left: 22px;
 
     font-size: 20px;
     line-height: 0.9;
@@ -1010,8 +1126,8 @@
   }
 
   .step__select-dropdown {
-    bottom: 30px;
-    left: 665px;
+    bottom: 28px;
+    left: 658px;
 
     background: none;
   }
@@ -1060,8 +1176,8 @@
   }
 
   .step__select-button-image {
-    top: 30px;
-    right: 0;
+    top: 27px;
+    right: 5px;
 
     width: 17px;
     height: 17px;
@@ -1069,7 +1185,7 @@
     // в поле "Добавить страну" заменяется на "плюс"
     &--add-country {
       top: 23px;
-      left: -40px;
+      left: -45px;
 
       width: 18px;
       height: 18px;
@@ -1077,7 +1193,7 @@
   }
 
   .step__country-dropdown {
-    top: 592px;
+    top: 574px;
     left: auto;
 
     flex-direction: row;
@@ -1120,28 +1236,53 @@
     width: 100%;
   }
 
+  .step__button--forward {
+    padding-left: 30px;
+  }
+
   .step__button--back {
     width: 224px;
   }
 
   .step__country {
-    margin-bottom: 37px;
+    margin-bottom: 43px;
     padding: 0;
 
     font-size: 30px;
     line-height: 0.6;
+    letter-spacing: 0.4px;
 
-    &--empty::before {
-      display: none;
+    &--bosnia::after {
+      content: "";
+
+      position: absolute;
+      top: -88px;
+      left: 0;
+
+      width: 997px;
+      height: 1px;
+
+      background-color: #d4d9eb;
+    }
+
+    &--bosnia::before {
+      top: 2px;
+      right: -50px;
+
+      left: auto;
+      width: 15px;
+      height: 276px;
+      background-image: url("../img/line-tablet.png");
+      background-size: 15px 276px;
     }
   }
 
   .step__country-plan {
     width: 730px;
     height: 142px;
-    padding-top: 28px;
-    padding-right: 27px;
-    padding-left: 27px;
+    padding-top: 24px;
+    padding-right: 22px;
+    padding-left: 22px;
     padding-bottom: 28px;
 
     font-size: 20px;
@@ -1149,13 +1290,34 @@
   }
 
   .step__country-plan-wrapper {
-    margin-bottom: 56px;
+    margin-bottom: 51px;
 
     font-size: 20px;
 
     &--error::before {
       width: 730px;
       padding-top: 19px;
+    }
+
+    &:first-of-type {
+      padding-top: 88px;
+    }
+
+    &::after {
+      width: 70px;
+      height: 47px;
+
+      background-size: 0, 70px 47px;
+    }
+
+    &--bosnia::after {
+      top: 76px;
+      right: -153px;
+    }
+
+    &--czech::after {
+      top: -12px;
+      right: -153px;
     }
   }
 }

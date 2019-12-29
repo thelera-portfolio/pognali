@@ -2,7 +2,7 @@
   position: relative;
 
   margin: 0;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
 
   @include font-name;
   font-size: 36px;
@@ -26,7 +26,7 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .page-main-heading {
-    padding-bottom: 70px;
+    padding-bottom: 62px;
 
     font-size: 60px;
     line-height: 1.17;
@@ -41,12 +41,14 @@
 
 @media (min-width: $desktop-width) {
   .page-main-heading {
-    padding-bottom: 70px;
+    padding-bottom: 63px;
 
     font-size: 60px;
     line-height: 1.17;
 
     &::before {
+      bottom: -4px;
+
       height: 8px;
 
       border-radius: 4px;

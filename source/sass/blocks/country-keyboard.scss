@@ -11,6 +11,12 @@
   &--hide {
     display: none;
   }
+
+  &--catalog {
+    .country-keyboard__item {
+      height: 41px;
+    }
+  }
 }
 
 .country-keyboard__item {
@@ -49,12 +55,15 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .country-keyboard {
+    margin-left: -20px;
+
     font-size: 20px;
     letter-spacing: 2px;
 
     &--catalog {
       .country-keyboard__item {
-        width: 71px;
+        width: 77px;
+        height: 82px;
         margin-right: 46px;
         font-size: 60px;
         line-height: 0.4;

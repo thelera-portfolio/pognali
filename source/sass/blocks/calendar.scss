@@ -1,5 +1,6 @@
 .calendar {
-  margin-bottom: 22px;
+  width: 220px;
+  margin-bottom: 24px;
 
   @include font-name;
   font-size: 14px;
@@ -8,11 +9,19 @@
   color: $grey-5;
 
   border-collapse: collapse;
+
+  // :focus-within {
+  //  color: $grey-2;
+
+  //   background-color: $blue-4;
+  //   border: 2px solid $yellow-5;
+  //   outline: 3px solid $yellow-5;
+  // }
 }
 
 .calendar__item {
   width: 30px;
-  height: 30px;
+  height: 31px;
   padding: 0;
 
   text-align: center;
@@ -27,7 +36,8 @@
     background-color: $blue-7;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $grey-2;
 
     background-color: $blue-4;
@@ -54,10 +64,6 @@
   }
 }
 
-.calendar__item-text {
-  display: none;
-}
-
 .calendar__days-of-week .calendar__item {
   background-color: transparent;
   border: none;
@@ -73,6 +79,14 @@
   }
 }
 
+.calendar__item-text {
+  display: none;
+}
+
+.calendar__item-1st-of-month {
+  display: none;
+}
+
 .calendar__days-of-week .calendar__item--weekend {
   color: $yellow-5;
 
@@ -83,6 +97,7 @@
 
 @media (min-width: $tablet-width) and (max-width: $desktop-width - 1px) {
   .calendar {
+    width: 531px;
     margin-bottom: 46px;
 
     font-size: 18px;
@@ -92,17 +107,54 @@
 
   .calendar__item {
     width: 75px;
-    height: 70px;
+    height: 69px;
+  }
+
+  .calendar__days-of-week .calendar__item {
+    height: 34px;
+
+    &:first-child::after {
+      content: "н";
+    }
+
+    &:nth-child(2)::after {
+      content: "т";
+    }
+
+    &:nth-child(3)::after {
+      content: "р";
+    }
+
+    &:nth-child(4)::after {
+      content: "т";
+    }
+
+    &:nth-child(5)::after {
+      content: "т";
+    }
+
+    &:nth-child(6)::after {
+      content: "б";
+    }
+
+    &:nth-child(7)::after {
+      content: "с";
+    }
   }
 
   .calendar__item-text {
+    display: none;
+  }
+
+  .calendar__item-1st-of-month {
     display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
   .calendar {
-    margin-bottom: 56px;
+    width: 999px;
+    margin-bottom: 53px;
 
     font-size: 18px;
     line-height: 25px;
@@ -120,7 +172,40 @@
     vertical-align: top;
   }
 
+  .calendar__days-of-week .calendar__item {
+    height: 48px;
+    padding-top: 13px;
+
+    &:first-child::after {
+      content: "н";
+    }
+
+    &:nth-child(2)::after {
+      content: "т";
+    }
+
+    &:nth-child(3)::after {
+      content: "р";
+    }
+
+    &:nth-child(4)::after {
+      content: "т";
+    }
+
+    &:nth-child(5)::after {
+      content: "т";
+    }
+
+    &:nth-child(6)::after {
+      content: "б";
+    }
+
+    &:nth-child(7)::after {
+      content: "с";
+    }
+  }
+
   .calendar__item-text {
-    display: none;
+    display: block;
   }
 }

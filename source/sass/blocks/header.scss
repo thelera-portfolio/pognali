@@ -13,19 +13,6 @@
   }
 }
 
-.header__toggle {
-  padding: 0;
-
-  background-color: transparent;
-  border: none;
-
-  cursor: pointer;
-}
-
-.header__toggle-icon {
-  fill: #ffffff;
-}
-
 .header__login-button {
   display: none;
 }
@@ -41,10 +28,6 @@
     min-height: 132px;
   }
 
-  .header__toggle-icon {
-    fill: #ffffff;
-  }
-
   .header__login-button {
     display: flex;
     width: 188px;
@@ -52,19 +35,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .header {
-    padding-top: 47px;
-  }
-
   .header__inner {
-    display: none;
-  }
-
-  .header__logo {
-    display: none;
-  }
-
-  .header__toggle {
     display: none;
   }
 

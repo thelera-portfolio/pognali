@@ -1,26 +1,30 @@
 .filter-country {
-  position: relative;
-
+  width: 100%;
   margin-top: -$radius-2;
-  padding-top: 40px;
+  padding-top: 36px;
 
   background-color: $grey-4;
   border-bottom-right-radius: $radius-2;
   border-bottom-left-radius: $radius-2;
+
+  &--absolute {
+    position: absolute;
+    z-index: 3;
+  }
 }
 
 .filter-country__inner {
   position: relative;
 
   align-items: flex-start;
+  padding-left: 50px;
 }
 
 .filter-country__title {
   position: relative;
 
   margin: 0;
-  padding-bottom: 18px;
-  padding-left: 27px;
+  padding-bottom: 13px;
 
   @include font-name;
   font-size: 16px;
@@ -34,7 +38,7 @@
 
     position: absolute;
     top: 4px;
-    left: 0;
+    left: -24px;
 
     width: 15px;
     height: 10px;
@@ -46,7 +50,8 @@
 
 .filter-country__button {
   position: absolute;
-  right: 0;
+  top: -10px;
+  right: 30px;
   padding: 0;
 
   width: 20px;
@@ -87,8 +92,8 @@
     content: "";
     position: absolute;
 
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 2px;
 
     width: 17px;
     height: 16px;
@@ -109,19 +114,29 @@
     background-position: right center;
     background-size: 12px 12px;
   }
+
+  &--hide {
+    display: none;
+  }
 }
 
 .filter-country__continent {
-  margin-bottom: 25px;
-  padding-top: 20px;
+  margin-bottom: 18px;
+  padding-top: 18px;
 }
 
 .filter-country__countries-list {
   padding-left: 0;
+  padding-top: 47px;
+  padding-bottom: 37px;
 }
 
 .filter-country__button-close {
+  margin-left: -23px;
   margin-bottom: 27px;
+  padding-right: 0;
+
+  letter-spacing: 0.2px;
 
   cursor: pointer;
 
@@ -134,8 +149,8 @@
       content: "";
 
       position: absolute;
-      top: 7px;
-      left: 0;
+      top: 14px;
+      left: 85px;
 
       width: 12px;
       height: 12px;
@@ -176,6 +191,7 @@
   .filter-country__inner {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
     padding-left: 75px;
     padding-right: 75px;
   }
@@ -191,17 +207,20 @@
 
   .filter-country__button {
     position: relative;
+    top: 0;
     right: auto;
 
     order: 2;
     width: 175px;
     height: 20px;
-    margin-bottom: 69px;
+    margin-bottom: 50px;
     margin-left: auto;
 
     font-size: 20px;
 
     &::after {
+      top: 0;
+
       width: 29px;
       height: 19px;
 
@@ -218,7 +237,7 @@
 
   .filter-country__continent {
     order: 1;
-    margin-bottom: 69px;
+    margin-bottom: 50px;
     padding: 0;
   }
 
@@ -234,9 +253,10 @@
 
   .filter-country__button-close {
     order: 5;
-    width: 100%;
-    margin-top: 70px;
+    width: 618px;
+    margin-top: 55px;
     margin-bottom: 74px;
+    margin-left: -3px;
     padding-top: 35px;
     padding-bottom: 35px;
 
@@ -246,8 +266,8 @@
       padding-left: 39px;
 
       &::before {
-        top: 4px;
-        left: 0;
+        top: 40px;
+        left: 245px;
         width: 19px;
         height: 19px;
       }
@@ -257,6 +277,8 @@
 
 @media (min-width: $desktop-width) {
   .filter-country {
+    position: relative;
+
     margin-top: -$radius-5;
     padding-top: 117px;
 
@@ -267,13 +289,15 @@
   .filter-country__inner {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 80px;
-    padding-right: 80px;
+    justify-content: flex-start;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 
   .filter-country__title {
     order: 1;
     margin-right: 35px;
+    margin-left: 20px;
     padding: 0;
     padding-left: 44px;
 
@@ -300,12 +324,15 @@
     order: 3;
     width: 175px;
     height: 20px;
-    margin-bottom: 69px;
+    margin-top: 10px;
+    margin-right: 65px;
+    margin-bottom: 67px;
     margin-left: auto;
 
     font-size: 20px;
 
     &::after {
+      top: 0;
       width: 29px;
       height: 19px;
 
@@ -328,13 +355,15 @@
 
   .filter-country__countries-list {
     order: 4;
+    margin-left: 35px;
     padding: 0;
   }
 
   .filter-country__button-close {
     order: 5;
-    width: 100%;
-    margin-top: 70px;
+    width: 1320px;
+    margin: 0;
+    margin-top: 12px;
     margin-bottom: 74px;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -345,8 +374,8 @@
       padding-left: 39px;
 
       &::before {
-        top: 4px;
-        left: 0;
+        top: 40px;
+        left: 595px;
         width: 19px;
         height: 19px;
       }

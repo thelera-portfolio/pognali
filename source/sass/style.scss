@@ -5,74 +5,42 @@
 // шрифты
 @font-face {
   font-family: $main-font;
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
   src: local("Blogger Sans Light"),
     url("../fonts/bloggersans-light.woff") format("woff"),
     url("../fonts/bloggersans-light.woff2") format("woff2");
-  font-weight: 300;
+}
+
+@font-face {
+  font-family: $main-font;
+  font-display: swap;
+  font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: $main-font;
-  src: local("Blogger Sans Light Italic"),
-    url("../fonts/bloggersans-lightitalic.woff") format("woff"),
-    url("../fonts/bloggersans-lightitalic.woff2") format("woff2");
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: $main-font;
   src: local("Blogger Sans"),
     url("../fonts/bloggersans.woff") format("woff"),
     url("../fonts/bloggersans.woff2") format("woff2");
-  font-weight: 400;
+}
+
+@font-face {
+  font-family: $main-font;
+  font-display: swap;
+  font-weight: 500;
   font-style: normal;
-}
-
-@font-face {
-  font-family: $main-font;
-  src: local("Blogger Sans Italic"),
-    url("../fonts/bloggersans-italic.woff") format("woff"),
-    url("../fonts/bloggersans-italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: $main-font;
   src: local("Blogger Sans Medium"),
     url("../fonts/bloggersans-medium.woff") format("woff"),
     url("../fonts/bloggersans-medium.woff2") format("woff2");
-  font-weight: 500;
+}
+
+@font-face {
+  font-family: $main-font;
+  font-display: swap;
+  font-weight: 700;
   font-style: normal;
-}
-
-@font-face {
-  font-family: $main-font;
-  src: local("Blogger Sans Medium Italic"),
-    url("../fonts/bloggersans-mediumitalic.woff") format("woff"),
-    url("../fonts/bloggersans-mediumitalic.woff2") format("woff2");
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: $main-font;
   src: local("Blogger Sans Bold"),
     url("../fonts/bloggersans-bold.woff") format("woff"),
     url("../fonts/bloggersans-bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: $main-font;
-  src: local("Blogger Sans Bold Italic"),
-    url("../fonts/bloggersans-bolditalic.woff") format("woff"),
-    url("../fonts/bloggersans-bolditalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
 }
 
 html {
@@ -142,3 +110,4 @@ img {
 @import "./blocks/business-rates-modal.scss";
 @import "./blocks/form-main.scss";
 @import "./blocks/tooltip.scss";
+@import "./blocks/sprite.scss";

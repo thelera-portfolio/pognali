@@ -12,8 +12,12 @@
 .travelmates-filtered__button {
   position: relative;
 
-  width: 155px;
-  margin: 0 auto;
+  width: 149px;
+  margin-top: 17px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-left: auto;
+  padding-right: 0;
   padding-left: 33px;
 
   background-color: transparent;
@@ -52,10 +56,10 @@
   }
 
   .travelmates-filtered__button {
-    width: 190px;
+    width: 192px;
     margin: 0 auto;
-    margin-bottom: 30px;
-    padding-left: 52px;
+    margin-bottom: 35px;
+    padding-left: 39px;
 
     &::before {
       top: 10px;
@@ -82,13 +86,32 @@
   }
 
   .travelmates-filtered__list {
-    margin-bottom: 70px;
+    margin-bottom: 56px;
+  }
+
+  .travelmates-filtered__item {
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 49px;
+      left: 630px;
+
+      width: 1px;
+      height: 187px;
+
+      background-color: #000000;
+      background-image: linear-gradient(to bottom, #ffffff, #000000 25%, #000000 75%, #ffffff);
+
+      opacity: 0.1;
+    }
   }
 
   .travelmates-filtered__button {
-    width: 190px;
+    justify-content: flex-start;
+    width: 262px;
     margin: 0 auto;
-    margin-bottom: 70px;
+    margin-bottom: 57px;
     padding-left: 52px;
 
     &::before {
