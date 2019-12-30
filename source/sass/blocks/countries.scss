@@ -66,6 +66,13 @@ $padding-bottom-desktop: 140px;
       height: 575px;
 
       background-image: url("../img/flags-back@1x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flags-back@2x.png");
+      }
+
       border-radius: $radius-2;
     }
   }
@@ -135,6 +142,13 @@ $padding-bottom-desktop: 140px;
       height: 575px;
 
       background-image: url("../img/flags-back@1x.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/flags-back@2x.png");
+      }
+
       border-radius: $radius-2;
     }
   }
