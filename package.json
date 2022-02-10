@@ -50,6 +50,6 @@
     "node": "8.16"
   },
   "dependencies": {
-    "node-sass": "^4.13.0"
+    "node-sass": "^7.0.0"
   }
 }
